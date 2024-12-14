@@ -64,7 +64,7 @@ const MathLogicNotes: React.FC = () => {
                 <p className="mt-2">This could mean either:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>The person is happy because the sun is shining (causation)</li>
-                  <li>The sun is shining and the person's happiness are independent facts (conjunction)</li>
+                  <li>The sun is shining and the person&apos;s happiness are independent facts (conjunction)</li>
                 </ul>
               </Card>
 
@@ -157,7 +157,7 @@ const MathLogicNotes: React.FC = () => {
                 <p className="font-semibold">Special Case: Paradoxes</p>
                 <p>Consider the statement S:&quot;S is false&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
-                  <li>If S is true, then by its own admission, it's false</li>
+                  <li>If S is true, then by its own admission, it&apos;s false</li>
                   <li>If S is false, then its statement is true</li>
                   <li>This creates a logical paradox and is not a valid proposition</li>
                 </ul>
@@ -202,7 +202,7 @@ const MathLogicNotes: React.FC = () => {
                 <p>&quot;4 is a prime number&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>This is false</li>
-                  <li>Its truth value doesn't depend on other propositions</li>
+                  <li>Its truth value doesn&apos;t depend on other propositions</li>
                   <li>Cannot be broken down further</li>
                 </ul>
               </Card>
@@ -249,7 +249,7 @@ const MathLogicNotes: React.FC = () => {
                 <ul className="list-disc ml-6">
                   <li>Every proposition must have exactly one truth value</li>
                   <li>Truth values cannot change within the same context</li>
-                  <li>Complex propositions' truth values are determined by their components</li>
+                  <li>Complex propositions&apos; truth values are determined by their components</li>
                 </ul>
               </div>
 
@@ -283,14 +283,14 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Examples of Atomic Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>&quot;4 is a prime number"
+                  <li>&quot;4 is a prime number&quot;
                     <ul className="list-circle ml-6 mt-1">
                       <li>Truth value: False</li>
                       <li>Cannot be derived from other propositions</li>
                       <li>Stands as a complete statement</li>
                     </ul>
                   </li>
-                  <li>&quot;New Delhi is the capital of India"
+                  <li>&quot;New Delhi is the capital of India&quot;
                     <ul className="list-circle ml-6 mt-1">
                       <li>Truth value: True</li>
                       <li>Independent of other statements</li>
@@ -744,7 +744,7 @@ const MathLogicNotes: React.FC = () => {
                 </Card>
 
                 <Card className="p-4">
-                  <p className="font-semibold">8. De Morgan's Laws:</p>
+                  <p className="font-semibold">8. De Morgan&apos;s Laws:</p>
                   <ul className="list-disc ml-6">
                     <li>¬(p ∧ q) ≡ ¬p ∨ ¬q</li>
                     <li>¬(p ∨ q) ≡ ¬p ∧ ¬q</li>
@@ -832,11 +832,11 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example 1:</p>
-                <p>&quot;Jen won't go to the party UNLESS Mary goes to the party&quot;</p>
+                <p>&quot;Jen won&apos;t go to the party UNLESS Mary goes to the party&quot;</p>
                 <div className="ml-4 mt-2">
                   <p>Let:</p>
                   <ul className="list-disc ml-6">
-                    <li>p =&quot;Jen won't go to the party&quot;</li>
+                    <li>p =&quot;Jen won&apos;t go to the party&quot;</li>
                     <li>q =&quot;Mary goes to the party&quot;</li>
                   </ul>
                   <p className="mt-2">Translation: ¬q → p</p>
@@ -845,11 +845,11 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example 2:</p>
-                <p>&quot;I won't study UNLESS you complete my demand&quot;</p>
+                <p>&quot;I won&apos;t study UNLESS you complete my demand&quot;</p>
                 <div className="ml-4 mt-2">
                   <p>Let:</p>
                   <ul className="list-disc ml-6">
-                    <li>p =&quot;I won't study&quot;</li>
+                    <li>p =&quot;I won&apos;t study&quot;</li>
                     <li>q =&quot;you complete my demand&quot;</li>
                   </ul>
                   <p className="mt-2">Translation: ¬q → p</p>
@@ -975,11 +975,11 @@ const MathLogicNotes: React.FC = () => {
                 <div className="ml-4">
                   <p className="font-medium">Premises:</p>
                   <ul className="list-disc ml-6">
-                    <li>&quot;If it is raining, He'll take umbrella.&quot; (P → Q)</li>
+                    <li>&quot;If it is raining, He&apos;ll take umbrella.&quot; (P → Q)</li>
                     <li>&quot;It is not raining.&quot; (¬P)</li>
                   </ul>
                   <p className="mt-2 font-medium">Conclusion:</p>
-                  <p className="ml-6">&quot;He'll not take umbrella&quot; (¬Q)</p>
+                  <p className="ml-6">&quot;He&apos;ll not take umbrella&quot; (¬Q)</p>
                 </div>
               </Card>
             </div>
@@ -1376,7 +1376,7 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">No Free Variables:</p>
-                <p>If&quot;A&quot; doesn't have any free variable x then:</p>
+                <p>If&quot;A&quot; doesn&apos;t have any free variable x then:</p>
                 <ul className="list-disc ml-6 space-y-2">
                   <li>∃x A = A</li>
                   <li>∀x A = A</li>
@@ -1520,7 +1520,7 @@ const MathLogicNotes: React.FC = () => {
                 <p className="mt-2">An interpretation includes:</p>
                 <ul className="list-disc ml-6">
                   <li>Domain (e.g., set of natural numbers)</li>
-                  <li>Meaning of P(x) (e.g.,&quot;x is even")</li>
+                  <li>Meaning of P(x) (e.g.,&quot;x is even&quot;)</li>
                 </ul>
               </Card>
 

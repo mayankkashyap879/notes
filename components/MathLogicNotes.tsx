@@ -60,7 +60,7 @@ const MathLogicNotes: React.FC = () => {
               
               <Card className="p-4">
                 <p className="font-semibold">Example 1:</p>
-                <p>"The sun is shining and I feel happy."</p>
+                <p>&quot;The sun is shining and I feel happy.&quot;</p>
                 <p className="mt-2">This could mean either:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>The person is happy because the sun is shining (causation)</li>
@@ -70,7 +70,7 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example 2:</p>
-                <p>"Cats are furry and elephants are heavy."</p>
+                <p>&quot;Cats are furry and elephants are heavy.&quot;</p>
                 <p className="mt-2">This has the same structure as Example 1, but:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Nobody assumes elephants are heavy because cats are furry</li>
@@ -137,25 +137,25 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Valid Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>"Jaipur is the capital of India" (False)</li>
-                  <li>"Some cows are brown" (True)</li>
-                  <li>"2 × 2 = 5" (False)</li>
+                  <li>&quot;Jaipur is the capital of India&quot; (False)</li>
+                  <li>&quot;Some cows are brown&quot; (True)</li>
+                  <li>&quot;2 × 2 = 5&quot; (False)</li>
                 </ul>
               </Card>
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Non-Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>Commands: "Close the door"</li>
-                  <li>Questions: "What time is it?"</li>
-                  <li>Expressions with variables: "x + 2 = 2x"</li>
-                  <li>Exclamations: "How beautiful!"</li>
+                  <li>Commands:&quot;Close the door&quot;</li>
+                  <li>Questions:&quot;What time is it?&quot;</li>
+                  <li>Expressions with variables:&quot;x + 2 = 2x&quot;</li>
+                  <li>Exclamations:&quot;How beautiful!&quot;</li>
                 </ul>
               </Card>
 
               <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Special Case: Paradoxes</p>
-                <p>Consider the statement S: "S is false"</p>
+                <p>Consider the statement S:&quot;S is false&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>If S is true, then by its own admission, it's false</li>
                   <li>If S is false, then its statement is true</li>
@@ -199,7 +199,7 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example of Atomic Proposition:</p>
-                <p>"4 is a prime number"</p>
+                <p>&quot;4 is a prime number&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>This is false</li>
                   <li>Its truth value doesn't depend on other propositions</li>
@@ -218,7 +218,7 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example of Compound Proposition:</p>
-                <p>"4 is a prime number AND New Delhi is the capital of India"</p>
+                <p>&quot;4 is a prime number AND New Delhi is the capital of India&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Combines two atomic propositions</li>
                   <li>Uses the logical connective AND</li>
@@ -283,14 +283,14 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Examples of Atomic Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>"4 is a prime number"
+                  <li>&quot;4 is a prime number"
                     <ul className="list-circle ml-6 mt-1">
                       <li>Truth value: False</li>
                       <li>Cannot be derived from other propositions</li>
                       <li>Stands as a complete statement</li>
                     </ul>
                   </li>
-                  <li>"New Delhi is the capital of India"
+                  <li>&quot;New Delhi is the capital of India"
                     <ul className="list-circle ml-6 mt-1">
                       <li>Truth value: True</li>
                       <li>Independent of other statements</li>
@@ -331,14 +331,14 @@ const MathLogicNotes: React.FC = () => {
                 <p className="font-semibold">Examples with Logical Connectives:</p>
                 <p className="mt-2">Let:</p>
                 <ul className="list-disc ml-6">
-                  <li>P: "4 is a prime number"</li>
-                  <li>Q: "New Delhi is the capital of India"</li>
+                  <li>P:&quot;4 is a prime number&quot;</li>
+                  <li>Q:&quot;New Delhi is the capital of India&quot;</li>
                 </ul>
                 <p className="mt-2">Compound Propositions:</p>
                 <ol className="list-decimal ml-6 space-y-2">
-                  <li>"4 is a prime number AND New Delhi is the capital of India" (P ∧ Q)</li>
-                  <li>"4 is NOT a prime number" (¬P)</li>
-                  <li>"New Delhi is the capital of India OR 4 is not a prime number" (Q ∨ ¬P)</li>
+                  <li>&quot;4 is a prime number AND New Delhi is the capital of India&quot; (P ∧ Q)</li>
+                  <li>&quot;4 is NOT a prime number&quot; (¬P)</li>
+                  <li>&quot;New Delhi is the capital of India OR 4 is not a prime number&quot; (Q ∨ ¬P)</li>
                 </ol>
               </div>
             </div>
@@ -432,8 +432,8 @@ const MathLogicNotes: React.FC = () => {
                 </ul>
                 <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
                   <p className="font-semibold">Example:</p>
-                  <p>p: "Today is Sunday"</p>
-                  <p>¬p: "Today is not Sunday"</p>
+                  <p>p:&quot;Today is Sunday&quot;</p>
+                  <p>¬p:&quot;Today is not Sunday&quot;</p>
                 </div>
               </div>
 
@@ -528,18 +528,18 @@ const MathLogicNotes: React.FC = () => {
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Implication (→):</p>
                 <ul className="list-disc ml-6">
-                  <li>Represents "if p then q"</li>
+                  <li>Represents&quot;if p then q&quot;</li>
                   <li>False only when p is true and q is false</li>
                   <li>True in all other cases</li>
                 </ul>
                 <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
                   <p className="font-semibold">Alternative Expressions:</p>
                   <ul className="list-disc ml-6">
-                    <li>"p implies q"</li>
-                    <li>"if p, then q"</li>
-                    <li>"p only if q"</li>
-                    <li>"q if p"</li>
-                    <li>"q whenever p"</li>
+                    <li>&quot;p implies q&quot;</li>
+                    <li>&quot;if p, then q&quot;</li>
+                    <li>&quot;p only if q&quot;</li>
+                    <li>&quot;q if p&quot;</li>
+                    <li>&quot;q whenever p&quot;</li>
                   </ul>
                 </div>
                 <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
@@ -581,16 +581,16 @@ const MathLogicNotes: React.FC = () => {
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Biconditional (↔):</p>
                 <ul className="list-disc ml-6">
-                  <li>Represents "p if and only if q"</li>
+                  <li>Represents&quot;p if and only if q&quot;</li>
                   <li>True when p and q have the same truth value</li>
                   <li>Equivalent to (p → q) ∧ (q → p)</li>
                 </ul>
                 <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
                   <p className="font-semibold">Alternative Expressions:</p>
                   <ul className="list-disc ml-6">
-                    <li>"p iff q"</li>
-                    <li>"p is necessary and sufficient for q"</li>
-                    <li>"if p then q, and conversely"</li>
+                    <li>&quot;p iff q&quot;</li>
+                    <li>&quot;p is necessary and sufficient for q&quot;</li>
+                    <li>&quot;if p then q, and conversely&quot;</li>
                   </ul>
                 </div>
               </div>
@@ -825,19 +825,19 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4">
                 <p className="font-semibold">Rule:</p>
                 <ul className="list-disc ml-6">
-                  <li>"Unless P, Q" translates to "¬P → Q" or "P ∨ Q"</li>
-                  <li>"P unless Q" translates to "P if not Q" = "¬Q → P" = "Q ∨ P"</li>
+                  <li>&quot;Unless P, Q&quot; translates to&quot;¬P → Q&quot; or&quot;P ∨ Q&quot;</li>
+                  <li>&quot;P unless Q&quot; translates to&quot;P if not Q&quot; =&quot;¬Q → P&quot; =&quot;Q ∨ P&quot;</li>
                 </ul>
               </Card>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example 1:</p>
-                <p>"Jen won't go to the party UNLESS Mary goes to the party"</p>
+                <p>&quot;Jen won't go to the party UNLESS Mary goes to the party&quot;</p>
                 <div className="ml-4 mt-2">
                   <p>Let:</p>
                   <ul className="list-disc ml-6">
-                    <li>p = "Jen won't go to the party"</li>
-                    <li>q = "Mary goes to the party"</li>
+                    <li>p =&quot;Jen won't go to the party&quot;</li>
+                    <li>q =&quot;Mary goes to the party&quot;</li>
                   </ul>
                   <p className="mt-2">Translation: ¬q → p</p>
                 </div>
@@ -845,12 +845,12 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example 2:</p>
-                <p>"I won't study UNLESS you complete my demand"</p>
+                <p>&quot;I won't study UNLESS you complete my demand&quot;</p>
                 <div className="ml-4 mt-2">
                   <p>Let:</p>
                   <ul className="list-disc ml-6">
-                    <li>p = "I won't study"</li>
-                    <li>q = "you complete my demand"</li>
+                    <li>p =&quot;I won't study&quot;</li>
+                    <li>q =&quot;you complete my demand&quot;</li>
                   </ul>
                   <p className="mt-2">Translation: ¬q → p</p>
                 </div>
@@ -867,17 +867,17 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example:</p>
-                <p>"If you study well, you will crack GATE exam unless you make silly mistakes."</p>
+                <p>&quot;If you study well, you will crack GATE exam unless you make silly mistakes.&quot;</p>
                 <div className="ml-4 mt-2">
                   <p>Let:</p>
                   <ul className="list-disc ml-6">
-                    <li>p = "you study well"</li>
-                    <li>q = "you will crack GATE exam"</li>
-                    <li>r = "you make silly mistakes"</li>
+                    <li>p =&quot;you study well&quot;</li>
+                    <li>q =&quot;you will crack GATE exam&quot;</li>
+                    <li>r =&quot;you make silly mistakes&quot;</li>
                   </ul>
                   <p className="mt-2">Translation: (p → q) ∨ r</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Note: We take "if you study well, you will crack GATE exam" as the first unit because it forms a complete thought in English.
+                    Note: We take&quot;if you study well, you will crack GATE exam&quot; as the first unit because it forms a complete thought in English.
                   </p>
                 </div>
               </Card>
@@ -890,22 +890,22 @@ const MathLogicNotes: React.FC = () => {
                 <Card className="p-4">
                   <p className="font-semibold">Conditional Statements:</p>
                   <ul className="list-disc ml-6">
-                    <li>"if p then q" → p → q</li>
-                    <li>"p implies q" → p → q</li>
-                    <li>"p only if q" → p → q</li>
-                    <li>"q if p" → p → q</li>
-                    <li>"q when p" → p → q</li>
-                    <li>"q whenever p" → p → q</li>
+                    <li>&quot;if p then q&quot; → p → q</li>
+                    <li>&quot;p implies q&quot; → p → q</li>
+                    <li>&quot;p only if q&quot; → p → q</li>
+                    <li>&quot;q if p&quot; → p → q</li>
+                    <li>&quot;q when p&quot; → p → q</li>
+                    <li>&quot;q whenever p&quot; → p → q</li>
                   </ul>
                 </Card>
 
                 <Card className="p-4">
                   <p className="font-semibold">Biconditional Statements:</p>
                   <ul className="list-disc ml-6">
-                    <li>"p if and only if q" → p ↔ q</li>
-                    <li>"p exactly when q" → p ↔ q</li>
-                    <li>"p is necessary and sufficient for q" → p ↔ q</li>
-                    <li>"p iff q" → p ↔ q</li>
+                    <li>&quot;p if and only if q&quot; → p ↔ q</li>
+                    <li>&quot;p exactly when q&quot; → p ↔ q</li>
+                    <li>&quot;p is necessary and sufficient for q&quot; → p ↔ q</li>
+                    <li>&quot;p iff q&quot; → p ↔ q</li>
                   </ul>
                 </Card>
               </div>
@@ -928,19 +928,19 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4">
                 <p className="font-semibold">Necessary and Sufficient Conditions:</p>
                 <ul className="list-disc ml-6">
-                  <li>"P is necessary for Q" means "Q → P"</li>
-                  <li>"P is sufficient for Q" means "P → Q"</li>
-                  <li>"P is necessary and sufficient for Q" means "P ↔ Q"</li>
+                  <li>&quot;P is necessary for Q&quot; means&quot;Q → P&quot;</li>
+                  <li>&quot;P is sufficient for Q&quot; means&quot;P → Q&quot;</li>
+                  <li>&quot;P is necessary and sufficient for Q&quot; means&quot;P ↔ Q&quot;</li>
                 </ul>
               </Card>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example:</p>
-                <p>"Being Natural number is sufficient for Being integer number"</p>
+                <p>&quot;Being Natural number is sufficient for Being integer number&quot;</p>
                 <div className="ml-4 mt-2">
                   <ul className="list-disc ml-6">
-                    <li>Let N = "is a natural number"</li>
-                    <li>Let I = "is an integer number"</li>
+                    <li>Let N =&quot;is a natural number&quot;</li>
+                    <li>Let I =&quot;is an integer number&quot;</li>
                     <li>Translation: N → I</li>
                   </ul>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
@@ -975,11 +975,11 @@ const MathLogicNotes: React.FC = () => {
                 <div className="ml-4">
                   <p className="font-medium">Premises:</p>
                   <ul className="list-disc ml-6">
-                    <li>"If it is raining, He'll take umbrella." (P → Q)</li>
-                    <li>"It is not raining." (¬P)</li>
+                    <li>&quot;If it is raining, He'll take umbrella.&quot; (P → Q)</li>
+                    <li>&quot;It is not raining.&quot; (¬P)</li>
                   </ul>
                   <p className="mt-2 font-medium">Conclusion:</p>
-                  <p className="ml-6">"He'll not take umbrella" (¬Q)</p>
+                  <p className="ml-6">&quot;He'll not take umbrella&quot; (¬Q)</p>
                 </div>
               </Card>
             </div>
@@ -1102,11 +1102,11 @@ const MathLogicNotes: React.FC = () => {
                 <div className="mt-2">
                   <p>Knowledge Base:</p>
                   <ul className="list-disc ml-6">
-                    <li>"All men are mortal"</li>
-                    <li>"Socrates is a man"</li>
+                    <li>&quot;All men are mortal&quot;</li>
+                    <li>&quot;Socrates is a man&quot;</li>
                   </ul>
                   <p className="mt-2">Valid Inference:</p>
-                  <p className="ml-6">"Therefore, Socrates is mortal"</p>
+                  <p className="ml-6">&quot;Therefore, Socrates is mortal&quot;</p>
                 </div>
               </Card>
             </div>
@@ -1135,9 +1135,9 @@ const MathLogicNotes: React.FC = () => {
                 <div className="mt-2 space-y-2">
                   <p>Consider this valid argument:</p>
                   <div className="ml-4 pl-4 border-l-4 border-gray-300">
-                    <p>"All men are mortal."</p>
-                    <p>"Socrates is a man."</p>
-                    <p>"Therefore, Socrates is mortal."</p>
+                    <p>&quot;All men are mortal.&quot;</p>
+                    <p>&quot;Socrates is a man.&quot;</p>
+                    <p>&quot;Therefore, Socrates is mortal.&quot;</p>
                   </div>
                   <p className="mt-2 text-gray-600 dark:text-gray-400">
                     This cannot be expressed adequately in propositional logic, showing its limitations.
@@ -1185,19 +1185,19 @@ const MathLogicNotes: React.FC = () => {
                     <div className="ml-4">
                       <p className="font-semibold mt-2">Unary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>C(x): "x is clever"</li>
-                        <li>M(x): "x is male"</li>
+                        <li>C(x):&quot;x is clever&quot;</li>
+                        <li>M(x):&quot;x is male&quot;</li>
                       </ul>
                       
                       <p className="font-semibold mt-2">Binary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>F(x,y): "x is father of y"</li>
-                        <li>L(x,y): "x is less than y"</li>
+                        <li>F(x,y):&quot;x is father of y&quot;</li>
+                        <li>L(x,y):&quot;x is less than y&quot;</li>
                       </ul>
                       
                       <p className="font-semibold mt-2">Ternary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>B(x,y,z): "x is between y and z"</li>
+                        <li>B(x,y,z):&quot;x is between y and z&quot;</li>
                       </ul>
                     </div>
                   </div>
@@ -1210,15 +1210,15 @@ const MathLogicNotes: React.FC = () => {
                   <div className="mt-2">
                     <p className="font-semibold">Universal Quantifier (∀):</p>
                     <ul className="list-disc ml-6">
-                      <li>"For all" or "For every"</li>
-                      <li>∀x P(x) means "P(x) is true for all values of x"</li>
+                      <li>&quot;For all&quot; or&quot;For every&quot;</li>
+                      <li>∀x P(x) means&quot;P(x) is true for all values of x&quot;</li>
                       <li>False if there exists a counterexample</li>
                     </ul>
                     
                     <p className="font-semibold mt-4">Existential Quantifier (∃):</p>
                     <ul className="list-disc ml-6">
-                      <li>"There exists" or "For some"</li>
-                      <li>∃x P(x) means "There exists an x such that P(x) is true"</li>
+                      <li>&quot;There exists&quot; or&quot;For some&quot;</li>
+                      <li>∃x P(x) means&quot;There exists an x such that P(x) is true&quot;</li>
                       <li>True if there is at least one witness</li>
                     </ul>
                   </div>
@@ -1308,11 +1308,11 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The universal quantification of P(x) is a proposition stating "P(x) is true for all values of x in the universe of discourse"</p>
+                <p>The universal quantification of P(x) is a proposition stating&quot;P(x) is true for all values of x in the universe of discourse&quot;</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
-                    <li>"For all x P(x)" or "For every x P(x)"</li>
+                    <li>&quot;For all x P(x)&quot; or&quot;For every x P(x)&quot;</li>
                     <li>Written as: ∀x P(x)</li>
                   </ul>
                 </div>
@@ -1330,8 +1330,8 @@ const MathLogicNotes: React.FC = () => {
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example:</p>
                 <p>Domain: Natural numbers</p>
-                <p>P(x): "x ≥ 0"</p>
-                <p>∀x P(x) means "All natural numbers are greater than or equal to 0"</p>
+                <p>P(x):&quot;x ≥ 0&quot;</p>
+                <p>∀x P(x) means&quot;All natural numbers are greater than or equal to 0&quot;</p>
                 <p className="mt-2 text-green-600 dark:text-green-400">This is true as every natural number satisfies this property</p>
               </div>
             </div>
@@ -1341,12 +1341,12 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The Existential Quantification of P(x) is a proposition stating "There exists an element x in the universe of discourse such that P(x) is true"</p>
+                <p>The Existential Quantification of P(x) is a proposition stating&quot;There exists an element x in the universe of discourse such that P(x) is true&quot;</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
-                    <li>"There exists x such that P(x)"</li>
-                    <li>"There is at least one x such that P(x)"</li>
+                    <li>&quot;There exists x such that P(x)&quot;</li>
+                    <li>&quot;There is at least one x such that P(x)&quot;</li>
                     <li>Written as: ∃x P(x)</li>
                   </ul>
                 </div>
@@ -1376,7 +1376,7 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">No Free Variables:</p>
-                <p>If "A" doesn't have any free variable x then:</p>
+                <p>If&quot;A&quot; doesn't have any free variable x then:</p>
                 <ul className="list-disc ml-6 space-y-2">
                   <li>∃x A = A</li>
                   <li>∀x A = A</li>
@@ -1434,9 +1434,9 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example:</p>
-                <p>Statement: "All students are clever"</p>
+                <p>Statement:&quot;All students are clever&quot;</p>
                 <p>∀x (Student(x) → Clever(x))</p>
-                <p className="mt-2">Negation: "There exists a student who is not clever"</p>
+                <p className="mt-2">Negation:&quot;There exists a student who is not clever&quot;</p>
                 <p>∃x (Student(x) ∧ ¬Clever(x))</p>
               </Card>
             </div>
@@ -1446,7 +1446,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>∃!x P(x) means "there exists exactly one x such that P(x)"</p>
+                <p>∃!x P(x) means&quot;there exists exactly one x such that P(x)&quot;</p>
                 <p className="mt-2">Equivalent to:</p>
                 <p>∃x (P(x) ∧ ∀y (P(y) → x = y))</p>
               </div>
@@ -1520,7 +1520,7 @@ const MathLogicNotes: React.FC = () => {
                 <p className="mt-2">An interpretation includes:</p>
                 <ul className="list-disc ml-6">
                   <li>Domain (e.g., set of natural numbers)</li>
-                  <li>Meaning of P(x) (e.g., "x is even")</li>
+                  <li>Meaning of P(x) (e.g.,&quot;x is even")</li>
                 </ul>
               </Card>
 

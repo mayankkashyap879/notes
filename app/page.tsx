@@ -1,101 +1,156 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import { ChevronRight, BookOpen } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
-export default function Home() {
+interface SubjectProps {
+  title: string;
+  description: string;
+  topics: Array<{
+    name: string;
+    path: string;
+  }>;
+}
+
+const SubjectCard: React.FC<SubjectProps> = ({ title, description, topics }) => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Card className="p-6 hover:shadow-lg transition-shadow">
+      <div className="flex items-start space-x-4">
+        <div className="mt-1">
+          <BookOpen className="h-6 w-6 text-blue-500" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="flex-1">
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+          <ul className="space-y-2">
+            {topics.map((topic) => (
+              <li key={topic.path}>
+                <Link 
+                  href={topic.path}
+                  className="group flex items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+                >
+                  <ChevronRight className="h-4 w-4 mr-2 transition-transform group-hover:translate-x-1" />
+                  {topic.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Card>
+  );
+};
+
+const CSNotesHome: React.FC = () => {
+  const subjects = [
+    {
+      title: "Engineering Mathematics",
+      description: "Fundamental mathematical concepts essential for computer science",
+      topics: [
+        {
+          name: "Discrete Mathematics",
+          path: "/discrete_mathematics",
+          subtopics: [
+            { name: "Mathematical Logic", path: "/discrete_mathematics/mathematical_logic" },
+            { name: "Set Theory", path: "/discrete_mathematics/set_theory" },
+            { name: "Functions", path: "/discrete_mathematics/functions" },
+            { name: "Group Theory", path: "/discrete_mathematics/group_theory" },
+            { name: "Combinatorics", path: "/discrete_mathematics/combinatorics" },
+            { name: "Graph Theory", path: "/discrete_mathematics/graph_theory" },
+          ]
+        },
+        { name: "Linear Algebra", path: "/linear_algebra" },
+        { name: "Calculus", path: "/calculus" },
+        { name: "Probability and Statistics", path: "/probability_statistics" }
+      ]
+    },
+    {
+      title: "Digital Logic",
+      description: "Understanding digital circuits and boolean algebra",
+      topics: [
+        { name: "Digital Logic Design", path: "/digital_logic" }
+      ]
+    },
+    {
+      title: "Computer Organization and Architecture",
+      description: "Hardware components and system architecture",
+      topics: [
+        { name: "Computer Architecture", path: "/computer_architecture" }
+      ]
+    },
+    {
+      title: "Programming and Data Structures",
+      description: "Programming fundamentals and data organization",
+      topics: [
+        { name: "C Programming", path: "/c_programming" },
+        { name: "Data Structures", path: "/data_structures" }
+      ]
+    },
+    {
+      title: "Algorithms",
+      description: "Design and analysis of algorithms",
+      topics: [
+        { name: "Algorithm Analysis", path: "/algorithms" }
+      ]
+    },
+    {
+      title: "Theory of Computation",
+      description: "Fundamental theory of computational systems",
+      topics: [
+        { name: "Theory of Computation", path: "/theory_of_computation" }
+      ]
+    },
+    {
+      title: "Compiler Design",
+      description: "Principles and practices of compiler construction",
+      topics: [
+        { name: "Compiler Design", path: "/compiler_design" }
+      ]
+    },
+    {
+      title: "Operating Systems",
+      description: "Concepts and implementation of operating systems",
+      topics: [
+        { name: "Operating Systems", path: "/operating_systems" }
+      ]
+    },
+    {
+      title: "Databases",
+      description: "Database management systems and SQL",
+      topics: [
+        { name: "Database Systems", path: "/databases" }
+      ]
+    },
+    {
+      title: "Computer Networks",
+      description: "Network protocols and architecture",
+      topics: [
+        { name: "Computer Networks", path: "/computer_networks" }
+      ]
+    }
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-4">Computer Science Notes</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300">
+          Comprehensive study materials for computer science and engineering
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {subjects.map((subject) => (
+          <SubjectCard
+            key={subject.title}
+            title={subject.title}
+            description={subject.description}
+            topics={subject.topics}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default CSNotesHome;

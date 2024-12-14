@@ -6,13 +6,14 @@ import { Card } from '@/components/ui/card';
 interface SubjectProps {
   title: string;
   description: string;
+  averageMarks: number; // Add this
   topics: Array<{
     name: string;
     path: string;
   }>;
 }
 
-const SubjectCard: React.FC<SubjectProps> = ({ title, description, topics }) => {
+const SubjectCard: React.FC<SubjectProps> = ({ title, description, averageMarks, topics }) => {
   return (
     <Card className="p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start space-x-4">
@@ -21,7 +22,10 @@ const SubjectCard: React.FC<SubjectProps> = ({ title, description, topics }) => 
         </div>
         <div className="flex-1">
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-2">{description}</p>
+          <p className="text-sm font-medium text-green-600 dark:text-gray-400 mb-4">Average Marks:
+            <span className="text-green-600 font-bold"> {averageMarks} Marks</span>
+          </p>
           <ul className="space-y-2">
             {topics.map((topic) => (
               <li key={topic.path}>
@@ -46,19 +50,9 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Engineering Mathematics",
       description: "Fundamental mathematical concepts essential for computer science",
+      averageMarks: 16.15, // Add average marks here
       topics: [
-        {
-          name: "Discrete Mathematics",
-          path: "/discrete_mathematics",
-          subtopics: [
-            { name: "Mathematical Logic", path: "/discrete_mathematics/mathematical_logic" },
-            { name: "Set Theory", path: "/discrete_mathematics/set_theory" },
-            { name: "Functions", path: "/discrete_mathematics/functions" },
-            { name: "Group Theory", path: "/discrete_mathematics/group_theory" },
-            { name: "Combinatorics", path: "/discrete_mathematics/combinatorics" },
-            { name: "Graph Theory", path: "/discrete_mathematics/graph_theory" },
-          ]
-        },
+        { name: "Discrete Mathematics", path: "/discrete_mathematics" },
         { name: "Linear Algebra", path: "/linear_algebra" },
         { name: "Calculus", path: "/calculus" },
         { name: "Probability and Statistics", path: "/probability_statistics" }
@@ -67,6 +61,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Digital Logic",
       description: "Understanding digital circuits and boolean algebra",
+      averageMarks: 6, // Add average marks here
       topics: [
         { name: "Digital Logic Design", path: "/digital_logic" }
       ]
@@ -74,6 +69,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Computer Organization and Architecture",
       description: "Hardware components and system architecture",
+      averageMarks: 7.32, // Add average marks here
       topics: [
         { name: "Computer Architecture", path: "/computer_architecture" }
       ]
@@ -81,6 +77,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Programming and Data Structures",
       description: "Programming fundamentals and data organization",
+      averageMarks: 8.33, // Add average marks here
       topics: [
         { name: "C Programming", path: "/c_programming" },
         { name: "Data Structures", path: "/data_structures" }
@@ -89,6 +86,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Algorithms",
       description: "Design and analysis of algorithms",
+      averageMarks: 7.67, // Add average marks here
       topics: [
         { name: "Algorithm Analysis", path: "/algorithms" }
       ]
@@ -96,6 +94,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Theory of Computation",
       description: "Fundamental theory of computational systems",
+      averageMarks: 8, // Add average marks here
       topics: [
         { name: "Theory of Computation", path: "/theory_of_computation" }
       ]
@@ -103,6 +102,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Compiler Design",
       description: "Principles and practices of compiler construction",
+      averageMarks: 7, // Add average marks here
       topics: [
         { name: "Compiler Design", path: "/compiler_design" }
       ]
@@ -110,6 +110,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Operating Systems",
       description: "Concepts and implementation of operating systems",
+      averageMarks: 8.83, // Add average marks here
       topics: [
         { name: "Operating Systems", path: "/operating_systems" }
       ]
@@ -117,6 +118,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Databases",
       description: "Database management systems and SQL",
+      averageMarks: 7.16, // Add average marks here
       topics: [
         { name: "Database Systems", path: "/databases" }
       ]
@@ -124,6 +126,7 @@ const CSNotesHome: React.FC = () => {
     {
       title: "Computer Networks",
       description: "Network protocols and architecture",
+      averageMarks: 8.67, // Add average marks here
       topics: [
         { name: "Computer Networks", path: "/computer_networks" }
       ]
@@ -145,6 +148,7 @@ const CSNotesHome: React.FC = () => {
             key={subject.title}
             title={subject.title}
             description={subject.description}
+            averageMarks={subject.averageMarks} // Pass average marks
             topics={subject.topics}
           />
         ))}

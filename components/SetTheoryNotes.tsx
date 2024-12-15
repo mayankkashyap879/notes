@@ -286,8 +286,8 @@ const SetTheoryNotes: React.FC = () => {
               <Card className="p-4">
                 <p className="font-semibold">Definition:</p>
                 <p>The Universal set U is the set containing everything currently under consideration. Content depends on context and must be explicitly defined.</p>
-                <div className="mt-4">
-                  <p className="font-semibold">Examples of Context:</p>
+                <div className="mt-4 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                  <p className="font-semibold">Examples of Universal Sets:</p>
                   <ul className="list-disc ml-6">
                     <li>For vowels: U = {'{a, e, i, o, u}'}</li>
                     <li>For natural numbers: U = N</li>
@@ -347,18 +347,18 @@ const SetTheoryNotes: React.FC = () => {
               </Card>
 
               <Card className="p-4">
-              <p className="font-semibold">Complement (Ā or A′):</p>
-              <div className="mt-2">
-                <p>Definition: Ā = {'{x ∈ U | x ∉ A}'}</p>
-                <p className="mt-2">Properties:</p>
-                <ul className="list-disc ml-6">
-                  <li>Ā = U − A</li>
-                  <li><span style={{textDecoration: "overline"}}>Ā</span> = A (Double Complement)</li>
-                  <li><span style={{textDecoration: "overline"}}>∅</span> = U</li>
-                  <li><span style={{textDecoration: "overline"}}>U</span> = ∅</li>
-                </ul>
-              </div>
-            </Card>
+                <p className="font-semibold">Complement (Ā or A′):</p>
+                <div className="mt-2">
+                  <p>Definition: Ā = {'{x ∈ U | x ∉ A}'}</p>
+                  <p className="mt-2">Properties:</p>
+                  <ul className="list-disc ml-6">
+                    <li>Ā = U − A</li>
+                    <li><span style={{textDecoration: "overline"}}>Ā</span> = A (Double Complement)</li>
+                    <li><span style={{textDecoration: "overline"}}>∅</span> = U</li>
+                    <li><span style={{textDecoration: "overline"}}>U</span> = ∅</li>
+                  </ul>
+                </div>
+              </Card>
             </div>
           </SubSection>
 
@@ -383,7 +383,7 @@ const SetTheoryNotes: React.FC = () => {
           <SubSection title="Set Identities">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">De Morgan&apos;s Laws:</p>
+                <p className="font-semibold">De Morgan's Laws:</p>
                 <ul className="list-disc ml-6">
                   <li>(A ∪ B)̄ = Ā ∩ B̄</li>
                   <li>(A ∩ B)̄ = Ā ∪ B̄</li>
@@ -412,7 +412,7 @@ const SetTheoryNotes: React.FC = () => {
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Method 1: Element Method</p>
-                <p className="mt-2">To prove A = B:</p>
+                <p>To prove A = B:</p>
                 <ol className="list-decimal ml-6">
                   <li>Show x ∈ A ⟹ x ∈ B</li>
                   <li>Show x ∈ B ⟹ x ∈ A</li>
@@ -421,7 +421,7 @@ const SetTheoryNotes: React.FC = () => {
 
               <Card className="p-4">
                 <p className="font-semibold">Method 2: Set Containment</p>
-                <p className="mt-2">To prove A = B:</p>
+                <p>To prove A = B:</p>
                 <ol className="list-decimal ml-6">
                   <li>Show A ⊆ B</li>
                   <li>Show B ⊆ A</li>
@@ -461,159 +461,160 @@ const SetTheoryNotes: React.FC = () => {
       </Section>
 
       <Section title="4. Ordered Pairs and Cartesian Product">
-        <div className="space-y-6">
-          <SubSection title="Ordered Pairs">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Definition:</p>
-                <p>An ordered pair (a, b) is a sequence of two elements where:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>Order matters: (a, b) ≠ (b, a) if a ≠ b</li>
-                  <li>Repetition is allowed: (a, a) is a valid ordered pair</li>
-                  <li>Two ordered pairs (a, b) and (c, d) are equal if and only if a = c and b = d</li>
-                </ul>
-              </Card>
+      <div className="space-y-6">
+        <SubSection title="Ordered Pairs">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Definition:</p>
+              <p>An ordered pair (a, b) is a sequence of two elements where:</p>
+              <ul className="list-disc ml-6 mt-2">
+                <li>Order matters: (a, b) ≠ (b, a) if a ≠ b</li>
+                <li>Repetition is allowed: (a, a) is a valid ordered pair</li>
+                <li>Two ordered pairs (a, b) and (c, d) are equal if and only if a = c and b = d</li>
+              </ul>
+            </Card>
 
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Comparison with Sets:</p>
-                <div className="mt-2">
-                  <table className="w-full">
-                    <thead>
-                      <tr>
-                        <th className="border p-2">Property</th>
-                        <th className="border p-2">Sets</th>
-                        <th className="border p-2">Ordered Pairs</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border p-2">Order</td>
-                        <td className="border p-2">{'{a, b}'} = {'{b, a}'}</td>
-                        <td className="border p-2">(a, b) ≠ (b, a)</td>
-                      </tr>
-                      <tr>
-                        <td className="border p-2">Repetition</td>
-                        <td className="border p-2">{'{a, a}'} = {'{a}'}</td>
-                        <td className="border p-2">(a, a) is distinct</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <p className="font-semibold">Comparison with Sets:</p>
+              <div className="mt-2">
+                <table className="w-full">
+                  <thead>
+                    <tr>
+                      <th className="border p-2">Property</th>
+                      <th className="border p-2">Sets</th>
+                      <th className="border p-2">Ordered Pairs</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border p-2">Order</td>
+                      <td className="border p-2">{'{a, b}'} = {'{b, a}'}</td>
+                      <td className="border p-2">(a, b) ≠ (b, a)</td>
+                    </tr>
+                    <tr>
+                      <td className="border p-2">Repetition</td>
+                      <td className="border p-2">{'{a, a}'} = {'{a}'}</td>
+                      <td className="border p-2">(a, a) is distinct</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-          </SubSection>
+          </div>
+        </SubSection>
 
-          <SubSection title="Structures with Order">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Different Types of Structures:</p>
-                <ul className="list-disc ml-6">
-                  <li className="mb-2">
-                    <span className="font-medium">Set (finite or infinite):</span>
-                    <ul className="list-disc ml-6 mt-1">
-                      <li>Order doesn&apos;t matter</li>
-                      <li>Repetition doesn&apos;t matter</li>
-                      <li>Example: {'{1, 2, 3}'} = {'{3, 1, 2}'}</li>
-                    </ul>
-                  </li>
-                  <li className="mb-2">
-                    <span className="font-medium">Ordered n-tuple (finite):</span>
-                    <ul className="list-disc ml-6 mt-1">
-                      <li>Order matters</li>
-                      <li>Repetition matters</li>
-                      <li>Example: (1, 2, 3) ≠ (3, 1, 2)</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="font-medium">Sequence (finite or infinite):</span>
-                    <ul className="list-disc ml-6 mt-1">
-                      <li>Order matters</li>
-                      <li>Repetition matters</li>
-                      <li>Can be infinite</li>
-                      <li>Notation: ⟨1, 2, 3, ...⟩</li>
-                    </ul>
-                  </li>
-                </ul>
-              </Card>
+        <SubSection title="Structures with Order">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Different Types of Structures:</p>
+              <ul className="list-disc ml-6">
+                <li className="mb-2">
+                  <span className="font-medium">Set (finite or infinite):</span>
+                  <ul className="list-disc ml-6 mt-1">
+                    <li>Order doesn't matter</li>
+                    <li>Repetition doesn't matter</li>
+                    <li>Example: {'{1, 2, 3}'} = {'{3, 1, 2}'}</li>
+                  </ul>
+                </li>
+                <li className="mb-2">
+                  <span className="font-medium">Ordered n-tuple (finite):</span>
+                  <ul className="list-disc ml-6 mt-1">
+                    <li>Order matters</li>
+                    <li>Repetition matters</li>
+                    <li>Example: (1, 2, 3) ≠ (3, 1, 2)</li>
+                  </ul>
+                </li>
+                <li>
+                  <span className="font-medium">Sequence (finite or infinite):</span>
+                  <ul className="list-disc ml-6 mt-1">
+                    <li>Order matters</li>
+                    <li>Repetition matters</li>
+                    <li>Can be infinite</li>
+                    <li>Notation: ⟨1, 2, 3, ...⟩</li>
+                  </ul>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </SubSection>
+
+        <SubSection title="Cartesian Product">
+          <div className="space-y-4">
+            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <p className="font-semibold">Definition:</p>
+              <ul className="list-disc ml-6">
+                <li>A × B = {'{(x,y) | x ∈ A and y ∈ B}'}</li>
+                <li>B × A = {'{(x,y) | x ∈ B and y ∈ A}'}</li>
+              </ul>
+              <p className="mt-4">General form for n sets:</p>
+              <p className="ml-6">A₁ × A₂ × ... × Aₙ = {'{(x₁, x₂, ..., xₙ) | xᵢ ∈ Aᵢ}'}</p>
             </div>
-          </SubSection>
 
-          <SubSection title="Cartesian Product">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Definition:</p>
-                <ul className="list-disc ml-6">
-                  <li>A × B = {'{(x,y) | x ∈ A and y ∈ B}'}</li>
-                  <li>B × A = {'{(x,y) | x ∈ B and y ∈ A}'}</li>
-                </ul>
-                <p className="mt-4">General form for n sets:</p>
-                <p className="ml-6">A₁ × A₂ × ... × Aₙ = {'{(x₁, x₂, ..., xₙ) | xᵢ ∈ Aᵢ}'}</p>
-              </div>
+            <Card className="p-4">
+              <p className="font-semibold">Properties:</p>
+              <ul className="list-disc ml-6">
+                <li>|A × B| = |A| × |B| where |A| and |B| are cardinalities</li>
+                <li>A × ∅ = ∅</li>
+                <li>A × B = B × A only if A = B or one is empty</li>
+                <li>Not associative: (A × B) × C ≠ A × (B × C)</li>
+                <li>Not commutative: A × B ≠ B × A in general</li>
+              </ul>
+            </Card>
 
-              <Card className="p-4">
-                <p className="font-semibold">Properties:</p>
-                <ul className="list-disc ml-6">
-                  <li>|A × B| = |A| × |B| where |A| and |B| are cardinalities</li>
-                  <li>A × ∅ = ∅</li>
-                  <li>A × B = B × A only if A = B or one is empty</li>
-                  <li>Not associative: (A × B) × C ≠ A × (B × C)</li>
-                  <li>Not commutative: A × B ≠ B × A in general</li>
-                </ul>
-              </Card>
-
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-                <p className="font-semibold">Special Cases:</p>
-                <p>For set {'{1, 2}'} and exponent n:</p>
-                <ul className="list-disc ml-6">
-                  <li>n = 2: {'{(1,1), (1,2), (2,1), (2,2)}'}</li>
-                  <li>n = 3: {'{(1,1,1), (1,1,2), (1,2,1), ..., (2,2,2)}'}</li>
-                  <li>General case: {'{1, 2}'}<sup>n</sup> = set of all n-tuples of 1s and 2s</li>
-                  <li>|{'{1, 2}'}<sup>n</sup>| = 2<sup>n</sup></li>
-                </ul>
-              </div>
-
-              <Card className="p-4">
-                <p className="font-semibold">Examples:</p>
-                <ul className="list-disc ml-6">
-                  <li>A = {'{1, 2}'}, B = {'{a, b}'}</li>
-                  <li>A × B = {'{(1,a), (1,b), (2,a), (2,b)}'}</li>
-                  <li>B × A = {'{(a,1), (a,2), (b,1), (b,2)}'}</li>
-                  <li>|A × B| = |A| × |B| = 2 × 2 = 4</li>
-                </ul>
-              </Card>
+            <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <p className="font-semibold">Special Cases:</p>
+              <p>For set {'{1, 2}'} and exponent n:</p>
+              <ul className="list-disc ml-6">
+                <li>n = 2: {'{(1,1), (1,2), (2,1), (2,2)}'}</li>
+                <li>n = 3: {'{(1,1,1), (1,1,2), (1,2,1), ..., (2,2,2)}'}</li>
+                <li>General case: {'{1, 2}'}<sup>n</sup> = set of all n-tuples of 1s and 2s</li>
+                <li>|{'{1, 2}'}<sup>n</sup>| = 2<sup>n</sup></li>
+              </ul>
             </div>
-          </SubSection>
-        </div>
+
+            <Card className="p-4">
+              <p className="font-semibold">Examples:</p>
+              <ul className="list-disc ml-6">
+                <li>A = {'{1, 2}'}, B = {'{a, b}'}</li>
+                <li>A × B = {'{(1,a), (1,b), (2,a), (2,b)}'}</li>
+                <li>B × A = {'{(a,1), (a,2), (b,1), (b,2)}'}</li>
+                <li>|A × B| = |A| × |B| = 2 × 2 = 4</li>
+              </ul>
+            </Card>
+          </div>
+        </SubSection>
+      </div>
       </Section>
 
       <Section title="5. Relations">
         <div className="space-y-6">
-          <SubSection title="Binary Relations">
+          <SubSection title="Binary Relations - Formal Definition">
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Definition:</p>
-                <p>A binary relation R between sets A and B is a subset of their Cartesian product A × B. For elements a ∈ A and b ∈ B, we write:</p>
+                <p>A binary relation R between sets A and B is a subset of their Cartesian product A × B. We denote this as:</p>
                 <ul className="list-disc ml-6 mt-2">
-                  <li>(a, b) ∈ R or aRb to indicate a is related to b</li>
+                  <li>R ⊆ A × B</li>
+                  <li>(a, b) ∈ R or aRb indicates a is related to b</li>
                   <li>R: A → B denotes a relation from A to B</li>
-                  <li>R ⊆ A × B defines the relation formally</li>
                 </ul>
-                <div className="mt-4">
+                
+                <div className="mt-4 bg-gray-50 dark:bg-gray-800 p-4 rounded">
                   <p className="font-semibold">Important Properties:</p>
                   <ul className="list-disc ml-6">
-                    <li>One-way: aRb doesn&apos;t imply bRa</li>
-                    <li>Two-way: Some relations work in both directions</li>
-                    <li>On same set: R: A → A (relation on A)</li>
+                    <li>Relations can be one-way (aRb doesn't imply bRa)</li>
+                    <li>Relations can work in both directions</li>
+                    <li>A relation on a set A means R: A → A</li>
                   </ul>
                 </div>
               </Card>
 
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Examples:</p>
+                <p className="font-semibold">Standard Examples:</p>
                 <ul className="list-disc ml-6">
-                  <li>&quot;Less than&quot; on real numbers: R = {'{(x,y) ∈ R × R | x < y}'}</li>
-                  <li>&quot;Divides&quot; on integers: R = {'{(x,y) ∈ Z × Z | x|y}'}</li>
-                  <li>&quot;Subset&quot; on power set: R = {'{(X,Y) ∈ P(A) × P(A) | X ⊆ Y}'}</li>
+                  <li>"Less than" on real numbers: R = {'{(x,y) ∈ R × R | x < y}'}</li>
+                  <li>"Divides" on integers: R = {'{(x,y) ∈ Z × Z | x|y}'}</li>
+                  <li>"Subset" on power set: R = {'{(X,Y) ∈ P(A) × P(A) | X ⊆ Y}'}</li>
                 </ul>
               </div>
             </div>
@@ -661,7 +662,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>If a relates to b, then b relates to a</li>
                   <li>Matrix: Symmetric about diagonal</li>
                   <li>Graph: If edge a→b exists, b→a exists</li>
-                  <li>Example: &quot;is sibling of&quot;</li>
+                  <li>Example: "is sibling of"</li>
                 </ul>
               </Card>
 
@@ -681,7 +682,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>Definition: ∀x,y,z∈A((xRy ∧ yRz) → xRz)</li>
                   <li>If a relates to b and b relates to c, then a relates to c</li>
                   <li>Graph: If paths a→b and b→c exist, a→c exists</li>
-                  <li>Example: &quot;ancestor of&quot;</li>
+                  <li>Example: "ancestor of"</li>
                 </ul>
               </Card>
             </div>
@@ -732,114 +733,112 @@ const SetTheoryNotes: React.FC = () => {
       </Section>
 
       <Section title="6. Equivalence Relations and Partitions">
-        <div className="space-y-6">
-          <SubSection title="Equivalence Relations">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Definition and Properties:</p>
-                <p>Given the properties discussed in Section 5, a relation R on a set A becomes an equivalence relation when it satisfies all three:</p>
-                <ul className="list-disc ml-6">
-                  <li>Reflexivity: ∀x∈A(xRx)</li>
-                  <li>Symmetry: ∀x,y∈A(xRy → yRx)</li>
-                  <li>Transitivity: ∀x,y,z∈A((xRy ∧ yRz) → xRz)</li>
-                </ul>
-              </Card>
+        <SubSection title="Equivalence Relations">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Definition:</p>
+              <p>A relation R on a set A is an equivalence relation if and only if R satisfies all three properties:</p>
+              <ul className="list-disc ml-6 mt-2">
+                <li>Reflexivity: ∀x∈A(xRx)</li>
+                <li>Symmetry: ∀x,y∈A(xRy → yRx)</li>
+                <li>Transitivity: ∀x,y,z∈A((xRy ∧ yRz) → xRz)</li>
+              </ul>
+            </Card>
 
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Common Examples:</p>
+            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <p className="font-semibold">Common Examples:</p>
+              <ul className="list-disc ml-6">
+                <li>Congruence modulo n: aRb ⟺ n|(a-b)</li>
+                <li>Equal length strings: xRy ⟺ length(x) = length(y)</li>
+                <li>Similar triangles: xRy ⟺ x is similar to y</li>
+                <li>Parallel lines: lRm ⟺ l is parallel to m</li>
+              </ul>
+            </div>
+          </div>
+        </SubSection>
+
+        <SubSection title="Equivalence Classes">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Definition:</p>
+              <p>For an equivalence relation R on set A and an element a∈A, the equivalence class of a is:</p>
+              <p className="ml-4 mt-2 font-mono">[a]ᴿ = {'{x∈A | xRa}'}</p>
+              <div className="mt-4">
+                <p className="font-semibold">Key Properties:</p>
                 <ul className="list-disc ml-6">
-                  <li>Congruence modulo n: aRb ⟺ n|(a-b)</li>
-                  <li>Same length strings: xRy ⟺ length(x) = length(y)</li>
-                  <li>Similar triangles: xRy ⟺ x is similar to y</li>
-                  <li>Parallel lines: lRm ⟺ l is parallel to m</li>
+                  <li>∀a,b∈A: aRb ⟺ [a]ᴿ = [b]ᴿ</li>
+                  <li>∀a,b∈A: [a]ᴿ ∩ [b]ᴿ = ∅ or [a]ᴿ = [b]ᴿ</li>
+                  <li>⋃{'{[a]ᴿ | a∈A}'} = A</li>
                 </ul>
               </div>
+            </Card>
+
+            <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <p className="font-semibold">Example:</p>
+              <p>For R = "congruence modulo 3" on Z:</p>
+              <ul className="list-disc ml-6">
+                <li>[0]ᴿ = {'{..., -3, 0, 3, 6, ...}'}</li>
+                <li>[1]ᴿ = {'{..., -2, 1, 4, 7, ...}'}</li>
+                <li>[2]ᴿ = {'{..., -1, 2, 5, 8, ...}'}</li>
+              </ul>
             </div>
-          </SubSection>
+          </div>
+        </SubSection>
 
-          <SubSection title="Equivalence Classes">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Definition:</p>
-                <p>For an equivalence relation R on set A and an element a∈A, the equivalence class of a is:</p>
-                <p className="ml-4 mt-2">[a]ᴿ = {'{x∈A | xRa}'}</p>
-                <div className="mt-4">
-                  <p className="font-semibold">Key Properties:</p>
-                  <ul className="list-disc ml-6">
-                    <li>∀a,b∈A: aRb ⟺ [a]ᴿ = [b]ᴿ</li>
-                    <li>∀a,b∈A: [a]ᴿ ∩ [b]ᴿ = ∅ or [a]ᴿ = [b]ᴿ</li>
-                    <li>⋃{'{[a]ᴿ | a∈A}'} = A</li>
-                  </ul>
-                </div>
-              </Card>
+        <SubSection title="Partitions">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Definition:</p>
+              <p>A partition of set S is a collection of non-empty subsets {'{A₁, A₂, ..., Aₙ}'} where:</p>
+              <ul className="list-disc ml-6">
+                <li>∀i(Aᵢ ≠ ∅) (no empty subsets)</li>
+                <li>∀i,j(i≠j → Aᵢ ∩ Aⱼ = ∅) (pairwise disjoint)</li>
+                <li>⋃Aᵢ = S (covers all of S)</li>
+              </ul>
+            </Card>
 
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-                <p className="font-semibold">Example:</p>
-                <p>For R = &quot;congruence modulo 3&quot; on Z:</p>
-                <ul className="list-disc ml-6">
-                  <li>[0]ᴿ = {'{..., -3, 0, 3, 6, ...}'}</li>
-                  <li>[1]ᴿ = {'{..., -2, 1, 4, 7, ...}'}</li>
-                  <li>[2]ᴿ = {'{..., -1, 2, 5, 8, ...}'}</li>
-                </ul>
-              </div>
+            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <p className="font-semibold">Relationship to Equivalence Relations:</p>
+              <ul className="list-disc ml-6">
+                <li>Every equivalence relation induces a partition (via equivalence classes)</li>
+                <li>Every partition determines an equivalence relation</li>
+                <li>There is a one-to-one correspondence between equivalence relations and partitions</li>
+              </ul>
             </div>
-          </SubSection>
 
-          <SubSection title="Partitions">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Definition:</p>
-                <p>A partition of set S is a collection of non-empty subsets {'{A₁, A₂, ..., Aₙ}'} where:</p>
-                <ul className="list-disc ml-6">
-                  <li>∀i(Aᵢ ≠ ∅) (no empty subsets)</li>
-                  <li>∀i,j(i≠j → Aᵢ ∩ Aⱼ = ∅) (pairwise disjoint)</li>
-                  <li>⋃Aᵢ = S (covers all of S)</li>
-                </ul>
-              </Card>
+            <Card className="p-4">
+              <p className="font-semibold">Counting Partitions:</p>
+              <p>For a set with n elements:</p>
+              <ul className="list-disc ml-6">
+                <li>Number of different partitions = Bell number Bₙ</li>
+                <li>Bell numbers: B₁=1, B₂=2, B₃=5, B₄=15, B₅=52, ...</li>
+                <li>Bell triangle construction:
+                  <p className="mt-1 ml-4 font-mono">
+                    1<br/>
+                    1 2<br/>
+                    2 3 5<br/>
+                    5 7 10 15
+                  </p>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </SubSection>
 
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Relationship to Equivalence Relations:</p>
-                <ul className="list-disc ml-6">
-                  <li>Every equivalence relation induces a partition (via equivalence classes)</li>
-                  <li>Every partition determines an equivalence relation</li>
-                  <li>There is a one-to-one correspondence between equivalence relations and partitions</li>
-                </ul>
-              </div>
-
-              <Card className="p-4">
-                <p className="font-semibold">Counting Partitions:</p>
-                <p>For a set with n elements:</p>
-                <ul className="list-disc ml-6">
-                  <li>Number of different partitions = Bell number Bₙ</li>
-                  <li>Bell numbers: B₁=1, B₂=2, B₃=5, B₄=15, B₅=52, ...</li>
-                  <li>Bell triangle construction:
-                    <p className="mt-1 ml-4">
-                      1<br/>
-                      1 2<br/>
-                      2 3 5<br/>
-                      5 7 10 15
-                    </p>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Applications">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Common Uses:</p>
-                <ul className="list-disc ml-6">
-                  <li>Classification of objects</li>
-                  <li>Decomposition of sets into disjoint classes</li>
-                  <li>Modular arithmetic</li>
-                  <li>Pattern recognition</li>
-                  <li>Database indexing and grouping</li>
-                </ul>
-              </Card>
-            </div>
-          </SubSection>
-        </div>
+        <SubSection title="Applications">
+          <div className="space-y-4">
+            <Card className="p-4">
+              <p className="font-semibold">Common Uses:</p>
+              <ul className="list-disc ml-6">
+                <li>Classification of objects</li>
+                <li>Decomposition of sets into disjoint classes</li>
+                <li>Modular arithmetic</li>
+                <li>Pattern recognition</li>
+                <li>Database indexing and grouping</li>
+              </ul>
+            </Card>
+          </div>
+        </SubSection>
       </Section>
 
       <Section title="7. Partial Order Relations">
@@ -847,21 +846,23 @@ const SetTheoryNotes: React.FC = () => {
           <div className="space-y-4">
             <Card className="p-4">
               <p className="font-semibold">Ordering in Sets:</p>
-              <ul className="list-disc ml-6">
+              <p className="mt-2">Partial orders naturally arise in many contexts:</p>
+              <ul className="list-disc ml-6 mt-2">
                 <li>Dictionary ordering of words</li>
-                <li>Project task dependencies</li>
+                <li>Tasks in a project (dependencies)</li>
                 <li>Natural numbers under ≤ relation</li>
                 <li>Set containment under ⊆ relation</li>
+                <li>Divisibility relation among integers</li>
               </ul>
             </Card>
 
             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-              <p className="font-semibold">Example: GATE Course Prerequisites</p>
-              <ul className="list-disc ml-6">
-                <li>DM → TOC → CD (Discrete Math before Theory of Computation)</li>
-                <li>DLD → CO → OS (Digital Logic before Computer Organization)</li>
-                <li>FM (Fundamental Mathematics - independent)</li>
-                <li>GA (General Aptitude - independent)</li>
+              <p className="font-semibold">Example: Course Prerequisites</p>
+              <ul className="list-disc ml-6 mt-2">
+                <li>Discrete Math → Theory of Computation → Compiler Design</li>
+                <li>Digital Logic → Computer Organization → Operating Systems</li>
+                <li>Foundation Mathematics (independent)</li>
+                <li>General Aptitude (independent)</li>
                 <p className="mt-2 italic">Note: Not all subjects have defined relationships (partial order)</p>
               </ul>
             </div>
@@ -872,7 +873,7 @@ const SetTheoryNotes: React.FC = () => {
           <div className="space-y-4">
             <Card className="p-4">
               <p className="font-semibold">Definition:</p>
-              <p>A relation R on a set A is a partial order if and only if R is:</p>
+              <p className="mt-2">A relation R on a set A is a partial order if and only if R is:</p>
               <ul className="list-disc ml-6 mt-2">
                 <li>Reflexive: ∀x∈A(xRx)</li>
                 <li>Antisymmetric: ∀x,y∈A((xRy ∧ yRx) → x=y)</li>
@@ -1000,7 +1001,7 @@ const SetTheoryNotes: React.FC = () => {
 
       <Section title="8. Lattice Theory">
         <div className="space-y-6">
-          <SubSection title="8.1 Basic Definitions and Concepts">
+          <SubSection title="Basic Definitions and Concepts">
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Definition:</p>
@@ -1024,7 +1025,7 @@ const SetTheoryNotes: React.FC = () => {
             </div>
           </SubSection>
 
-          <SubSection title="8.2 Fundamental Properties">
+          <SubSection title="Fundamental Properties">
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Basic Properties (ICAA):</p>
@@ -1058,7 +1059,7 @@ const SetTheoryNotes: React.FC = () => {
             </div>
           </SubSection>
 
-          <SubSection title="8.3 Types of Lattices">
+          <SubSection title="Types of Lattices">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold mb-2">1. Bounded Lattice:</p>
@@ -1099,7 +1100,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="mt-2">
                   <p className="font-semibold">Key Theorems:</p>
                   <ul className="list-disc ml-6">
-                    <li>No &quot;kite&quot; or &quot;pentagon&quot; sublattice exists in distributive lattices</li>
+                    <li>No "kite" or "pentagon" sublattice exists in distributive lattices</li>
                     <li>If |L| ≤ 4, then L is definitely distributive</li>
                     <li>In distributive lattices, elements have at most one complement</li>
                   </ul>
@@ -1133,7 +1134,7 @@ const SetTheoryNotes: React.FC = () => {
             </div>
           </SubSection>
 
-          <SubSection title="8.4 Divisibility Lattices">
+          <SubSection title="Divisibility Lattices">
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Definition:</p>

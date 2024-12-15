@@ -2,9 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import MathLogicNotes from '@/components/MathLogicNotes';
+import SetTheoryNotes from '@/components/SetTheoryNotes';
 
-export default function MathematicalLogicPage() {
+export default function SetTheoryPage() {
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -19,13 +19,13 @@ export default function MathematicalLogicPage() {
         </div>
 
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">Mathematical Logic</h1>
+          <h1 className="text-4xl font-bold mb-4">Set Theory</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Study of formal logic, propositions, predicates, and logical reasoning techniques
+            Fundamental concepts of sets, set operations, relations, and functions
           </p>
-        </div>
 
-        <MathLogicNotes />
+            <SetTheoryNotes />
+        </div>
       </div>
     </div>
   );

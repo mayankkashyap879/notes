@@ -48,8 +48,6 @@ const SubSection: React.FC<SubSectionProps> = ({ title, children }) => {
 const MathLogicNotes: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-center">Mathematical Logic Notes</h1>
-
       <Section title="1. Introduction to Mathematical Logic">
         <div className="space-y-4">
           <p className="text-lg">Mathematical logic provides precise, unambiguous meaning to mathematical statements, theorems, and proofs.</p>

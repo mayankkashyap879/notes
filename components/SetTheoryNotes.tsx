@@ -69,8 +69,8 @@ const SetTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Membership:</p>
                 <p>For S = {'{a, b, c}'}</p>
                 <ul className="list-disc ml-6 mt-2">
-                  <li>a ∈ S (element "a" belongs to set S)</li>
-                  <li>d ∉ S (element "d" is not in set S)</li>
+                  <li>a ∈ S (element &quot;a&quot; belongs to set S)</li>
+                  <li>d ∉ S (element &quot;d&quot; is not in set S)</li>
                   <li>∈ is called set membership symbol</li>
                 </ul>
               </div>
@@ -265,7 +265,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>Commutative laws: A ∪ B = B ∪ A</li>
                   <li>Associative laws: (A ∪ B) ∪ C = A ∪ (B ∪ C)</li>
                   <li>Distributive laws</li>
-                  <li>De Morgan's laws</li>
+                  <li>De Morgan&apos;s laws</li>
                 </ul>
               </div>
             </div>
@@ -287,7 +287,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="mt-2">
                   <p className="font-semibold">Comparison with Sets:</p>
                   <ul className="list-disc ml-6">
-                    <li>Sets: Order doesn't matter, repetition doesn't matter</li>
+                    <li>Sets: Order doesn&apos;t matter, repetition doesn&apos;t matter</li>
                     <li>Ordered pairs: Order matters, repetition matters</li>
                   </ul>
                 </div>
@@ -296,7 +296,7 @@ const SetTheoryNotes: React.FC = () => {
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Structures with Order:</p>
                 <ul className="list-disc ml-6">
-                  <li>Set (finite or infinite): Order doesn't matter, repetition doesn't matter</li>
+                  <li>Set (finite or infinite): Order doesn&apos;t matter, repetition doesn&apos;t matter</li>
                   <li>Ordered n-tuple (finite): Order matters, repetition matters</li>
                   <li>Sequence (finite or infinite): Order matters, repetition matters</li>
                 </ul>
@@ -352,7 +352,7 @@ const SetTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Important Properties:</p>
                 <p>Relations may be:</p>
                 <ul className="list-disc ml-6">
-                  <li>One-way: aRb doesn't imply bRa</li>
+                  <li>One-way: aRb doesn&apos;t imply bRa</li>
                   <li>Two-way: Some relations work in both directions</li>
                   <li>Defined between same set: R: A → A</li>
                 </ul>
@@ -381,7 +381,7 @@ const SetTheoryNotes: React.FC = () => {
                 <ul className="list-disc ml-6">
                   <li>Domain and codomain are the same set</li>
                   <li>R ⊆ A × A</li>
-                  <li>Called a relation "on" set A</li>
+                  <li>Called a relation &quot;on&quot; set A</li>
                 </ul>
               </div>
 
@@ -419,7 +419,7 @@ const SetTheoryNotes: React.FC = () => {
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Definition:</p>
-                <p>If every element is related to itself, it's a reflexive relation.</p>
+                <p>If every element is related to itself, it&apos;s a reflexive relation.</p>
                 <div className="mt-2">
                   <p>For relation R on set A:</p>
                   <ul className="list-disc ml-6">
@@ -474,7 +474,7 @@ const SetTheoryNotes: React.FC = () => {
               <Card className="p-4">
                 <p className="font-semibold">Alternate Definition:</p>
                 <p>∀a,b∈A((b R a ∧ a R b) → b = a)</p>
-                <p className="mt-2">Two elements cannot be related in both directions unless they're the same element</p>
+                <p className="mt-2">Two elements cannot be related in both directions unless they&apos;re the same element</p>
               </Card>
             </div>
           </SubSection>
@@ -489,7 +489,7 @@ const SetTheoryNotes: React.FC = () => {
 
               <Card className="p-4">
                 <p className="font-semibold">Graph Representation:</p>
-                <p>In a graph, if there's a path from a to b and b to c, there must be a direct path from a to c</p>
+                <p>In a graph, if there&apos;s a path from a to b and b to c, there must be a direct path from a to c</p>
               </Card>
             </div>
           </SubSection>
@@ -890,7 +890,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
                 <p>A lattice is complemented if and only if every element has at least one complement.</p>
-                <p>For an element "a", a complement "b" satisfies:</p>
+                <p>For an element &quot;a&quot;, a complement &quot;b&quot; satisfies:</p>
                 <ul className="list-disc ml-6">
                     <li>a ∨ b = 1</li>
                     <li>a ∧ b = 0</li>
@@ -922,7 +922,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Theorem:</p>
                 <ul className="list-disc ml-6">
-                    <li>If a "kite" or "pentagon" sublattice exists, then the lattice is not distributive</li>
+                    <li>If a &quot;kite&quot; or &quot;pentagon&quot; sublattice exists, then the lattice is not distributive</li>
                     <li>If |L| ≤ 4, then it is definitely distributive</li>
                     <li>If distributive, then at most one complement per element</li>
                 </ul>
@@ -949,8 +949,8 @@ const SetTheoryNotes: React.FC = () => {
                     <li>It has the same structure as (P(A), ⊆)</li>
                     <li>Examples of Boolean lattices:
                     <ul className="list-disc ml-6">
-                        <li>1 element = "{'{∅}'}"</li>
-                        <li>2 elements = "{'∅, {1}'}"</li>
+                        <li>1 element = &quot;{'{∅}'}&quot;</li>
+                        <li>2 elements = &quot;{'∅, {1}'}&quot;</li>
                         <li>3 elements = impossible</li>
                         <li>4 elements = possible</li>
                     </ul>

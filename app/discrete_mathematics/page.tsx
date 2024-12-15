@@ -111,17 +111,6 @@ const DiscreteMathPage: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <div className="mt-12">
-        <Card className="p-6 bg-gray-50 dark:bg-gray-800/50">
-          <h2 className="text-2xl font-semibold mb-4">Prerequisites</h2>
-          <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300">
-            <li>Basic mathematical maturity</li>
-            <li>Understanding of algebraic concepts</li>
-            <li>Familiarity with basic set notation</li>
-          </ul>
-        </Card>
-      </div>
     </div>
   );
 };

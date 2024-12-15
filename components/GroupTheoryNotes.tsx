@@ -1,6 +1,6 @@
 'use client';
 import React, { ReactNode, useState } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { ChevronRight, ChevronDown } from 'lucide-react';
 
 interface SectionProps {
@@ -72,7 +72,7 @@ const GroupTheoryNotes: React.FC = () => {
               <p>Group theory was discovered by Évariste Galois while studying polynomial equations.</p>
               
               <Card className="p-4">
-                <p className="font-semibold">Galois's Key Contributions:</p>
+                <p className="font-semibold">Galois&apos;s Key Contributions:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Developed while studying polynomials of different degrees</li>
                   <li>Proved there is no formula for finding roots of degree 5 polynomials</li>
@@ -154,7 +154,7 @@ const GroupTheoryNotes: React.FC = () => {
                   <li>Formally written as # : S × S → S</li>
                   <li>Maps two elements of set to one value in same set</li>
                   <li>Must satisfy closure property by definition</li>
-                  <li>Different from normal math where it's just operation between two operands</li>
+                  <li>Different from normal math where it&apos;s just operation between two operands</li>
                 </ul>
               </div>
 
@@ -245,9 +245,9 @@ const GroupTheoryNotes: React.FC = () => {
 
               <Card className="p-4">
                 <p className="font-semibold">Important Note:</p>
-                <p>When operation "*" is NOT associative:</p>
+                <p>When operation &quot;*&quot; is NOT associative:</p>
                 <ul className="list-disc ml-6">
-                  <li>Cannot write a * b * c because it's ambiguous</li>
+                  <li>Cannot write a * b * c because it&apos;s ambiguous</li>
                   <li>Must use parentheses to disambiguate</li>
                   <li>Different parentheses placements may give different results</li>
                 </ul>
@@ -391,7 +391,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Cayley Table Properties:</p>
                 <ul className="list-disc ml-6">
                   <li>Each element appears exactly once in each row and column</li>
-                  <li>Identity element's row and column match the header</li>
+                  <li>Identity element&apos;s row and column match the header</li>
                   <li>Inverse elements can be identified by finding e in the table</li>
                   <li>Commutativity can be checked by table symmetry</li>
                   <li>Cannot easily check associativity from table alone</li>
@@ -586,7 +586,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Existence of Elements:</p>
                 <p>For group G = {'<a>'} and elements aᵛ, aᵘ ∈ G:</p>
                 <ul className="list-disc ml-6">
-                  <li>The subgroup containing both aᵛ and aᵘ contains aᵍᶜᵈ⁽ᵛ'ᵘ⁾</li>
+                  <li>The subgroup containing both aᵛ and aᵘ contains aᵍᶜᵈ⁽ᵛ&apos;ᵘ⁾</li>
                   <li>This is the smallest such subgroup</li>
                   <li>For finite groups, inverse of element can be expressed as positive power</li>
                 </ul>
@@ -687,7 +687,7 @@ const GroupTheoryNotes: React.FC = () => {
                   <li>If O(g) = n then O(gk) = n/gcd(n,k)</li>
                   <li>Powers of generator eventually cycle back to identity</li>
                   <li>In finite cyclic groups, every element is a power of generator</li>
-                  <li>Element orders divide group order (Lagrange's Theorem)</li>
+                  <li>Element orders divide group order (Lagrange&apos;s Theorem)</li>
                 </ul>
               </div>
             </div>
@@ -706,7 +706,7 @@ const GroupTheoryNotes: React.FC = () => {
                     </ul>
                   </li>
                   <li>Groups of prime order are cyclic</li>
-                  <li>If G is cyclic of order n, then number of generators = φ(n) (Euler's totient)</li>
+                  <li>If G is cyclic of order n, then number of generators = φ(n) (Euler&apos;s totient)</li>
                 </ul>
               </div>
 
@@ -767,7 +767,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p>While multiplication modulo n is not a group over all of Zn, we can create a group by selecting only elements with multiplicative inverses:</p>
                 <ul className="list-disc ml-6 mt-2">
                     <li>Start with multiplication modulo n operation</li>
-                    <li>Remove elements that don't have multiplicative inverses</li>
+                    <li>Remove elements that don&apos;t have multiplicative inverses</li>
                     <li>Resulting set with remaining elements forms Un</li>
                 </ul>
                 </div>
@@ -785,7 +785,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <ul className="list-disc ml-6">
                     <li>Forms a group under multiplication modulo n</li>
                     <li>All elements have multiplicative inverses</li>
-                    <li>Order of Un equals φ(n) (Euler's totient function)</li>
+                    <li>Order of Un equals φ(n) (Euler&apos;s totient function)</li>
                 </ul>
                 </div>
             </div>
@@ -878,7 +878,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Relationship to Other Concepts:</p>
                 <ul className="list-disc ml-6">
-                    <li>Connected to Euler's totient function</li>
+                    <li>Connected to Euler&apos;s totient function</li>
                     <li>Important in cryptography (RSA algorithm)</li>
                     <li>Used in studying cyclic groups</li>
                     <li>Helps understand group structure through isomorphisms</li>
@@ -923,7 +923,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p>For a cyclic group G = {'<a>'}, given elements aᵛ and aᵘ:</p>
                 <ul className="list-disc ml-6 mt-2">
                     <li>Their powers are related: aᵛˣaᵘʸ = aᵛˣ⁺ᵘʸ</li>
-                    <li>The subgroup containing both elements also contains aᵍᶜᵈ⁽ᵛ'ᵘ⁾</li>
+                    <li>The subgroup containing both elements also contains aᵍᶜᵈ⁽ᵛ&apos;ᵘ⁾</li>
                     <li>This is the smallest such subgroup</li>
                 </ul>
                 </div>
@@ -1043,7 +1043,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Important Order Theorems:</p>
                 <ul className="list-disc ml-6">
                     <li>If |G| = 2n (even order), there exists an element a ≠ e with a² = e</li>
-                    <li>Order of element divides group order (Lagrange's Theorem)</li>
+                    <li>Order of element divides group order (Lagrange&apos;s Theorem)</li>
                     <li>If g^m = e, order of g divides m</li>
                     <li>Every group of prime order is cyclic</li>
                 </ul>

@@ -383,7 +383,7 @@ const SetTheoryNotes: React.FC = () => {
           <SubSection title="Set Identities">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">De Morgan's Laws:</p>
+                <p className="font-semibold">De Morgan&apos;s Laws:</p>
                 <ul className="list-disc ml-6">
                   <li>(A ∪ B)̄ = Ā ∩ B̄</li>
                   <li>(A ∩ B)̄ = Ā ∪ B̄</li>
@@ -511,8 +511,8 @@ const SetTheoryNotes: React.FC = () => {
                 <li className="mb-2">
                   <span className="font-medium">Set (finite or infinite):</span>
                   <ul className="list-disc ml-6 mt-1">
-                    <li>Order doesn't matter</li>
-                    <li>Repetition doesn't matter</li>
+                    <li>Order doesn&apos;t matter</li>
+                    <li>Repetition doesn&apos;t matter</li>
                     <li>Example: {'{1, 2, 3}'} = {'{3, 1, 2}'}</li>
                   </ul>
                 </li>
@@ -602,7 +602,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="mt-4 bg-gray-50 dark:bg-gray-800 p-4 rounded">
                   <p className="font-semibold">Important Properties:</p>
                   <ul className="list-disc ml-6">
-                    <li>Relations can be one-way (aRb doesn't imply bRa)</li>
+                    <li>Relations can be one-way (aRb doesn&apos;t imply bRa)</li>
                     <li>Relations can work in both directions</li>
                     <li>A relation on a set A means R: A → A</li>
                   </ul>
@@ -612,9 +612,9 @@ const SetTheoryNotes: React.FC = () => {
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Standard Examples:</p>
                 <ul className="list-disc ml-6">
-                  <li>"Less than" on real numbers: R = {'{(x,y) ∈ R × R | x < y}'}</li>
-                  <li>"Divides" on integers: R = {'{(x,y) ∈ Z × Z | x|y}'}</li>
-                  <li>"Subset" on power set: R = {'{(X,Y) ∈ P(A) × P(A) | X ⊆ Y}'}</li>
+                  <li>&quot;Less than&quot; on real numbers: R = {'{(x,y) ∈ R × R | x < y}'}</li>
+                  <li>&quot;Divides&quot; on integers: R = {'{(x,y) ∈ Z × Z | x|y}'}</li>
+                  <li>&quot;Subset&quot; on power set: R = {'{(X,Y) ∈ P(A) × P(A) | X ⊆ Y}'}</li>
                 </ul>
               </div>
             </div>
@@ -662,7 +662,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>If a relates to b, then b relates to a</li>
                   <li>Matrix: Symmetric about diagonal</li>
                   <li>Graph: If edge a→b exists, b→a exists</li>
-                  <li>Example: "is sibling of"</li>
+                  <li>Example: &quot;is sibling of&quot;</li>
                 </ul>
               </Card>
 
@@ -682,7 +682,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>Definition: ∀x,y,z∈A((xRy ∧ yRz) → xRz)</li>
                   <li>If a relates to b and b relates to c, then a relates to c</li>
                   <li>Graph: If paths a→b and b→c exist, a→c exists</li>
-                  <li>Example: "ancestor of"</li>
+                  <li>Example: &quot;ancestor of&quot;</li>
                 </ul>
               </Card>
             </div>
@@ -775,7 +775,7 @@ const SetTheoryNotes: React.FC = () => {
 
             <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
               <p className="font-semibold">Example:</p>
-              <p>For R = "congruence modulo 3" on Z:</p>
+              <p>For R = &quot;congruence modulo 3&quot; on Z:</p>
               <ul className="list-disc ml-6">
                 <li>[0]ᴿ = {'{..., -3, 0, 3, 6, ...}'}</li>
                 <li>[1]ᴿ = {'{..., -2, 1, 4, 7, ...}'}</li>
@@ -1100,7 +1100,7 @@ const SetTheoryNotes: React.FC = () => {
                 <div className="mt-2">
                   <p className="font-semibold">Key Theorems:</p>
                   <ul className="list-disc ml-6">
-                    <li>No "kite" or "pentagon" sublattice exists in distributive lattices</li>
+                    <li>No &quot;kite&quot; or &quot;pentagon&quot; sublattice exists in distributive lattices</li>
                     <li>If |L| ≤ 4, then L is definitely distributive</li>
                     <li>In distributive lattices, elements have at most one complement</li>
                   </ul>

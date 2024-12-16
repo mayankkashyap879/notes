@@ -159,8 +159,8 @@ const GraphTheoryNotes: React.FC = () => {
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Complement Properties:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>For graph G(V,E), complement G'(V,E') has edges missing from G</li>
-                                    <li>|E'| = n(n-1)/2 - |E| where n is number of vertices</li>
+                                    <li>For graph G(V,E), complement G&apos;(V,E&apos;) has edges missing from G</li>
+                                    <li>|E&apos;| = n(n-1)/2 - |E| where n is number of vertices</li>
                                     <li>Complement of disconnected graph is always connected</li>
                                 </ul>
                             </div>
@@ -188,7 +188,7 @@ const GraphTheoryNotes: React.FC = () => {
 
                             <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                                 <p className="font-semibold">Key Theorem:</p>
-                                <p>A graph is bipartite if and only if it doesn't have an odd cycle</p>
+                                <p>A graph is bipartite if and only if it doesn&apos;t have an odd cycle</p>
                             </div>
 
                             <Card className="p-4">
@@ -239,7 +239,7 @@ const GraphTheoryNotes: React.FC = () => {
                                     <li>Maximal: A set where no new elements can be added while preserving the property</li>
                                     <li>Maximum: The largest among all maximal sets</li>
                                 </ul>
-                                <p className="mt-2 text-sm">Example: For property P: "No two elements consecutive" in set S = {'{1, 2, 3, 4, 5}'}:</p>
+                                <p className="mt-2 text-sm">Example: For property P: &quot;No two elements consecutive&quot; in set S = {'{1, 2, 3, 4, 5}'}:</p>
                                 <ul className="list-disc ml-6 mt-1">
                                     <li>{'{2, 4}'} and {'{1, 3, 5}'} are maximal sets</li>
                                     <li>{'{1, 3, 5}'} is the maximum set</li>
@@ -290,7 +290,7 @@ const GraphTheoryNotes: React.FC = () => {
                                 <p className="font-semibold mt-4">Edge Cover:</p>
                                 <ul className="list-disc ml-6">
                                     <li>Set of edges covering all vertices</li>
-                                    <li>β'(G): Edge covering number</li>
+                                    <li>β&apos;(G): Edge covering number</li>
                                     <li>Exists if and only if δ &gt; 0 (minimum degree &gt; 0)</li>
                                     <li>Minimum edge cover ≥ ⌈n/2⌉</li>
                                 </ul>
@@ -300,8 +300,8 @@ const GraphTheoryNotes: React.FC = () => {
                                 <p className="font-semibold">Important Relationships:</p>
                                 <ul className="list-disc ml-6">
                                     <li>α + β = n (vertex cover and independent set)</li>
-                                    <li>α' + β' = n (matching and edge cover)</li>
-                                    <li>β' ≥ ⌈n/2⌉</li>
+                                    <li>α&apos; + β&apos; = n (matching and edge cover)</li>
+                                    <li>β&apos; ≥ ⌈n/2⌉</li>
                                 </ul>
                             </Card>
                         </div>
@@ -318,7 +318,7 @@ const GraphTheoryNotes: React.FC = () => {
                                     <ul className="list-disc ml-6">
                                         <li>Perfect Matching: Covers all vertices</li>
                                         <li>Maximum Matching: Largest possible matching</li>
-                                        <li>μ(G) or α'(G): Matching number (size of maximum matching)</li>
+                                        <li>μ(G) or α&apos;(G): Matching number (size of maximum matching)</li>
                                     </ul>
                                 </div>
                             </div>
@@ -347,7 +347,7 @@ const GraphTheoryNotes: React.FC = () => {
                             </div>
 
                             <Card className="p-4">
-                                <p className="font-semibold">Brooks' Theorem:</p>
+                                <p className="font-semibold">Brooks&apos; Theorem:</p>
                                 <p>All connected graphs have χ(G) ≤ Δ(G), except for complete graphs and odd cycles</p>
 
                                 <p className="font-semibold mt-4">Important Bounds:</p>
@@ -416,7 +416,7 @@ const GraphTheoryNotes: React.FC = () => {
                             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                                 <p className="font-semibold">Definition:</p>
                                 <p>A graph is k-connected if κ(G) ≥ k, where k is variable.</p>
-                                <p className="mt-2">Alternatively: Removal of any ≤ k-1 vertices doesn't disconnect the graph or leaves a single vertex.</p>
+                                <p className="mt-2">Alternatively: Removal of any ≤ k-1 vertices doesn&apos;t disconnect the graph or leaves a single vertex.</p>
                             </div>
                         </div>
                     </SubSection>
@@ -433,7 +433,7 @@ const GraphTheoryNotes: React.FC = () => {
 
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Strongly Connected Components:</p>
-                                <p>Each equivalence class of "strongly connected relation" is called a strongly connected component</p>
+                                <p>Each equivalence class of &quot;strongly connected relation&quot; is called a strongly connected component</p>
                             </div>
 
                             <Card className="p-4">
@@ -558,7 +558,7 @@ const GraphTheoryNotes: React.FC = () => {
                             </Card>
 
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                                <p className="font-semibold">Dirac's Theorem:</p>
+                                <p className="font-semibold">Dirac&apos;s Theorem:</p>
                                 <p>If minimum degree of any vertex in a simple connected undirected graph is ≥ n/2 (where n is the number of vertices), then a Hamiltonian cycle exists (provided |V| ≥ 3)</p>
                             </div>
 
@@ -739,10 +739,10 @@ const GraphTheoryNotes: React.FC = () => {
 
                             <Card className="p-4">
                                 <p className="font-semibold">Self-Loop Transformation:</p>
-                                <p>Converting graph G to G' by adding self-loops:</p>
+                                <p>Converting graph G to G&apos; by adding self-loops:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>If there's a walk of length 1 to n-1 in G between vertices</li>
-                                    <li>Then there's a walk of exactly length n-1 in G'</li>
+                                    <li>If there&apos;s a walk of length 1 to n-1 in G between vertices</li>
+                                    <li>Then there&apos;s a walk of exactly length n-1 in G&apos;</li>
                                 </ul>
                             </Card>
 

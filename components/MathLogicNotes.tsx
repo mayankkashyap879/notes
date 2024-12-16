@@ -10,11 +10,11 @@ const MathLogicNotes: React.FC = () => {
       <Section title="1. Introduction to Mathematical Logic">
         <div className="space-y-4">
           <p className="text-lg">Mathematical logic provides precise, unambiguous meaning to mathematical statements, theorems, and proofs.</p>
-          
+
           <SubSection title="Need for Mathematical Logic">
             <div className="space-y-4">
               <p>Natural languages like English are inherently ambiguous. Consider these examples:</p>
-              
+
               <Card className="p-4">
                 <p className="font-semibold">Example 1:</p>
                 <p>&quot;The sun is shining and I feel happy.&quot;</p>
@@ -57,7 +57,7 @@ const MathLogicNotes: React.FC = () => {
                 <li>Logical connectives (AND, OR, NOT, etc.)</li>
                 <li>Quantifiers (∀ - for all, ∃ - there exists)</li>
               </ul>
-              
+
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Foundation for:</p>
                 <ul className="list-disc ml-6">
@@ -78,7 +78,7 @@ const MathLogicNotes: React.FC = () => {
           <div className="mb-4">
             <p className="text-lg">Propositional logic forms the foundation of mathematical reasoning, dealing with propositions that can be either true or false.</p>
           </div>
-          
+
           <SubSection title="Propositions">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
@@ -644,7 +644,7 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="space-y-4 mt-4">
                 <p className="font-semibold">Key Equivalence Laws:</p>
-                
+
                 <Card className="p-4">
                   <p className="font-semibold">1. Identity Laws:</p>
                   <ul className="list-disc ml-6">
@@ -1145,13 +1145,13 @@ const MathLogicNotes: React.FC = () => {
                         <li>C(x):&quot;x is clever&quot;</li>
                         <li>M(x):&quot;x is male&quot;</li>
                       </ul>
-                      
+
                       <p className="font-semibold mt-2">Binary Predicates:</p>
                       <ul className="list-disc ml-6">
                         <li>F(x,y):&quot;x is father of y&quot;</li>
                         <li>L(x,y):&quot;x is less than y&quot;</li>
                       </ul>
-                      
+
                       <p className="font-semibold mt-2">Ternary Predicates:</p>
                       <ul className="list-disc ml-6">
                         <li>B(x,y,z):&quot;x is between y and z&quot;</li>
@@ -1171,7 +1171,7 @@ const MathLogicNotes: React.FC = () => {
                       <li>∀x P(x) means&quot;P(x) is true for all values of x&quot;</li>
                       <li>False if there exists a counterexample</li>
                     </ul>
-                    
+
                     <p className="font-semibold mt-4">Existential Quantifier (∃):</p>
                     <ul className="list-disc ml-6">
                       <li>&quot;There exists&quot; or&quot;For some&quot;</li>
@@ -1345,7 +1345,7 @@ const MathLogicNotes: React.FC = () => {
           <SubSection title="Nested Quantifiers">
             <div className="space-y-4">
               <p>Many interesting statements require combinations of quantifiers.</p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="p-4">
                   <p className="font-semibold">∀x ∀y P(x,y)</p>
@@ -1425,7 +1425,7 @@ const MathLogicNotes: React.FC = () => {
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Interpretation Definition:</p>
                 <p>An interpretation I assigns a truth value to each atomic proposition.</p>
-                
+
                 <div className="mt-4">
                   <p className="font-semibold">For a propositional formula G:</p>
                   <ul className="list-disc ml-6">

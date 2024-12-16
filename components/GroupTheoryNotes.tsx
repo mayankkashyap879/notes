@@ -29,7 +29,7 @@ const GroupTheoryNotes: React.FC = () => {
           <SubSection title="Historical Context">
             <div className="space-y-4">
               <p>Group theory was discovered by Évariste Galois while studying polynomial equations.</p>
-              
+
               <Card className="p-4">
                 <p className="font-semibold">Galois&apos;s Key Contributions:</p>
                 <ul className="list-disc ml-6 mt-2">
@@ -719,365 +719,365 @@ const GroupTheoryNotes: React.FC = () => {
 
       <Section title="7. Unit Groups">
         <div className="space-y-6">
-            <SubSection title="Definition and Construction">
+          <SubSection title="Definition and Construction">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Unit Group Construction:</p>
                 <p>While multiplication modulo n is not a group over all of Zn, we can create a group by selecting only elements with multiplicative inverses:</p>
                 <ul className="list-disc ml-6 mt-2">
-                    <li>Start with multiplication modulo n operation</li>
-                    <li>Remove elements that don&apos;t have multiplicative inverses</li>
-                    <li>Resulting set with remaining elements forms Un</li>
+                  <li>Start with multiplication modulo n operation</li>
+                  <li>Remove elements that don&apos;t have multiplicative inverses</li>
+                  <li>Resulting set with remaining elements forms Un</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Formal Definition:</p>
                 <div className="space-y-2">
-                    <p>For a positive integer n, the unit group Un consists of elements that are coprime to n:</p>
-                    <p className="font-mono bg-gray-100 dark:bg-gray-800 p-2 rounded">Un = {'{m | m ∈ Zn, gcd(m,n) = 1}'}</p>
+                  <p>For a positive integer n, the unit group Un consists of elements that are coprime to n:</p>
+                  <p className="font-mono bg-gray-100 dark:bg-gray-800 p-2 rounded">Un = {'{m | m ∈ Zn, gcd(m,n) = 1}'}</p>
                 </div>
-                </Card>
+              </Card>
 
-                <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Key Properties:</p>
                 <ul className="list-disc ml-6">
-                    <li>Forms a group under multiplication modulo n</li>
-                    <li>All elements have multiplicative inverses</li>
-                    <li>Order of Un equals φ(n) (Euler&apos;s totient function)</li>
+                  <li>Forms a group under multiplication modulo n</li>
+                  <li>All elements have multiplicative inverses</li>
+                  <li>Order of Un equals φ(n) (Euler&apos;s totient function)</li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Example: U4">
+          <SubSection title="Example: U4">
             <div className="space-y-4">
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Construction of U4:</p>
                 <div className="space-y-2">
-                    <p>Starting with Z4 = {'{0, 1, 2, 3}'}</p>
-                    <p>Check coprimality with 4:</p>
-                    <ul className="list-disc ml-6">
+                  <p>Starting with Z4 = {'{0, 1, 2, 3}'}</p>
+                  <p>Check coprimality with 4:</p>
+                  <ul className="list-disc ml-6">
                     <li>gcd(0,4) = 4 → 0 is not in U4</li>
                     <li>gcd(1,4) = 1 → 1 is in U4</li>
                     <li>gcd(2,4) = 2 → 2 is not in U4</li>
                     <li>gcd(3,4) = 1 → 3 is in U4</li>
-                    </ul>
-                    <p className="mt-2">Therefore, U4 = {'{1, 3}'}</p>
+                  </ul>
+                  <p className="mt-2">Therefore, U4 = {'{1, 3}'}</p>
                 </div>
-                </Card>
+              </Card>
 
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <p className="font-semibold">U4 Operation Table:</p>
                 <div className="grid grid-cols-3 gap-1 text-center mt-2">
-                    <div className="font-bold">×</div>
-                    <div className="font-bold">1</div>
-                    <div className="font-bold">3</div>
-                    <div className="font-bold">1</div>
-                    <div>1</div>
-                    <div>3</div>
-                    <div className="font-bold">3</div>
-                    <div>3</div>
-                    <div>1</div>
+                  <div className="font-bold">×</div>
+                  <div className="font-bold">1</div>
+                  <div className="font-bold">3</div>
+                  <div className="font-bold">1</div>
+                  <div>1</div>
+                  <div>3</div>
+                  <div className="font-bold">3</div>
+                  <div>3</div>
+                  <div>1</div>
                 </div>
                 <p className="mt-2 text-sm">Note: Operations are performed modulo 4</p>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Patterns in Unit Groups">
+          <SubSection title="Patterns in Unit Groups">
             <div className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="p-4">
-                    <p className="font-semibold">U8 Structure:</p>
-                    <p>U8 = {'{1, 3, 5, 7}'}</p>
-                    <ul className="list-disc ml-6">
+                  <p className="font-semibold">U8 Structure:</p>
+                  <p>U8 = {'{1, 3, 5, 7}'}</p>
+                  <ul className="list-disc ml-6">
                     <li>Order of group: |U8| = 4</li>
                     <li>Forms an abelian group</li>
                     <li>Each element is its own inverse</li>
-                    </ul>
+                  </ul>
                 </Card>
 
                 <Card className="p-4">
-                    <p className="font-semibold">U10 Structure:</p>
-                    <p>U10 = {'{1, 3, 7, 9}'}</p>
-                    <ul className="list-disc ml-6">
+                  <p className="font-semibold">U10 Structure:</p>
+                  <p>U10 = {'{1, 3, 7, 9}'}</p>
+                  <ul className="list-disc ml-6">
                     <li>Order of group: |U10| = 4</li>
                     <li>Isomorphic to U8</li>
                     <li>Shows same inverse pattern</li>
-                    </ul>
+                  </ul>
                 </Card>
-                </div>
+              </div>
 
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Important Observations:</p>
                 <ul className="list-disc ml-6">
-                    <li>Unit groups of different moduli can be isomorphic</li>
-                    <li>For order 4 unit groups, only two non-isomorphic structures exist</li>
-                    <li>All unit groups are abelian</li>
-                    <li>Identity element is always 1</li>
-                    <li>Elements and their inverses are unique modulo n</li>
+                  <li>Unit groups of different moduli can be isomorphic</li>
+                  <li>For order 4 unit groups, only two non-isomorphic structures exist</li>
+                  <li>All unit groups are abelian</li>
+                  <li>Identity element is always 1</li>
+                  <li>Elements and their inverses are unique modulo n</li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Properties and Applications">
+          <SubSection title="Properties and Applications">
             <div className="space-y-4">
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Fundamental Properties:</p>
                 <ul className="list-disc ml-6">
-                    <li>Every element has unique multiplicative inverse</li>
-                    <li>Product of units is a unit</li>
-                    <li>Closure under multiplication modulo n</li>
-                    <li>Associates with number theory through coprimality</li>
+                  <li>Every element has unique multiplicative inverse</li>
+                  <li>Product of units is a unit</li>
+                  <li>Closure under multiplication modulo n</li>
+                  <li>Associates with number theory through coprimality</li>
                 </ul>
-                </Card>
+              </Card>
 
-                <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Relationship to Other Concepts:</p>
                 <ul className="list-disc ml-6">
-                    <li>Connected to Euler&apos;s totient function</li>
-                    <li>Important in cryptography (RSA algorithm)</li>
-                    <li>Used in studying cyclic groups</li>
-                    <li>Helps understand group structure through isomorphisms</li>
+                  <li>Connected to Euler&apos;s totient function</li>
+                  <li>Important in cryptography (RSA algorithm)</li>
+                  <li>Used in studying cyclic groups</li>
+                  <li>Helps understand group structure through isomorphisms</li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
         </div>
-        </Section>
+      </Section>
 
-        <Section title="8. Element Orders and Properties">
+      <Section title="8. Element Orders and Properties">
         <div className="space-y-6">
-            <SubSection title="Element Orders in Groups">
+          <SubSection title="Element Orders in Groups">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
                 <p>The order of an element a in a group G is the least positive integer n such that aⁿ = e, where e is the identity.</p>
                 <p className="mt-2">For any a ∈ G we define:</p>
                 <ul className="list-disc ml-6">
-                    <li>a⁰ = e (identity element)</li>
-                    <li>aⁿ = aⁿ⁻¹a, for n ≥ 1</li>
-                    <li>a⁻ⁿ = (a⁻¹)ⁿ for n ≥ 1</li>
+                  <li>a⁰ = e (identity element)</li>
+                  <li>aⁿ = aⁿ⁻¹a, for n ≥ 1</li>
+                  <li>a⁻ⁿ = (a⁻¹)ⁿ for n ≥ 1</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Fundamental Properties:</p>
                 <ul className="list-disc ml-6">
-                    <li>aⁿa⁻ⁿ = e</li>
-                    <li>aᵐaⁿ = aᵐ⁺ⁿ</li>
-                    <li>(aᵐ)ⁿ = aᵐⁿ</li>
-                    <li>If aⁿ = e then a⁻¹ = aⁿ⁻¹</li>
+                  <li>aⁿa⁻ⁿ = e</li>
+                  <li>aᵐaⁿ = aᵐ⁺ⁿ</li>
+                  <li>(aᵐ)ⁿ = aᵐⁿ</li>
+                  <li>If aⁿ = e then a⁻¹ = aⁿ⁻¹</li>
                 </ul>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Existence of Elements in Subgroups">
+          <SubSection title="Existence of Elements in Subgroups">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Key Theorem:</p>
                 <p>For a cyclic group G = {'<a>'}, given elements aᵛ and aᵘ:</p>
                 <ul className="list-disc ml-6 mt-2">
-                    <li>Their powers are related: aᵛˣaᵘʸ = aᵛˣ⁺ᵘʸ</li>
-                    <li>The subgroup containing both elements also contains aᵍᶜᵈ⁽ᵛ&apos;ᵘ⁾</li>
-                    <li>This is the smallest such subgroup</li>
+                  <li>Their powers are related: aᵛˣaᵘʸ = aᵛˣ⁺ᵘʸ</li>
+                  <li>The subgroup containing both elements also contains aᵍᶜᵈ⁽ᵛ&apos;ᵘ⁾</li>
+                  <li>This is the smallest such subgroup</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Important Lemma:</p>
                 <p>If O(g) = n then O(gᵏ) = n/gcd(n,k)</p>
                 <div className="mt-2">
-                    <p className="font-semibold">Applications Example:</p>
-                    <p>In a cyclic group of order 48, elements of order 8:</p>
-                    <ul className="list-disc ml-6">
+                  <p className="font-semibold">Applications Example:</p>
+                  <p>In a cyclic group of order 48, elements of order 8:</p>
+                  <ul className="list-disc ml-6">
                     <li>Need k where 48/gcd(48,k) = 8</li>
                     <li>Therefore, gcd(48,k) = 6</li>
                     <li>Solutions: k = 6, 18, 30, 42</li>
                     <li>These k values give elements of order 8</li>
-                    </ul>
+                  </ul>
                 </div>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Properties of Even Order Groups">
+          <SubSection title="Properties of Even Order Groups">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Theorem:</p>
                 <p>If G is a group of even order, then there exists an element a ≠ e such that a² = e</p>
                 <p className="mt-2">Proof Sketch:</p>
                 <ul className="list-disc ml-6">
-                    <li>Remove identity element from consideration</li>
-                    <li>Pair remaining elements with their inverses</li>
-                    <li>With even order, one unpaired element must remain</li>
-                    <li>This element must be its own inverse (a² = e)</li>
+                  <li>Remove identity element from consideration</li>
+                  <li>Pair remaining elements with their inverses</li>
+                  <li>With even order, one unpaired element must remain</li>
+                  <li>This element must be its own inverse (a² = e)</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Consequences:</p>
                 <ul className="list-disc ml-6">
-                    <li>Every group of even order has an element of order 2</li>
-                    <li>Such elements are self-inverse: a = a⁻¹</li>
-                    <li>These elements form their own conjugacy class</li>
+                  <li>Every group of even order has an element of order 2</li>
+                  <li>Such elements are self-inverse: a = a⁻¹</li>
+                  <li>These elements form their own conjugacy class</li>
                 </ul>
-                </Card>
+              </Card>
 
-                <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Common Mistakes to Avoid:</p>
                 <ul className="list-disc ml-6">
-                    <li>gᵐ = e does not imply m is the order of g</li>
-                    <li>Order of gᵏ may not be order of g divided by k</li>
-                    <li>Element orders must divide group order (Lagrange)</li>
-                    <li>Self-inverse elements (a² = e) always have order 2 or 1</li>
+                  <li>gᵐ = e does not imply m is the order of g</li>
+                  <li>Order of gᵏ may not be order of g divided by k</li>
+                  <li>Element orders must divide group order (Lagrange)</li>
+                  <li>Self-inverse elements (a² = e) always have order 2 or 1</li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Additional Properties">
+          <SubSection title="Additional Properties">
             <div className="space-y-4">
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <p className="font-semibold">General Results:</p>
                 <ul className="list-disc ml-6">
-                    <li>The order of g⁻¹ equals the order of g</li>
-                    <li>If g has finite order n, then gᵏ has order n/gcd(n,k)</li>
-                    <li>In a finite group, the order of any element divides the group order</li>
-                    <li>Powers of an element form a cyclic subgroup</li>
+                  <li>The order of g⁻¹ equals the order of g</li>
+                  <li>If g has finite order n, then gᵏ has order n/gcd(n,k)</li>
+                  <li>In a finite group, the order of any element divides the group order</li>
+                  <li>Powers of an element form a cyclic subgroup</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Special Cases:</p>
                 <ul className="list-disc ml-6">
-                    <li>The identity element always has order 1</li>
-                    <li>Elements of prime order generate cyclic subgroups</li>
-                    <li>If g has order n, then gᵏ = gʲ if and only if k ≡ j (mod n)</li>
+                  <li>The identity element always has order 1</li>
+                  <li>Elements of prime order generate cyclic subgroups</li>
+                  <li>If g has order n, then gᵏ = gʲ if and only if k ≡ j (mod n)</li>
                 </ul>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
         </div>
-        </Section>
+      </Section>
 
-        <Section title="9. Additional Properties and Notes">
+      <Section title="9. Additional Properties and Notes">
         <div className="space-y-6">
-            <SubSection title="Unit Groups">
+          <SubSection title="Unit Groups">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Unit Group Definition:</p>
                 <p>For a positive integer n, the unit group Un is defined as:</p>
                 <p className="mt-2 font-mono">Un = {'{m | m ∈ Zn, m and n are coprime}'}</p>
                 <p className="mt-2">Properties:</p>
                 <ul className="list-disc ml-6">
-                    <li>Forms a group under multiplication modulo n</li>
-                    <li>Contains only elements coprime to n</li>
-                    <li>Can be derived from multiplication modulo n group by removing elements without inverses</li>
+                  <li>Forms a group under multiplication modulo n</li>
+                  <li>Contains only elements coprime to n</li>
+                  <li>Can be derived from multiplication modulo n group by removing elements without inverses</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Example: U4 Construction</p>
                 <ul className="list-disc ml-6">
-                    <li>Start with Z4 = {'{0, 1, 2, 3}'}</li>
-                    <li>Check coprime elements:</li>
-                    <ul className="list-circle ml-6">
+                  <li>Start with Z4 = {'{0, 1, 2, 3}'}</li>
+                  <li>Check coprime elements:</li>
+                  <ul className="list-circle ml-6">
                     <li>1 is coprime to 4 (include)</li>
                     <li>2 shares factor 2 with 4 (exclude)</li>
                     <li>3 is coprime to 4 (include)</li>
-                    </ul>
-                    <li>Therefore, U4 = {'{1, 3}'}</li>
+                  </ul>
+                  <li>Therefore, U4 = {'{1, 3}'}</li>
                 </ul>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Properties of Orders">
+          <SubSection title="Properties of Orders">
             <div className="space-y-4">
-                <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Important Order Theorems:</p>
                 <ul className="list-disc ml-6">
-                    <li>If |G| = 2n (even order), there exists an element a ≠ e with a² = e</li>
-                    <li>Order of element divides group order (Lagrange&apos;s Theorem)</li>
-                    <li>If g^m = e, order of g divides m</li>
-                    <li>Every group of prime order is cyclic</li>
+                  <li>If |G| = 2n (even order), there exists an element a ≠ e with a² = e</li>
+                  <li>Order of element divides group order (Lagrange&apos;s Theorem)</li>
+                  <li>If g^m = e, order of g divides m</li>
+                  <li>Every group of prime order is cyclic</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Order Properties in Finite Groups:</p>
                 <ul className="list-disc ml-6">
-                    <li>Every element has finite order</li>
-                    <li>Powers of elements eventually cycle</li>
-                    <li>O(g) = O(g⁻¹) for any element g</li>
-                    <li>O(gᵏ) = O(g)/gcd(O(g),k)</li>
+                  <li>Every element has finite order</li>
+                  <li>Powers of elements eventually cycle</li>
+                  <li>O(g) = O(g⁻¹) for any element g</li>
+                  <li>O(gᵏ) = O(g)/gcd(O(g),k)</li>
                 </ul>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="Properties of Cyclic Groups">
+          <SubSection title="Properties of Cyclic Groups">
             <div className="space-y-4">
-                <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Key Theorems:</p>
                 <ul className="list-disc ml-6">
-                    <li>Every cyclic group is isomorphic to either Z or Zn</li>
-                    <li>Every cyclic group is abelian</li>
-                    <li>Every subgroup of a cyclic group is cyclic</li>
-                    <li>Smallest non-cyclic group has order 4</li>
+                  <li>Every cyclic group is isomorphic to either Z or Zn</li>
+                  <li>Every cyclic group is abelian</li>
+                  <li>Every subgroup of a cyclic group is cyclic</li>
+                  <li>Smallest non-cyclic group has order 4</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Properties of Finite Cyclic Groups:</p>
                 <ul className="list-disc ml-6">
-                    <li>Number of generators equals φ(n) for group of order n</li>
-                    <li>Has unique subgroup of each order dividing group order</li>
-                    <li>Every element is of form gᵏ for some generator g</li>
+                  <li>Number of generators equals φ(n) for group of order n</li>
+                  <li>Has unique subgroup of each order dividing group order</li>
+                  <li>Every element is of form gᵏ for some generator g</li>
                 </ul>
-                </Card>
+              </Card>
             </div>
-            </SubSection>
+          </SubSection>
 
-            <SubSection title="General Theorems and Notes">
+          <SubSection title="General Theorems and Notes">
             <div className="space-y-4">
-                <div className="bg-red-50 dark:bg-red-900 p-4 rounded-lg">
+              <div className="bg-red-50 dark:bg-red-900 p-4 rounded-lg">
                 <p className="font-semibold">Important Notes:</p>
                 <ul className="list-disc ml-6">
-                    <li>A group is never the union of two proper subgroups</li>
-                    <li>Groups of order p² or p (p prime) are abelian</li>
-                    <li>Groups of order less than 6 are abelian</li>
-                    <li>If ∀x ∈ G, x² = e then G is abelian</li>
+                  <li>A group is never the union of two proper subgroups</li>
+                  <li>Groups of order p² or p (p prime) are abelian</li>
+                  <li>Groups of order less than 6 are abelian</li>
+                  <li>If ∀x ∈ G, x² = e then G is abelian</li>
                 </ul>
-                </div>
+              </div>
 
-                <Card className="p-4">
+              <Card className="p-4">
                 <p className="font-semibold">Advanced Properties:</p>
                 <ul className="list-disc ml-6">
-                    <li>Non-isomorphic abelian groups of order pᵏ equals partitions of k</li>
-                    <li>Intersection of subgroups is always a subgroup</li>
-                    <li>Union of subgroups may not be a subgroup</li>
-                    <li>Every subgroup contains the identity element</li>
+                  <li>Non-isomorphic abelian groups of order pᵏ equals partitions of k</li>
+                  <li>Intersection of subgroups is always a subgroup</li>
+                  <li>Union of subgroups may not be a subgroup</li>
+                  <li>Every subgroup contains the identity element</li>
                 </ul>
-                </Card>
+              </Card>
 
-                <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <p className="font-semibold">Common Errors to Avoid:</p>
                 <ul className="list-disc ml-6">
-                    <li>Assuming gᵐ = e implies O(g)|m</li>
-                    <li>Confusing order of element with order of group</li>
-                    <li>Forgetting to check closure in subgroup proofs</li>
-                    <li>Assuming all groups of same order are isomorphic</li>
+                  <li>Assuming gᵐ = e implies O(g)|m</li>
+                  <li>Confusing order of element with order of group</li>
+                  <li>Forgetting to check closure in subgroup proofs</li>
+                  <li>Assuming all groups of same order are isomorphic</li>
                 </ul>
-                </div>
+              </div>
             </div>
-            </SubSection>
+          </SubSection>
         </div>
-        </Section>
+      </Section>
     </div>
   );
 };

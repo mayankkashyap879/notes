@@ -9,7 +9,7 @@ export default function MathematicalLogicPage() {
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <Link 
+          <Link
             href="/discrete_mathematics"
             className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
           >

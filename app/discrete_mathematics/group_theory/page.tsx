@@ -9,7 +9,7 @@ export default function GroupTheoryPage() {
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <Link 
+          <Link
             href="/discrete_mathematics"
             className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
           >
@@ -20,11 +20,11 @@ export default function GroupTheoryPage() {
 
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-4">Group Theory</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-                The study of symmetry and structure in mathematics and science that deals with groups, their properties, and the relationships between them.
-            </p>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            The study of symmetry and structure in mathematics and science that deals with groups, their properties, and the relationships between them.
+          </p>
 
-            <GroupTheoryNotes />
+          <GroupTheoryNotes />
         </div>
       </div>
     </div>

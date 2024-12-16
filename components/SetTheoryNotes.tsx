@@ -312,9 +312,9 @@ const SetTheoryNotes: React.FC = () => {
                   <p className="mt-2">Properties:</p>
                   <ul className="list-disc ml-6">
                     <li>Ā = U − A</li>
-                    <li><span style={{textDecoration: "overline"}}>Ā</span> = A (Double Complement)</li>
-                    <li><span style={{textDecoration: "overline"}}>∅</span> = U</li>
-                    <li><span style={{textDecoration: "overline"}}>U</span> = ∅</li>
+                    <li><span style={{ textDecoration: "overline" }}>Ā</span> = A (Double Complement)</li>
+                    <li><span style={{ textDecoration: "overline" }}>∅</span> = U</li>
+                    <li><span style={{ textDecoration: "overline" }}>U</span> = ∅</li>
                   </ul>
                 </div>
               </Card>
@@ -420,129 +420,129 @@ const SetTheoryNotes: React.FC = () => {
       </Section>
 
       <Section title="4. Ordered Pairs and Cartesian Product">
-      <div className="space-y-6">
-        <SubSection title="Ordered Pairs">
-          <div className="space-y-4">
-            <Card className="p-4">
-              <p className="font-semibold">Definition:</p>
-              <p>An ordered pair (a, b) is a sequence of two elements where:</p>
-              <ul className="list-disc ml-6 mt-2">
-                <li>Order matters: (a, b) ≠ (b, a) if a ≠ b</li>
-                <li>Repetition is allowed: (a, a) is a valid ordered pair</li>
-                <li>Two ordered pairs (a, b) and (c, d) are equal if and only if a = c and b = d</li>
-              </ul>
-            </Card>
+        <div className="space-y-6">
+          <SubSection title="Ordered Pairs">
+            <div className="space-y-4">
+              <Card className="p-4">
+                <p className="font-semibold">Definition:</p>
+                <p>An ordered pair (a, b) is a sequence of two elements where:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>Order matters: (a, b) ≠ (b, a) if a ≠ b</li>
+                  <li>Repetition is allowed: (a, a) is a valid ordered pair</li>
+                  <li>Two ordered pairs (a, b) and (c, d) are equal if and only if a = c and b = d</li>
+                </ul>
+              </Card>
 
-            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-              <p className="font-semibold">Comparison with Sets:</p>
-              <div className="mt-2">
-                <table className="w-full">
-                  <thead>
-                    <tr>
-                      <th className="border p-2">Property</th>
-                      <th className="border p-2">Sets</th>
-                      <th className="border p-2">Ordered Pairs</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border p-2">Order</td>
-                      <td className="border p-2">{'{a, b}'} = {'{b, a}'}</td>
-                      <td className="border p-2">(a, b) ≠ (b, a)</td>
-                    </tr>
-                    <tr>
-                      <td className="border p-2">Repetition</td>
-                      <td className="border p-2">{'{a, a}'} = {'{a}'}</td>
-                      <td className="border p-2">(a, a) is distinct</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Comparison with Sets:</p>
+                <div className="mt-2">
+                  <table className="w-full">
+                    <thead>
+                      <tr>
+                        <th className="border p-2">Property</th>
+                        <th className="border p-2">Sets</th>
+                        <th className="border p-2">Ordered Pairs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border p-2">Order</td>
+                        <td className="border p-2">{'{a, b}'} = {'{b, a}'}</td>
+                        <td className="border p-2">(a, b) ≠ (b, a)</td>
+                      </tr>
+                      <tr>
+                        <td className="border p-2">Repetition</td>
+                        <td className="border p-2">{'{a, a}'} = {'{a}'}</td>
+                        <td className="border p-2">(a, a) is distinct</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
-        </SubSection>
+          </SubSection>
 
-        <SubSection title="Structures with Order">
-          <div className="space-y-4">
-            <Card className="p-4">
-              <p className="font-semibold">Different Types of Structures:</p>
-              <ul className="list-disc ml-6">
-                <li className="mb-2">
-                  <span className="font-medium">Set (finite or infinite):</span>
-                  <ul className="list-disc ml-6 mt-1">
-                    <li>Order doesn&apos;t matter</li>
-                    <li>Repetition doesn&apos;t matter</li>
-                    <li>Example: {'{1, 2, 3}'} = {'{3, 1, 2}'}</li>
-                  </ul>
-                </li>
-                <li className="mb-2">
-                  <span className="font-medium">Ordered n-tuple (finite):</span>
-                  <ul className="list-disc ml-6 mt-1">
-                    <li>Order matters</li>
-                    <li>Repetition matters</li>
-                    <li>Example: (1, 2, 3) ≠ (3, 1, 2)</li>
-                  </ul>
-                </li>
-                <li>
-                  <span className="font-medium">Sequence (finite or infinite):</span>
-                  <ul className="list-disc ml-6 mt-1">
-                    <li>Order matters</li>
-                    <li>Repetition matters</li>
-                    <li>Can be infinite</li>
-                    <li>Notation: ⟨1, 2, 3, ...⟩</li>
-                  </ul>
-                </li>
-              </ul>
-            </Card>
-          </div>
-        </SubSection>
-
-        <SubSection title="Cartesian Product">
-          <div className="space-y-4">
-            <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-              <p className="font-semibold">Definition:</p>
-              <ul className="list-disc ml-6">
-                <li>A × B = {'{(x,y) | x ∈ A and y ∈ B}'}</li>
-                <li>B × A = {'{(x,y) | x ∈ B and y ∈ A}'}</li>
-              </ul>
-              <p className="mt-4">General form for n sets:</p>
-              <p className="ml-6">A₁ × A₂ × ... × Aₙ = {'{(x₁, x₂, ..., xₙ) | xᵢ ∈ Aᵢ}'}</p>
+          <SubSection title="Structures with Order">
+            <div className="space-y-4">
+              <Card className="p-4">
+                <p className="font-semibold">Different Types of Structures:</p>
+                <ul className="list-disc ml-6">
+                  <li className="mb-2">
+                    <span className="font-medium">Set (finite or infinite):</span>
+                    <ul className="list-disc ml-6 mt-1">
+                      <li>Order doesn&apos;t matter</li>
+                      <li>Repetition doesn&apos;t matter</li>
+                      <li>Example: {'{1, 2, 3}'} = {'{3, 1, 2}'}</li>
+                    </ul>
+                  </li>
+                  <li className="mb-2">
+                    <span className="font-medium">Ordered n-tuple (finite):</span>
+                    <ul className="list-disc ml-6 mt-1">
+                      <li>Order matters</li>
+                      <li>Repetition matters</li>
+                      <li>Example: (1, 2, 3) ≠ (3, 1, 2)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-medium">Sequence (finite or infinite):</span>
+                    <ul className="list-disc ml-6 mt-1">
+                      <li>Order matters</li>
+                      <li>Repetition matters</li>
+                      <li>Can be infinite</li>
+                      <li>Notation: ⟨1, 2, 3, ...⟩</li>
+                    </ul>
+                  </li>
+                </ul>
+              </Card>
             </div>
+          </SubSection>
 
-            <Card className="p-4">
-              <p className="font-semibold">Properties:</p>
-              <ul className="list-disc ml-6">
-                <li>|A × B| = |A| × |B| where |A| and |B| are cardinalities</li>
-                <li>A × ∅ = ∅</li>
-                <li>A × B = B × A only if A = B or one is empty</li>
-                <li>Not associative: (A × B) × C ≠ A × (B × C)</li>
-                <li>Not commutative: A × B ≠ B × A in general</li>
-              </ul>
-            </Card>
+          <SubSection title="Cartesian Product">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <ul className="list-disc ml-6">
+                  <li>A × B = {'{(x,y) | x ∈ A and y ∈ B}'}</li>
+                  <li>B × A = {'{(x,y) | x ∈ B and y ∈ A}'}</li>
+                </ul>
+                <p className="mt-4">General form for n sets:</p>
+                <p className="ml-6">A₁ × A₂ × ... × Aₙ = {'{(x₁, x₂, ..., xₙ) | xᵢ ∈ Aᵢ}'}</p>
+              </div>
 
-            <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-              <p className="font-semibold">Special Cases:</p>
-              <p>For set {'{1, 2}'} and exponent n:</p>
-              <ul className="list-disc ml-6">
-                <li>n = 2: {'{(1,1), (1,2), (2,1), (2,2)}'}</li>
-                <li>n = 3: {'{(1,1,1), (1,1,2), (1,2,1), ..., (2,2,2)}'}</li>
-                <li>General case: {'{1, 2}'}<sup>n</sup> = set of all n-tuples of 1s and 2s</li>
-                <li>|{'{1, 2}'}<sup>n</sup>| = 2<sup>n</sup></li>
-              </ul>
+              <Card className="p-4">
+                <p className="font-semibold">Properties:</p>
+                <ul className="list-disc ml-6">
+                  <li>|A × B| = |A| × |B| where |A| and |B| are cardinalities</li>
+                  <li>A × ∅ = ∅</li>
+                  <li>A × B = B × A only if A = B or one is empty</li>
+                  <li>Not associative: (A × B) × C ≠ A × (B × C)</li>
+                  <li>Not commutative: A × B ≠ B × A in general</li>
+                </ul>
+              </Card>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+                <p className="font-semibold">Special Cases:</p>
+                <p>For set {'{1, 2}'} and exponent n:</p>
+                <ul className="list-disc ml-6">
+                  <li>n = 2: {'{(1,1), (1,2), (2,1), (2,2)}'}</li>
+                  <li>n = 3: {'{(1,1,1), (1,1,2), (1,2,1), ..., (2,2,2)}'}</li>
+                  <li>General case: {'{1, 2}'}<sup>n</sup> = set of all n-tuples of 1s and 2s</li>
+                  <li>|{'{1, 2}'}<sup>n</sup>| = 2<sup>n</sup></li>
+                </ul>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold">Examples:</p>
+                <ul className="list-disc ml-6">
+                  <li>A = {'{1, 2}'}, B = {'{a, b}'}</li>
+                  <li>A × B = {'{(1,a), (1,b), (2,a), (2,b)}'}</li>
+                  <li>B × A = {'{(a,1), (a,2), (b,1), (b,2)}'}</li>
+                  <li>|A × B| = |A| × |B| = 2 × 2 = 4</li>
+                </ul>
+              </Card>
             </div>
-
-            <Card className="p-4">
-              <p className="font-semibold">Examples:</p>
-              <ul className="list-disc ml-6">
-                <li>A = {'{1, 2}'}, B = {'{a, b}'}</li>
-                <li>A × B = {'{(1,a), (1,b), (2,a), (2,b)}'}</li>
-                <li>B × A = {'{(a,1), (a,2), (b,1), (b,2)}'}</li>
-                <li>|A × B| = |A| × |B| = 2 × 2 = 4</li>
-              </ul>
-            </Card>
-          </div>
-        </SubSection>
-      </div>
+          </SubSection>
+        </div>
       </Section>
 
       <Section title="5. Relations">
@@ -557,7 +557,7 @@ const SetTheoryNotes: React.FC = () => {
                   <li>(a, b) ∈ R or aRb indicates a is related to b</li>
                   <li>R: A → B denotes a relation from A to B</li>
                 </ul>
-                
+
                 <div className="mt-4 bg-gray-50 dark:bg-gray-800 p-4 rounded">
                   <p className="font-semibold">Important Properties:</p>
                   <ul className="list-disc ml-6">
@@ -773,9 +773,9 @@ const SetTheoryNotes: React.FC = () => {
                 <li>Bell numbers: B₁=1, B₂=2, B₃=5, B₄=15, B₅=52, ...</li>
                 <li>Bell triangle construction:
                   <p className="mt-1 ml-4 font-mono">
-                    1<br/>
-                    1 2<br/>
-                    2 3 5<br/>
+                    1<br />
+                    1 2<br />
+                    2 3 5<br />
                     5 7 10 15
                   </p>
                 </li>

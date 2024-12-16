@@ -63,7 +63,7 @@ const DiscreteMathPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
-        <Link 
+        <Link
           href="/"
           className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
         >
@@ -83,7 +83,7 @@ const DiscreteMathPage: React.FC = () => {
         <Card className="p-6 bg-blue-50 dark:bg-blue-900/20">
           <h2 className="text-2xl font-semibold mb-4">Course Overview</h2>
           <p className="text-gray-700 dark:text-gray-300">
-            Discrete mathematics is the foundation of computer science, dealing with structures that are fundamentally discrete 
+            Discrete mathematics is the foundation of computer science, dealing with structures that are fundamentally discrete
             (not continuous). This course covers logical thinking, proof techniques, and discrete structures used in computer science.
           </p>
           <div className="mt-4 space-y-2">

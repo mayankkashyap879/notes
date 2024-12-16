@@ -5,124 +5,124 @@ import { Section } from '@/components/ui/Section';
 import { SubSection } from '@/components/ui/SubSection';
 
 interface FunctionVisualizationProps {
-    type: 'injective' | 'surjective' | 'bijective';
-  }
-  
-  const FunctionVisualization: React.FC<FunctionVisualizationProps> = ({ type }) => {
-    const baseProps = {
-      width: "100%",
-      height: "300",
-      className: "mt-4",
-      style: { maxWidth: "600px" }
-    };
-  
-    const commonStyles = {
-      labelStyle: {
-        fontSize: 20,
-        fontFamily: "system-ui",
-        textAnchor: "middle"
-      },
-      dotStyle: {
-        r: 15
-      }
-    };
-  
-    if (type === "injective") {
-      return (
-        <svg {...baseProps} viewBox="0 0 600 360">
-          <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">One-to-One (Injective)</text>
-          
-          {/* Domain container */}
-          <rect x="100" y="80" width="140" height="180" rx="20" fill="#f0f7ff"/>
-          <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
-          
-          {/* Domain dots */}
-          <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle}/>
-          
-          {/* Codomain container - taller to include the extra dot */}
-          <rect x="360" y="80" width="140" height="230" rx="20" fill="#f0fdf4"/>
-          <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
-          
-          {/* Codomain dots */}
-          <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="290" fill="#388e3c" {...commonStyles.dotStyle}/>
-          
-          {/* Arrows */}
-          <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 240 L415 240" stroke="#2196f3" strokeWidth="2"/>
-        </svg>
-      );
-    }
-  
-    if (type === "surjective") {
-      return (
-        <svg {...baseProps} viewBox="0 0 600 360">
-          <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">Onto (Surjective)</text>
-          
-          {/* Domain container - taller for extra dot */}
-          <rect x="100" y="80" width="140" height="230" rx="20" fill="#f0f7ff"/>
-          <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
-          
-          {/* Domain dots */}
-          <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="290" fill="#1976d2" {...commonStyles.dotStyle}/>
-          
-          {/* Codomain container */}
-          <rect x="360" y="80" width="140" height="180" rx="20" fill="#f0fdf4"/>
-          <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
-          
-          {/* Codomain dots */}
-          <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle}/>
-          
-          {/* Arrows */}
-          <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 240 L415 190" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 290 L415 240" stroke="#2196f3" strokeWidth="2"/>
-        </svg>
-      );
-    }
-  
-    if (type === "bijective") {
-      return (
-        <svg {...baseProps} viewBox="0 0 600 300">
-          <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">Bijective</text>
-          
-          {/* Domain container */}
-          <rect x="100" y="80" width="140" height="180" rx="20" fill="#f0f7ff"/>
-          <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
-          
-          {/* Domain dots */}
-          <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle}/>
-          <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle}/>
-          
-          {/* Codomain container */}
-          <rect x="360" y="80" width="140" height="180" rx="20" fill="#f0fdf4"/>
-          <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
-          
-          {/* Codomain dots */}
-          <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle}/>
-          <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle}/>
-          
-          {/* Arrows */}
-          <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2"/>
-          <path d="M185 240 L415 240" stroke="#2196f3" strokeWidth="2"/>
-        </svg>
-      );
+  type: 'injective' | 'surjective' | 'bijective';
+}
+
+const FunctionVisualization: React.FC<FunctionVisualizationProps> = ({ type }) => {
+  const baseProps = {
+    width: "100%",
+    height: "300",
+    className: "mt-4",
+    style: { maxWidth: "600px" }
+  };
+
+  const commonStyles = {
+    labelStyle: {
+      fontSize: 20,
+      fontFamily: "system-ui",
+      textAnchor: "middle"
+    },
+    dotStyle: {
+      r: 15
     }
   };
+
+  if (type === "injective") {
+    return (
+      <svg {...baseProps} viewBox="0 0 600 360">
+        <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">One-to-One (Injective)</text>
+
+        {/* Domain container */}
+        <rect x="100" y="80" width="140" height="180" rx="20" fill="#f0f7ff" />
+        <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
+
+        {/* Domain dots */}
+        <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle} />
+
+        {/* Codomain container - taller to include the extra dot */}
+        <rect x="360" y="80" width="140" height="230" rx="20" fill="#f0fdf4" />
+        <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
+
+        {/* Codomain dots */}
+        <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="290" fill="#388e3c" {...commonStyles.dotStyle} />
+
+        {/* Arrows */}
+        <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 240 L415 240" stroke="#2196f3" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  if (type === "surjective") {
+    return (
+      <svg {...baseProps} viewBox="0 0 600 360">
+        <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">Onto (Surjective)</text>
+
+        {/* Domain container - taller for extra dot */}
+        <rect x="100" y="80" width="140" height="230" rx="20" fill="#f0f7ff" />
+        <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
+
+        {/* Domain dots */}
+        <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="290" fill="#1976d2" {...commonStyles.dotStyle} />
+
+        {/* Codomain container */}
+        <rect x="360" y="80" width="140" height="180" rx="20" fill="#f0fdf4" />
+        <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
+
+        {/* Codomain dots */}
+        <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle} />
+
+        {/* Arrows */}
+        <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 240 L415 190" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 290 L415 240" stroke="#2196f3" strokeWidth="2" />
+      </svg>
+    );
+  }
+
+  if (type === "bijective") {
+    return (
+      <svg {...baseProps} viewBox="0 0 600 300">
+        <text x="300" y="40" textAnchor="middle" fontSize="24" fontFamily="system-ui">Bijective</text>
+
+        {/* Domain container */}
+        <rect x="100" y="80" width="140" height="180" rx="20" fill="#f0f7ff" />
+        <text x="170" y="110" {...commonStyles.labelStyle}>Domain</text>
+
+        {/* Domain dots */}
+        <circle cx="170" cy="140" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="190" fill="#1976d2" {...commonStyles.dotStyle} />
+        <circle cx="170" cy="240" fill="#1976d2" {...commonStyles.dotStyle} />
+
+        {/* Codomain container */}
+        <rect x="360" y="80" width="140" height="180" rx="20" fill="#f0fdf4" />
+        <text x="430" y="110" {...commonStyles.labelStyle}>Codomain</text>
+
+        {/* Codomain dots */}
+        <circle cx="430" cy="140" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="190" fill="#388e3c" {...commonStyles.dotStyle} />
+        <circle cx="430" cy="240" fill="#388e3c" {...commonStyles.dotStyle} />
+
+        {/* Arrows */}
+        <path d="M185 140 L415 140" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 190 L415 190" stroke="#2196f3" strokeWidth="2" />
+        <path d="M185 240 L415 240" stroke="#2196f3" strokeWidth="2" />
+      </svg>
+    );
+  }
+};
 
 const FunctionNotes: React.FC = () => {
   return (
@@ -130,7 +130,7 @@ const FunctionNotes: React.FC = () => {
       <Section title="1. Introduction to Functions">
         <div className="space-y-4">
           <p className="text-lg">A function is a special type of relation from set A to set B, written as R: A → B, where R ⊆ A × B. A binary relation R from A to B is a function if for every element a in A, there is a unique element b in B so that (a, b) is in R.</p>
-          
+
           <SubSection title="Basic Function Requirements">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
@@ -216,7 +216,7 @@ const FunctionNotes: React.FC = () => {
       <Section title="2. Number of Functions">
         <div className="space-y-4">
           <p className="text-lg">When counting possible functions between two sets, we need to consider all valid mappings that satisfy the function requirements.</p>
-          
+
           <SubSection title="Counting Basics">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
@@ -314,125 +314,125 @@ const FunctionNotes: React.FC = () => {
       </Section>
 
       <Section title="3. Types of Functions">
-    <div className="space-y-6">
-      <p className="text-lg mb-4">There are three main types of functions, each with distinct properties and relationships between their domain and codomain.</p>
+        <div className="space-y-6">
+          <p className="text-lg mb-4">There are three main types of functions, each with distinct properties and relationships between their domain and codomain.</p>
 
-      <SubSection title="Injective (One-to-One) Functions">
-        <div className="space-y-4">
-          <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-            <p className="font-semibold">Definition:</p>
-            <p>A function f is injective (one-to-one) if:</p>
-            <ul className="list-disc ml-6 mt-2">
-              <li>Each element in the codomain is mapped to by at most one element in the domain</li>
-              <li>If f(a) = f(b), then a = b</li>
-              <li>Every element of domain maps to different distinct elements of codomain</li>
-            </ul>
-          </div>
+          <SubSection title="Injective (One-to-One) Functions">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <p>A function f is injective (one-to-one) if:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>Each element in the codomain is mapped to by at most one element in the domain</li>
+                  <li>If f(a) = f(b), then a = b</li>
+                  <li>Every element of domain maps to different distinct elements of codomain</li>
+                </ul>
+              </div>
 
-          <Card className="p-4">
-            <p className="font-semibold text-xl mb-2">Visual Representation:</p>
-            <FunctionVisualization type="injective" />
-            <p className="mt-6 mb-2">In this example:</p>
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Each domain element maps to a unique codomain element</li>
-              <li>Some codomain elements may remain unmapped</li>
-              <li>No two arrows point to the same element</li>
-            </ul>
-          </Card>
+              <Card className="p-4">
+                <p className="font-semibold text-xl mb-2">Visual Representation:</p>
+                <FunctionVisualization type="injective" />
+                <p className="mt-6 mb-2">In this example:</p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>Each domain element maps to a unique codomain element</li>
+                  <li>Some codomain elements may remain unmapped</li>
+                  <li>No two arrows point to the same element</li>
+                </ul>
+              </Card>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-            <p className="font-semibold">Properties and Conditions:</p>
-            <ul className="list-disc ml-6">
-              <li>No two different elements in the domain map to the same element in the codomain</li>
-              <li>Each element in the codomain is mapped to by at most one element</li>
-              <li>|domain| ≤ |codomain| must be true for injection to be possible</li>
-              <li>If |domain| &gt; |codomain|, one-to-one function is not possible</li>
-            </ul>
-          </div>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p className="font-semibold">Properties and Conditions:</p>
+                <ul className="list-disc ml-6">
+                  <li>No two different elements in the domain map to the same element in the codomain</li>
+                  <li>Each element in the codomain is mapped to by at most one element</li>
+                  <li>|domain| ≤ |codomain| must be true for injection to be possible</li>
+                  <li>If |domain| &gt; |codomain|, one-to-one function is not possible</li>
+                </ul>
+              </div>
+            </div>
+          </SubSection>
+
+          <SubSection title="Surjective (Onto) Functions">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <p>A function f is surjective (onto) if:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>Every element in the codomain is mapped to by at least one element in the domain</li>
+                  <li>The range equals the codomain</li>
+                  <li>Every element of codomain has at least one preimage</li>
+                </ul>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold text-xl mb-2">Visual Representation:</p>
+                <FunctionVisualization type="surjective" />
+                <p className="mt-6 mb-2">In this example:</p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>Every codomain element has at least one arrow pointing to it</li>
+                  <li>Multiple domain elements can map to the same codomain element</li>
+                  <li>No codomain element is left unmapped</li>
+                </ul>
+              </Card>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+                <p className="font-semibold">Key Requirements:</p>
+                <ul className="list-disc ml-6">
+                  <li>|domain| ≥ |codomain| must be true for surjection to be possible</li>
+                  <li>If |domain| &lt; |codomain|, onto function is not possible</li>
+                  <li>Multiple elements from domain can map to the same codomain element</li>
+                  <li>No codomain element can be left unmapped</li>
+                </ul>
+              </div>
+            </div>
+          </SubSection>
+
+          <SubSection title="Bijective Functions">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <p>A function f is bijective if it is both injective and surjective, meaning:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>Each element in the codomain is mapped to by exactly one element in the domain</li>
+                  <li>Creates a perfect one-to-one pairing between domain and codomain</li>
+                  <li>If R: A → B then |A| = |B| must be true</li>
+                </ul>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold text-xl mb-2">Visual Representation:</p>
+                <FunctionVisualization type="bijective" />
+                <p className="mt-6 mb-2">In this example:</p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>Each domain element maps to exactly one codomain element</li>
+                  <li>Each codomain element is mapped to by exactly one domain element</li>
+                  <li>Perfect one-to-one correspondence between sets</li>
+                </ul>
+              </Card>
+
+              <div className="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
+                <p className="font-semibold">Essential Properties:</p>
+                <ul className="list-disc ml-6">
+                  <li>Guarantees existence of an inverse function</li>
+                  <li>|domain| = |codomain| must be true</li>
+                  <li>Every element in domain maps to exactly one element in codomain</li>
+                  <li>Every element in codomain has exactly one preimage</li>
+                  <li>Function is both one-to-one and onto</li>
+                </ul>
+              </div>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+                <p className="font-semibold">Size Relationships Summary:</p>
+                <ul className="list-disc ml-6">
+                  <li>For injective (one-to-one): |domain| ≤ |codomain|</li>
+                  <li>For surjective (onto): |domain| ≥ |codomain|</li>
+                  <li>For bijective: |domain| = |codomain|</li>
+                </ul>
+              </div>
+            </div>
+          </SubSection>
         </div>
-      </SubSection>
-
-      <SubSection title="Surjective (Onto) Functions">
-        <div className="space-y-4">
-          <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-            <p className="font-semibold">Definition:</p>
-            <p>A function f is surjective (onto) if:</p>
-            <ul className="list-disc ml-6 mt-2">
-              <li>Every element in the codomain is mapped to by at least one element in the domain</li>
-              <li>The range equals the codomain</li>
-              <li>Every element of codomain has at least one preimage</li>
-            </ul>
-          </div>
-
-          <Card className="p-4">
-            <p className="font-semibold text-xl mb-2">Visual Representation:</p>
-            <FunctionVisualization type="surjective" />
-            <p className="mt-6 mb-2">In this example:</p>
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Every codomain element has at least one arrow pointing to it</li>
-              <li>Multiple domain elements can map to the same codomain element</li>
-              <li>No codomain element is left unmapped</li>
-            </ul>
-          </Card>
-
-          <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-            <p className="font-semibold">Key Requirements:</p>
-            <ul className="list-disc ml-6">
-              <li>|domain| ≥ |codomain| must be true for surjection to be possible</li>
-              <li>If |domain| &lt; |codomain|, onto function is not possible</li>
-              <li>Multiple elements from domain can map to the same codomain element</li>
-              <li>No codomain element can be left unmapped</li>
-            </ul>
-          </div>
-        </div>
-      </SubSection>
-
-      <SubSection title="Bijective Functions">
-        <div className="space-y-4">
-          <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-            <p className="font-semibold">Definition:</p>
-            <p>A function f is bijective if it is both injective and surjective, meaning:</p>
-            <ul className="list-disc ml-6 mt-2">
-              <li>Each element in the codomain is mapped to by exactly one element in the domain</li>
-              <li>Creates a perfect one-to-one pairing between domain and codomain</li>
-              <li>If R: A → B then |A| = |B| must be true</li>
-            </ul>
-          </div>
-
-          <Card className="p-4">
-            <p className="font-semibold text-xl mb-2">Visual Representation:</p>
-            <FunctionVisualization type="bijective" />
-            <p className="mt-6 mb-2">In this example:</p>
-            <ul className="list-disc ml-6 space-y-2">
-              <li>Each domain element maps to exactly one codomain element</li>
-              <li>Each codomain element is mapped to by exactly one domain element</li>
-              <li>Perfect one-to-one correspondence between sets</li>
-            </ul>
-          </Card>
-
-          <div className="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
-            <p className="font-semibold">Essential Properties:</p>
-            <ul className="list-disc ml-6">
-              <li>Guarantees existence of an inverse function</li>
-              <li>|domain| = |codomain| must be true</li>
-              <li>Every element in domain maps to exactly one element in codomain</li>
-              <li>Every element in codomain has exactly one preimage</li>
-              <li>Function is both one-to-one and onto</li>
-            </ul>
-          </div>
-
-          <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-            <p className="font-semibold">Size Relationships Summary:</p>
-            <ul className="list-disc ml-6">
-              <li>For injective (one-to-one): |domain| ≤ |codomain|</li>
-              <li>For surjective (onto): |domain| ≥ |codomain|</li>
-              <li>For bijective: |domain| = |codomain|</li>
-            </ul>
-          </div>
-        </div>
-      </SubSection>
-    </div>
-        </Section>
+      </Section>
 
       <Section title="4. Function Composition">
         <div className="space-y-6">

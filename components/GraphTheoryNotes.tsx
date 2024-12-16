@@ -478,7 +478,7 @@ const GraphTheoryNotes: React.FC = () => {
                         </div>
                     </SubSection>
 
-                    <SubSection title="5.1 Euler Paths and Circuits">
+                    <SubSection title="Euler Paths and Circuits">
                         <div className="space-y-4">
                             <Card className="p-4">
                                 <p className="font-semibold">Definitions:</p>
@@ -514,7 +514,7 @@ const GraphTheoryNotes: React.FC = () => {
                         </div>
                     </SubSection>
 
-                    <SubSection title="5.2 Hamiltonian Graph">
+                    <SubSection title="Hamiltonian Graph">
                         <div className="space-y-4">
                             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                                 <p className="font-semibold">Core Concepts:</p>

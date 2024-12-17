@@ -24,7 +24,7 @@ const SubjectCard: React.FC<SubjectProps> = ({ title, description, averageMarks,
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-2">{description}</p>
           <p className="text-sm font-medium text-green-600 dark:text-gray-400 mb-4">Average Marks:
-            <span className="text-green-600 font-bold"> {averageMarks} Marks</span>
+            <span className="text-green-600 font-bold"> {averageMarks} Marks (in GATE)</span>
           </p>
           <ul className="space-y-2">
             {topics.map((topic) => (

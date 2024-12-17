@@ -195,7 +195,6 @@ export default function RootLayout({
                 </div>
               </div>
 
-              {/* <Link href="/contact" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Contact</Link> */}
               <Link href="/about" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">About</Link>
 
               {/* Dark Mode Toggle */}
@@ -273,13 +272,6 @@ export default function RootLayout({
                     ))}
                   </div>
                 </details>
-                {/* <Link
-                  href="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-                >
-                  Contact
-                </Link> */}
                 <Link
                   href="/about"
                   onClick={() => setMobileMenuOpen(false)}
@@ -295,6 +287,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Analytics />
         <SpeedInsights />
+        <script async src="https://cdn.counter.dev/script.js" data-id="your_id" data-utcoffset="1"></script>
 
         {/* Footer */}
         <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">

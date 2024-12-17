@@ -565,6 +565,10 @@ const CombinatoricsNotes: React.FC = () => {
                     <p className="font-medium">2. Sequence Problem:</p>
                     <p>Among any n+1 integers, there must be two that leave the same remainder when divided by n.</p>
                   </div>
+                  <div>
+                    <p className="font-medium">3. Number Theory:</p>
+                    <p>For any natural number n, there exists a nonzero multiple containing only digits 0 and 1.</p>
+                  </div>
                 </div>
               </Card>
             </div>

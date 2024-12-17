@@ -302,7 +302,7 @@ export default function RootLayout({
               .
             </p>
             <p className="text-gray-600 dark:text-gray-400">
-              Developed by{" "}
+              Conceptualised by{" "}
               <a
                 href="https://www.linkedin.com/in/mayankksp/"
                 target="_blank"

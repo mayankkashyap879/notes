@@ -287,7 +287,6 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Analytics />
         <SpeedInsights />
-        <script async src="https://cdn.counter.dev/script.js" data-id="your_id" data-utcoffset="1"></script>
 
         {/* Footer */}
         <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-8">

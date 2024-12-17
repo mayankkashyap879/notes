@@ -102,11 +102,11 @@ const CalculusNotes: React.FC = () => {
                                 </ul>
                             </div>
 
-                            {/* L'Hôpital's Rule */}
+                            {/* L'Hôpital&apos;s Rule */}
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                                <p className="font-semibold">4. L'Hôpital's Rule</p>
+                                <p className="font-semibold">4. L&apos;Hôpital&apos;s Rule</p>
                                 <p>Used for evaluating limits of indeterminate forms</p>
-                                <p className="mt-2">All Fundamental Limit Theorems (FLT) are derived from L'Hôpital's rule</p>
+                                <p className="mt-2">All Fundamental Limit Theorems (FLT) are derived from L&apos;Hôpital&apos;s rule</p>
                             </div>
 
                             {/* 1^∞ Form */}
@@ -236,7 +236,7 @@ const CalculusNotes: React.FC = () => {
                                 <li>g(x), 0 &lt; x ≤ a</li>
                                 <li>h(x), a &lt; x ≤ b</li>
                             </ul>
-                            <p>Then, f'(a-) = f'(a+) for differentiability at a</p>
+                            <p>Then, f&apos;(a-) = f&apos;(a+) for differentiability at a</p>
                         </div>
                     </Card>
 
@@ -248,15 +248,15 @@ const CalculusNotes: React.FC = () => {
                                 <ul className="list-disc ml-6">
                                     <li>If f is differentiable at x, then f must be continuous at x</li>
                                     <li>However, a function can be continuous but not differentiable at a point</li>
-                                    <li>If f'(x) exists, both one-sided derivatives must exist and be equal</li>
+                                    <li>If f&apos;(x) exists, both one-sided derivatives must exist and be equal</li>
                                 </ul>
                             </Card>
 
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Square Root Differentiability:</p>
                                 <p>If f is differentiable, then:</p>
-                                <p className="ml-4">d/dx √f(x) = f'(x)/(2√f(x))</p>
-                                <p className="mt-2 text-sm">Note: This doesn't mean if f is differentiable, √f is also differentiable. Counter example: f(x) = x at x = 0</p>
+                                <p className="ml-4">d/dx √f(x) = f&apos;(x)/(2√f(x))</p>
+                                <p className="mt-2 text-sm">Note: This doesn&apos;t mean if f is differentiable, √f is also differentiable. Counter example: f(x) = x at x = 0</p>
                             </div>
                         </div>
                     </SubSection>
@@ -295,19 +295,19 @@ const CalculusNotes: React.FC = () => {
                                 <p className="font-semibold">Basic Rules:</p>
                                 <ul className="list-disc ml-6">
                                     <li>d/dx(xⁿ) = nxⁿ⁻¹</li>
-                                    <li>d/dx(fg) = f'g + fg'</li>
-                                    <li>d/dx(f/g) = (gf' - fg')/g²</li>
-                                    <li>d/dx(f(g(x))) = f'(g(x))·g'(x)</li>
+                                    <li>d/dx(fg) = f&apos;g + fg&apos;</li>
+                                    <li>d/dx(f/g) = (gf&apos; - fg&apos;)/g²</li>
+                                    <li>d/dx(f(g(x))) = f&apos;(g(x))·g&apos;(x)</li>
                                 </ul>
                             </Card>
 
                             <Card className="p-4">
                                 <p className="font-semibold">Function Behavior:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>f'(x) &gt; 0: Function increasing</li>
-                                    <li>f'(x) &lt; 0: Function decreasing</li>
-                                    <li>f'(x) = 0: Potential critical point</li>
-                                    <li>f'(x) DNE: Critical point</li>
+                                    <li>f&apos;(x) &gt; 0: Function increasing</li>
+                                    <li>f&apos;(x) &lt; 0: Function decreasing</li>
+                                    <li>f&apos;(x) = 0: Potential critical point</li>
+                                    <li>f&apos;(x) DNE: Critical point</li>
                                 </ul>
                             </Card>
                         </div>
@@ -322,9 +322,9 @@ const CalculusNotes: React.FC = () => {
                         <Card className="p-4">
                             <ul className="space-y-2">
                                 <li>• d/dx(xⁿ) = nxⁿ⁻¹</li>
-                                <li>• d/dx(fg) = fg' + gf'</li>
-                                <li>• d/dx(f/g) = (gf' - fg')/g²</li>
-                                <li>• d/dx(f(g(x))) = f'(g(x))g'(x)</li>
+                                <li>• d/dx(fg) = fg&apos; + gf&apos;</li>
+                                <li>• d/dx(f/g) = (gf&apos; - fg&apos;)/g²</li>
+                                <li>• d/dx(f(g(x))) = f&apos;(g(x))g&apos;(x)</li>
                                 <li>• d/dx(sin x) = cos x</li>
                                 <li>• d/dx(cos x) = -sin x</li>
                                 <li>• d/dx(tan x) = sec² x</li>
@@ -347,9 +347,9 @@ const CalculusNotes: React.FC = () => {
                             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                                 <p className="font-semibold mb-2">Key Points:</p>
                                 <ul className="list-disc ml-6 space-y-2">
-                                    <li>Stationary points: Points where f'(x) = 0 if f is differentiable</li>
-                                    <li>Critical points: Points where f'(x) = 0 or doesn't exist (DNE)</li>
-                                    <li>Note: f'(x) = 0 doesn't always mean it's a maximum or minimum
+                                    <li>Stationary points: Points where f&apos;(x) = 0 if f is differentiable</li>
+                                    <li>Critical points: Points where f&apos;(x) = 0 or doesn&apos;t exist (DNE)</li>
+                                    <li>Note: f&apos;(x) = 0 doesn&apos;t always mean it&apos;s a maximum or minimum
                                         (e.g., f(x) = x³ at x = 0 is neither)</li>
                                 </ul>
                             </div>
@@ -362,7 +362,7 @@ const CalculusNotes: React.FC = () => {
                             <p className="font-semibold mb-2">Definition:</p>
                             <p>Point where function changes from concave to convex or vice versa</p>
                             <ul className="list-disc ml-6 mt-2">
-                                <li>Occurs at points where f''(x) = 0</li>
+                                <li>Occurs at points where f&apos;&apos;(x) = 0</li>
                                 <li>Must verify change in concavity by testing points on either side</li>
                                 <li>Not necessarily a maximum or minimum point</li>
                             </ul>
@@ -375,25 +375,25 @@ const CalculusNotes: React.FC = () => {
                             <Card className="p-4">
                                 <p className="font-semibold">First Derivative Test:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>f'(x) &gt; 0: Function is strictly increasing</li>
-                                    <li>f'(x) &lt; 0: Function is strictly decreasing</li>
+                                    <li>f&apos;(x) &gt; 0: Function is strictly increasing</li>
+                                    <li>f&apos;(x) &lt; 0: Function is strictly decreasing</li>
                                 </ul>
                             </Card>
 
                             <Card className="p-4">
                                 <p className="font-semibold">Second Derivative Test:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>f''(x) &gt; 0: Function is concave up (sagging)</li>
-                                    <li>f''(x) &lt; 0: Function is concave down (hogging)</li>
+                                    <li>f&apos;&apos;(x) &gt; 0: Function is concave up (sagging)</li>
+                                    <li>f&apos;&apos;(x) &lt; 0: Function is concave down (hogging)</li>
                                 </ul>
                             </Card>
 
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Analysis Steps:</p>
                                 <ol className="list-decimal ml-6">
-                                    <li>Find critical points by solving f'(x) = 0</li>
-                                    <li>Find intervals where f'(x) &gt; 0 and f'(x) &lt; 0</li>
-                                    <li>Find points of inflection by solving f''(x) = 0</li>
+                                    <li>Find critical points by solving f&apos;(x) = 0</li>
+                                    <li>Find intervals where f&apos;(x) &gt; 0 and f&apos;(x) &lt; 0</li>
+                                    <li>Find points of inflection by solving f&apos;&apos;(x) = 0</li>
                                     <li>Create a number line and test points to determine behavior</li>
                                 </ol>
                             </div>
@@ -406,7 +406,7 @@ const CalculusNotes: React.FC = () => {
                             <p className="font-semibold">Important Considerations:</p>
                             <ul className="list-disc ml-6">
                                 <li>End points of closed intervals must be checked</li>
-                                <li>Points where derivative doesn't exist must be considered</li>
+                                <li>Points where derivative doesn&apos;t exist must be considered</li>
                                 <li>Jump discontinuities may indicate local extrema</li>
                                 <li>Absolute extrema occur at:
                                     <ul className="list-circle ml-6">
@@ -438,9 +438,9 @@ const CalculusNotes: React.FC = () => {
                             </Card>
 
                             <Card className="p-4">
-                                <p className="font-semibold">2. Rolle's Theorem:</p>
+                                <p className="font-semibold">2. Rolle&apos;s Theorem:</p>
                                 <div className="space-y-2">
-                                    <p>If f is continuous on [a,b] and differentiable on (a,b), and f(a) = f(b), then ∃c ∈ [a,b] with f'(c) = 0</p>
+                                    <p>If f is continuous on [a,b] and differentiable on (a,b), and f(a) = f(b), then ∃c ∈ [a,b] with f&apos;(c) = 0</p>
                                     <div className="bg-blue-50 dark:bg-blue-900 p-3 rounded-lg mt-2">
                                         <p className="font-semibold">Conditions:</p>
                                         <ul className="list-disc ml-6">
@@ -455,7 +455,7 @@ const CalculusNotes: React.FC = () => {
                             <Card className="p-4">
                                 <p className="font-semibold">3. Mean Value Theorem:</p>
                                 <div className="space-y-2">
-                                    <p>If f is continuous on [a,b] and differentiable on (a,b), then ∃c ∈ [a,b] with [f(b) - f(a)]/(b-a) = f'(c)</p>
+                                    <p>If f is continuous on [a,b] and differentiable on (a,b), then ∃c ∈ [a,b] with [f(b) - f(a)]/(b-a) = f&apos;(c)</p>
                                     <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg mt-2">
                                         <p className="font-semibold">Geometric Interpretation:</p>
                                         <p>There exists at least one point where the instantaneous rate of change equals the average rate of change over the interval</p>
@@ -552,10 +552,10 @@ const CalculusNotes: React.FC = () => {
                             </Card>
 
                             <Card className="p-4">
-                                <p className="font-semibold">Wallis's Formulae:</p>
+                                <p className="font-semibold">Wallis&apos;s Formulae:</p>
                                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>∫₀ᵖⁱ sin" x dx = ∫₀ᵖⁱ cos" x dx = [(n-1)(n-3)...4.2]/[n(n-2)(n-4)...5.3]</li>
+                                        <li>∫₀ᵖⁱ sin&quot; x dx = ∫₀ᵖⁱ cos&quot; x dx = [(n-1)(n-3)...4.2]/[n(n-2)(n-4)...5.3]</li>
                                         <li>For n = 3,5,7,9...</li>
                                         <li>A = π/2 if m and n are both even positive integers</li>
                                         <li>A = 1 if m and/or n are odd positive integers</li>
@@ -581,7 +581,7 @@ const CalculusNotes: React.FC = () => {
                             </Card>
 
                             <Card className="p-4">
-                                <p className="font-semibold">Leibnitz's Integration Formula:</p>
+                                <p className="font-semibold">Leibnitz&apos;s Integration Formula:</p>
                                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                     <p>d/dx ∫ᵃᵇ f(t)dt = f(b)·db/dx - f(a)·da/dx</p>
                                 </div>

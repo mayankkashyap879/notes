@@ -66,7 +66,7 @@ const AboutPage = () => {
                         CS Notes combines the power of artificial intelligence with educational expertise to provide high-quality, accessible computer science education resources to students worldwide. We believe in making complex concepts understandable through clear explanations, practical examples, and a structured learning approach.
                     </p>
                     <p className="text-gray-600 dark:text-gray-300">
-                        By leveraging AI technology, we're able to create and maintain comprehensive study materials that adapt to student needs while ensuring accuracy through human oversight.
+                        By leveraging AI technology, we&are able to create and maintain comprehensive study materials that adapt to student needs while ensuring accuracy through human oversight.
                     </p>
                 </div>
 
@@ -132,26 +132,13 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                {/* Get Started Section */}
-                {/* <div className="bg-blue-500 dark:bg-blue-600 rounded-lg shadow-lg p-8 text-center">
-                    <h2 className="text-2xl font-bold text-white mb-4">
-                        Experience AI-Enhanced Learning
-                    </h2>
-                    <p className="text-white mb-6">
-                        Discover how our AI-powered notes can help you master computer science concepts more effectively.
-                    </p>
-                    <button className="bg-white text-blue-500 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Browse Subjects
-                    </button>
-                </div> */}
-
                 {/* Contact Section */}
                 <div className="mt-16 text-center">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                         Get in Touch
                     </h2>
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        Have questions about our AI-powered notes or suggestions for improvement? We'd love to hear from you!
+                        Have questions about our AI-powered notes or suggestions for improvement? We&apos;d love to hear from you!
                     </p>
                     <a
                         href="mailto:mayankkashyap930@gmail.com"

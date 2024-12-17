@@ -29,7 +29,7 @@ const SubjectCard: React.FC<SubjectProps> = ({ title, description, averageMarks,
           <ul className="space-y-2">
             {topics.map((topic) => (
               <li key={topic.path}>
-                <Link 
+                <Link
                   href={topic.path}
                   className="group flex items-center text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
                 >
@@ -148,7 +148,7 @@ const CSNotesHome: React.FC = () => {
             key={subject.title}
             title={subject.title}
             description={subject.description}
-            averageMarks={subject.averageMarks} // Pass average marks
+            averageMarks={subject.averageMarks}
             topics={subject.topics}
           />
         ))}

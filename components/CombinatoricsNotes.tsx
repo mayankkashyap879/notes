@@ -218,9 +218,9 @@ const CombinatoricsNotes: React.FC = () => {
                 <p className="font-semibold">Permutations with Repetition:</p>
                 <p>For n objects where nᵢ are repeated:</p>
                 <p className="mt-2 font-mono">n!/(n₁!×n₂!×...×nₖ!)</p>
-                <p className="mt-2">Example: Permutations of &apos;COOK&apos;</p>
+                <p className="mt-2">Example: Permutations of 'COOK'</p>
                 <ul className="list-disc ml-6">
-                  <li>Method 1: Select positions for C, K, then arrange O&apos;s</li>
+                  <li>Method 1: Select positions for C, K, then arrange O's</li>
                   <li>Method 2: Consider as 4!/(2!) = 12 arrangements</li>
                   <li>Method 3: Select positions with multiplicity</li>
                 </ul>
@@ -245,7 +245,7 @@ const CombinatoricsNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>A combination is a selection of objects where order doesn&apos;t matter.</p>
+                <p>A combination is a selection of objects where order doesn't matter.</p>
                 <div className="mt-2">
                   <p className="font-semibold">Core Formula:</p>
                   <p>C(n,r) = n!/[r!(n-r)!]</p>
@@ -260,12 +260,12 @@ const CombinatoricsNotes: React.FC = () => {
                   <li>C(n,0) = C(n,n) = 1</li>
                   <li>C(n,1) = n</li>
                   <li>C(n,r) = 0 if r &gt; n</li>
-                  <li>C(n+1,r) = C(n,r-1) + C(n,r) [Pascal&apos;s Identity]</li>
+                  <li>C(n+1,r) = C(n,r-1) + C(n,r) [Pascal's Identity]</li>
                 </ul>
               </Card>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p className="font-semibold">Pascal&apos;s Triangle:</p>
+                <p className="font-semibold">Pascal's Triangle:</p>
                 <div className="mt-2 text-center font-mono">
                   <p>1</p>
                   <p>1 1</p>
@@ -277,7 +277,7 @@ const CombinatoricsNotes: React.FC = () => {
               </div>
 
               <Card className="p-4">
-                <p className="font-semibold">Vandermonde&apos;s Identity:</p>
+                <p className="font-semibold">Vandermonde's Identity:</p>
                 <p className="mt-2">C(m+n,r) = ΣC(m,k)×C(n,r-k)</p>
                 <p className="mt-2">Example: Selecting r objects from two groups of m and n objects</p>
               </Card>
@@ -286,7 +286,7 @@ const CombinatoricsNotes: React.FC = () => {
                 <p className="font-semibold">Combinations with Repetition:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Formula: C(n+r-1,r) or C(n+r-1,n-1)</li>
-                  <li>Also known as &quot;Stars and Bars&quot; problem</li>
+                  <li>Also known as "Stars and Bars" problem</li>
                   <li>Example: Selecting r items from n types with repetition allowed</li>
                 </ul>
               </div>
@@ -329,7 +329,212 @@ const CombinatoricsNotes: React.FC = () => {
         </div>
       </Section>
 
-      <Section title="3. Advanced Counting Techniques">
+      <Section title="3. Distribution Problems">
+        <div className="space-y-6">
+          <p className="text-lg">
+            Distribution problems involve placing objects into boxes. The nature of both the objects and boxes leads to different counting techniques, with each case requiring its own specific approach.
+          </p>
+
+          <SubSection title="Types of Distribution Problems">
+            <div className="space-y-4">
+              <Card className="p-4">
+                <p className="font-semibold">Four Main Cases:</p>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-medium">1. DODB (Distinguishable Objects into Distinguishable Boxes)</p>
+                    <ul className="list-disc ml-6 mt-1 text-gray-600">
+                      <li>Each object and box can be identified uniquely</li>
+                      <li>Most straightforward case - ordered assignments</li>
+                      <li>Formula: nᵏ for n objects into k boxes</li>
+                      <li>Example: Assigning distinct tasks to different employees</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-medium">2. IODB (Indistinguishable Objects into Distinguishable Boxes)</p>
+                    <ul className="list-disc ml-6 mt-1 text-gray-600">
+                      <li>Objects are identical</li>
+                      <li>Also known as "Stars and Bars" problem</li>
+                      <li>Formula: C(n+k-1, k-1) or C(n+k-1, n)</li>
+                      <li>Example: Distributing identical coins into different piggy banks</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-medium">3. DOIB (Distinguishable Objects into Indistinguishable Boxes)</p>
+                    <ul className="list-disc ml-6 mt-1 text-gray-600">
+                      <li>Related to set partitioning</li>
+                      <li>Uses Stirling numbers of second kind</li>
+                      <li>Formula: S(n,k) for n objects into exactly k boxes</li>
+                      <li>Example: Grouping distinct elements into indistinguishable sets</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="font-medium">4. IOIB (Indistinguishable Objects into Indistinguishable Boxes)</p>
+                    <ul className="list-disc ml-6 mt-1 text-gray-600">
+                      <li>Related to integer partitions</li>
+                      <li>Most restricted case</li>
+                      <li>Uses partition function P(n)</li>
+                      <li>Example: Breaking a number into sum of positive integers</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Distribution with Constraints">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Common Constraints:</p>
+                <ul className="list-disc ml-6">
+                  <li>Minimum objects per box (at least)</li>
+                  <li>Maximum objects per box (at most)</li>
+                  <li>Empty boxes allowed/not allowed</li>
+                  <li>Objects must be adjacent/non-adjacent</li>
+                  <li>Circular arrangements</li>
+                  <li>Order-sensitive distributions</li>
+                </ul>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold">Solution Strategy:</p>
+                <ol className="list-decimal ml-6 mt-2">
+                  <li>Identify object and box distinguishability</li>
+                  <li>List all constraints</li>
+                  <li>Apply appropriate template</li>
+                  <li>Adjust formula for constraints</li>
+                  <li>Check for overcounting</li>
+                  <li>Verify boundary conditions</li>
+                </ol>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Integer Compositions">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <p>A composition of an integer n is a way of writing n as the sum of a sequence of positive integers where order matters.</p>
+                <div className="mt-2">
+                  <p className="font-semibold">Key Properties:</p>
+                  <ul className="list-disc ml-6">
+                    <li>Total number of compositions of n = 2ⁿ⁻¹</li>
+                    <li>Compositions into k parts = C(n-1, k-1)</li>
+                    <li>Different from partitions (where order doesn't matter)</li>
+                    <li>Related to IODB distribution problems</li>
+                    <li>Each composition represents a unique way to break down a number</li>
+                  </ul>
+                </div>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold">Example: Compositions of 4</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>4</li>
+                  <li>3+1, 1+3</li>
+                  <li>2+2</li>
+                  <li>2+1+1, 1+2+1, 1+1+2</li>
+                  <li>1+1+1+1</li>
+                </ul>
+                <p className="mt-2 text-sm">Total compositions = 2³ = 8</p>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Important Formulas">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Key Distribution Formulas:</p>
+                <div className="mt-2 space-y-3">
+                  <div>
+                    <p className="font-medium">DODB with no restrictions:</p>
+                    <p className="ml-4">n^k (n objects into k boxes)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">IODB with no restrictions:</p>
+                    <p className="ml-4">C(n+k-1, k-1) or C(n+k-1, n)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">DOIB into exactly k boxes:</p>
+                    <p className="ml-4">S(n,k) (Stirling number of second kind)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">IOIB (Integer Partitions):</p>
+                    <p className="ml-4">P(n) (Partition number)</p>
+                  </div>
+                </div>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold">Special Cases:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>At least one object per box: k! × S(n,k)</li>
+                  <li>At most m objects per box: Use inclusion-exclusion</li>
+                  <li>Exactly m objects per box: Direct multiplication</li>
+                  <li>Cyclic distributions: Divide by appropriate factorial</li>
+                  <li>Non-empty box constraint: Subtract empty box cases</li>
+                </ul>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Application Examples">
+            <div className="space-y-4">
+              <Card className="p-4">
+                <p className="font-semibold">Example 1: Card Distribution</p>
+                <div className="mt-2">
+                  <p>Distributing 52 cards to 4 players:</p>
+                  <ul className="list-disc ml-6">
+                    <li>DODB case (ordered dealing): 52!/(13!)⁴</li>
+                    <li>DOIB case (unordered teams): S(52,4) × 4!</li>
+                    <li>With constraints on specific cards: Use inclusion-exclusion</li>
+                  </ul>
+                </div>
+              </Card>
+
+              <Card className="p-4">
+                <p className="font-semibold">Example 2: Integer Solutions</p>
+                <div className="mt-2">
+                  <p>Solutions to x₁ + x₂ + x₃ = n where:</p>
+                  <ul className="list-disc ml-6">
+                    <li>Non-negative integers: C(n+2,2)</li>
+                    <li>Positive integers: C(n-1,2)</li>
+                    <li>With restrictions: Use inclusion-exclusion</li>
+                    <li>With upper bounds: Apply complementary counting</li>
+                  </ul>
+                </div>
+              </Card>
+
+              <Card className="p-4">
+                <p className="font-semibold">Example 3: Team Formation</p>
+                <div className="mt-2">
+                  <p>Dividing n people into k teams:</p>
+                  <ul className="list-disc ml-6">
+                    <li>Ordered teams: k! × S(n,k)</li>
+                    <li>Unordered teams: S(n,k)</li>
+                    <li>With size restrictions: Adjust using inclusion-exclusion</li>
+                    <li>With leadership roles: Multiply by appropriate arrangements</li>
+                  </ul>
+                </div>
+              </Card>
+
+              <Card className="p-4">
+                <p className="font-semibold">Example 4: Classroom Assignments</p>
+                <div className="mt-2">
+                  <p>Assigning students to classrooms:</p>
+                  <ul className="list-disc ml-6">
+                    <li>Equal size classes: Use multinomial coefficient</li>
+                    <li>Variable size classes: Apply IODB formulas</li>
+                    <li>With teacher assignments: Multiply by teacher arrangements</li>
+                    <li>With minimum class sizes: Use inclusion-exclusion</li>
+                  </ul>
+                </div>
+              </Card>
+            </div>
+          </SubSection>
+        </div>
+      </Section>
+
+      <Section title="4. Advanced Counting Techniques">
         <div className="space-y-6">
           <p className="text-lg">Advanced counting techniques help solve complex combinatorial problems by using sophisticated principles and methods. These techniques are particularly useful when basic counting principles alone are insufficient.</p>
 
@@ -479,211 +684,6 @@ const CombinatoricsNotes: React.FC = () => {
                   <p>Dₙ = (n-1)(Dₙ₋₁ + Dₙ₋₂)</p>
                   <p>This leads to the formula:</p>
                   <p>Dₙ = n! × (1 - 1/1! + 1/2! - ... + (-1)ⁿ/n!)</p>
-                </div>
-              </Card>
-            </div>
-          </SubSection>
-        </div>
-      </Section>
-
-      <Section title="4. Distribution Problems">
-        <div className="space-y-6">
-          <p className="text-lg">
-            Distribution problems involve placing objects into boxes. The nature of both the objects and boxes leads to different counting techniques, with each case requiring its own specific approach.
-          </p>
-
-          <SubSection title="Types of Distribution Problems">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Four Main Cases:</p>
-                <div className="space-y-3">
-                  <div>
-                    <p className="font-medium">1. DODB (Distinguishable Objects into Distinguishable Boxes)</p>
-                    <ul className="list-disc ml-6 mt-1 text-gray-600">
-                      <li>Each object and box can be identified uniquely</li>
-                      <li>Most straightforward case - ordered assignments</li>
-                      <li>Formula: nᵏ for n objects into k boxes</li>
-                      <li>Example: Assigning distinct tasks to different employees</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-medium">2. IODB (Indistinguishable Objects into Distinguishable Boxes)</p>
-                    <ul className="list-disc ml-6 mt-1 text-gray-600">
-                      <li>Objects are identical</li>
-                      <li>Also known as &quot;Stars and Bars&quot; problem</li>
-                      <li>Formula: C(n+k-1, k-1) or C(n+k-1, n)</li>
-                      <li>Example: Distributing identical coins into different piggy banks</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-medium">3. DOIB (Distinguishable Objects into Indistinguishable Boxes)</p>
-                    <ul className="list-disc ml-6 mt-1 text-gray-600">
-                      <li>Related to set partitioning</li>
-                      <li>Uses Stirling numbers of second kind</li>
-                      <li>Formula: S(n,k) for n objects into exactly k boxes</li>
-                      <li>Example: Grouping distinct elements into indistinguishable sets</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-medium">4. IOIB (Indistinguishable Objects into Indistinguishable Boxes)</p>
-                    <ul className="list-disc ml-6 mt-1 text-gray-600">
-                      <li>Related to integer partitions</li>
-                      <li>Most restricted case</li>
-                      <li>Uses partition function P(n)</li>
-                      <li>Example: Breaking a number into sum of positive integers</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Distribution with Constraints">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Common Constraints:</p>
-                <ul className="list-disc ml-6">
-                  <li>Minimum objects per box (at least)</li>
-                  <li>Maximum objects per box (at most)</li>
-                  <li>Empty boxes allowed/not allowed</li>
-                  <li>Objects must be adjacent/non-adjacent</li>
-                  <li>Circular arrangements</li>
-                  <li>Order-sensitive distributions</li>
-                </ul>
-              </div>
-
-              <Card className="p-4">
-                <p className="font-semibold">Solution Strategy:</p>
-                <ol className="list-decimal ml-6 mt-2">
-                  <li>Identify object and box distinguishability</li>
-                  <li>List all constraints</li>
-                  <li>Apply appropriate template</li>
-                  <li>Adjust formula for constraints</li>
-                  <li>Check for overcounting</li>
-                  <li>Verify boundary conditions</li>
-                </ol>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Integer Compositions">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Definition:</p>
-                <p>A composition of an integer n is a way of writing n as the sum of a sequence of positive integers where order matters.</p>
-                <div className="mt-2">
-                  <p className="font-semibold">Key Properties:</p>
-                  <ul className="list-disc ml-6">
-                    <li>Total number of compositions of n = 2ⁿ⁻¹</li>
-                    <li>Compositions into k parts = C(n-1, k-1)</li>
-                    <li>Different from partitions (where order doesn&apos;t matter)</li>
-                    <li>Related to IODB distribution problems</li>
-                    <li>Each composition represents a unique way to break down a number</li>
-                  </ul>
-                </div>
-              </div>
-
-              <Card className="p-4">
-                <p className="font-semibold">Example: Compositions of 4</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>4</li>
-                  <li>3+1, 1+3</li>
-                  <li>2+2</li>
-                  <li>2+1+1, 1+2+1, 1+1+2</li>
-                  <li>1+1+1+1</li>
-                </ul>
-                <p className="mt-2 text-sm">Total compositions = 2³ = 8</p>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Important Formulas">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Key Distribution Formulas:</p>
-                <div className="mt-2 space-y-3">
-                  <div>
-                    <p className="font-medium">DODB with no restrictions:</p>
-                    <p className="ml-4">n^k (n objects into k boxes)</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">IODB with no restrictions:</p>
-                    <p className="ml-4">C(n+k-1, k-1) or C(n+k-1, n)</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">DOIB into exactly k boxes:</p>
-                    <p className="ml-4">S(n,k) (Stirling number of second kind)</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">IOIB (Integer Partitions):</p>
-                    <p className="ml-4">P(n) (Partition number)</p>
-                  </div>
-                </div>
-              </div>
-
-              <Card className="p-4">
-                <p className="font-semibold">Special Cases:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>At least one object per box: k! × S(n,k)</li>
-                  <li>At most m objects per box: Use inclusion-exclusion</li>
-                  <li>Exactly m objects per box: Direct multiplication</li>
-                  <li>Cyclic distributions: Divide by appropriate factorial</li>
-                  <li>Non-empty box constraint: Subtract empty box cases</li>
-                </ul>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Application Examples">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Example 1: Card Distribution</p>
-                <div className="mt-2">
-                  <p>Distributing 52 cards to 4 players:</p>
-                  <ul className="list-disc ml-6">
-                    <li>DODB case (ordered dealing): 52!/(13!)⁴</li>
-                    <li>DOIB case (unordered teams): S(52,4) × 4!</li>
-                    <li>With constraints on specific cards: Use inclusion-exclusion</li>
-                  </ul>
-                </div>
-              </Card>
-
-              <Card className="p-4">
-                <p className="font-semibold">Example 2: Integer Solutions</p>
-                <div className="mt-2">
-                  <p>Solutions to x₁ + x₂ + x₃ = n where:</p>
-                  <ul className="list-disc ml-6">
-                    <li>Non-negative integers: C(n+2,2)</li>
-                    <li>Positive integers: C(n-1,2)</li>
-                    <li>With restrictions: Use inclusion-exclusion</li>
-                    <li>With upper bounds: Apply complementary counting</li>
-                  </ul>
-                </div>
-              </Card>
-
-              <Card className="p-4">
-                <p className="font-semibold">Example 3: Team Formation</p>
-                <div className="mt-2">
-                  <p>Dividing n people into k teams:</p>
-                  <ul className="list-disc ml-6">
-                    <li>Ordered teams: k! × S(n,k)</li>
-                    <li>Unordered teams: S(n,k)</li>
-                    <li>With size restrictions: Adjust using inclusion-exclusion</li>
-                    <li>With leadership roles: Multiply by appropriate arrangements</li>
-                  </ul>
-                </div>
-              </Card>
-
-              <Card className="p-4">
-                <p className="font-semibold">Example 4: Classroom Assignments</p>
-                <div className="mt-2">
-                  <p>Assigning students to classrooms:</p>
-                  <ul className="list-disc ml-6">
-                    <li>Equal size classes: Use multinomial coefficient</li>
-                    <li>Variable size classes: Apply IODB formulas</li>
-                    <li>With teacher assignments: Multiply by teacher arrangements</li>
-                    <li>With minimum class sizes: Use inclusion-exclusion</li>
-                  </ul>
                 </div>
               </Card>
             </div>

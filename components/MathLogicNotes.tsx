@@ -8,7 +8,7 @@ const MathLogicNotes: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <Section title="1. Introduction to Mathematical Logic">
-        <div className="space-y-4">
+        <div className="space-y-6">
           <p className="text-lg">Mathematical logic provides precise, unambiguous meaning to mathematical statements, theorems, and proofs.</p>
 
           <SubSection title="Need for Mathematical Logic">
@@ -103,16 +103,16 @@ const MathLogicNotes: React.FC = () => {
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Non-Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>Commands:&quot;Close the door&quot;</li>
-                  <li>Questions:&quot;What time is it?&quot;</li>
-                  <li>Expressions with variables:&quot;x + 2 = 2x&quot;</li>
-                  <li>Exclamations:&quot;How beautiful!&quot;</li>
+                  <li>Commands: &quot;Close the door&quot;</li>
+                  <li>Questions: &quot;What time is it?&quot;</li>
+                  <li>Expressions with variables: &quot;x + 2 = 2x&quot;</li>
+                  <li>Exclamations: &quot;How beautiful!&quot;</li>
                 </ul>
               </Card>
 
               <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Special Case: Paradoxes</p>
-                <p>Consider the statement S:&quot;S is false&quot;</p>
+                <p>Consider the statement S: &quot;S is false&quot;</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>If S is true, then by its own admission, it&apos;s false</li>
                   <li>If S is false, then its statement is true</li>
@@ -143,47 +143,9 @@ const MathLogicNotes: React.FC = () => {
             </div>
           </SubSection>
 
-          <SubSection title="Atomic and Compound Propositions">
+          <SubSection title="Logical Connectives">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Atomic Propositions:</p>
-                <ul className="list-disc ml-6">
-                  <li>Cannot be broken down into simpler propositions</li>
-                  <li>Truth value is independent of other propositions</li>
-                  <li>Represented by a single Boolean variable</li>
-                </ul>
-              </div>
-
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example of Atomic Proposition:</p>
-                <p>&quot;4 is a prime number&quot;</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>This is false</li>
-                  <li>Its truth value doesn&apos;t depend on other propositions</li>
-                  <li>Cannot be broken down further</li>
-                </ul>
-              </Card>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Compound Propositions:</p>
-                <ul className="list-disc ml-6">
-                  <li>Built from atomic propositions using logical connectives</li>
-                  <li>Truth value depends on component propositions</li>
-                  <li>Can be broken down into simpler propositions</li>
-                </ul>
-              </div>
-
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example of Compound Proposition:</p>
-                <p>&quot;4 is a prime number AND New Delhi is the capital of India&quot;</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>Combines two atomic propositions</li>
-                  <li>Uses the logical connective AND</li>
-                  <li>Truth value depends on both components</li>
-                </ul>
-              </Card>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Standard Logical Connectives:</p>
                 <ul className="list-disc ml-6">
                   <li>NOT (¬)</li>
@@ -196,22 +158,42 @@ const MathLogicNotes: React.FC = () => {
                   <li>NOR (↓)</li>
                 </ul>
               </div>
+
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
+                <p className="font-semibold">Example with Connectives:</p>
+                <p>Let P: &quot;4 is a prime number&quot;</p>
+                <p>Let Q: &quot;New Delhi is the capital of India&quot;</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>P ∧ Q: &quot;4 is a prime number AND New Delhi is the capital of India&quot;</li>
+                  <li>¬P: &quot;4 is NOT a prime number&quot;</li>
+                  <li>Q ∨ ¬P: &quot;New Delhi is the capital of India OR 4 is not a prime number&quot;</li>
+                </ul>
+              </div>
             </div>
           </SubSection>
 
           <SubSection title="Properties and Rules">
             <div className="space-y-4">
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p className="font-semibold">Basic Properties:</p>
+                <p className="font-semibold">Properties:</p>
                 <ul className="list-disc ml-6">
-                  <li>Every proposition must have exactly one truth value</li>
-                  <li>Truth values cannot change within the same context</li>
-                  <li>Complex propositions&apos; truth values are determined by their components</li>
+                  <li>Associative: (a + b) + c = a + (b + c)</li>
+                  <li>Commutative: a + b = b + a</li>
+                  <li>AND and OR operations follow both properties</li>
+                </ul>
+              </div>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg mt-4">
+                <p className="font-semibold">Important Note:</p>
+                <ul className="list-disc ml-6">
+                  <li>The precedence of EXOR, NOR, NAND operators is not universally defined</li>
+                  <li>Use parentheses to clarify order of operations</li>
+                  <li>Consider expanding to simpler logical connectives when needed</li>
                 </ul>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Important Rules:</p>
+                <p className="font-semibold">Basic Laws:</p>
                 <ul className="list-disc ml-6">
                   <li>Law of Excluded Middle: P ∨ ¬P is always true</li>
                   <li>Law of Non-Contradiction: P ∧ ¬P is always false</li>
@@ -220,25 +202,154 @@ const MathLogicNotes: React.FC = () => {
               </div>
             </div>
           </SubSection>
+
+          <SubSection title="Truth Tables">
+            <div className="space-y-4">
+              <p>Truth tables tell us about the truth values of a compound proposition for each combination of truth values of atomic propositions.</p>
+
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p className="font-semibold">Classification of Propositions:</p>
+                <ul className="list-disc ml-6">
+                  <li>Tautology: A proposition that is always true</li>
+                  <li>Contradiction: A proposition that is always false</li>
+                  <li>Contingency: A proposition that is neither a tautology nor a contradiction</li>
+                </ul>
+                <p className="mt-2">Example:</p>
+                <ul className="list-disc ml-6">
+                  <li>P ∨ ¬P is a tautology</li>
+                  <li>P ∧ ¬P is a contradiction</li>
+                  <li>P → Q is a contingency</li>
+                </ul>
+              </div>
+            </div>
+          </SubSection>
         </div>
       </Section>
 
-      <Section title="3. Atomic and Compound Propositions">
+      <Section title="3. Propositions">
         <div className="space-y-6">
+          <SubSection title="Definition and Characteristics">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Definition:</p>
+                <p>A proposition is a declarative sentence that:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>Makes a definite statement or declares a fact</li>
+                  <li>Must be either true or false (not both)</li>
+                  <li>Has a well-defined truth value</li>
+                  <li>Can be represented by a propositional (Boolean) variable</li>
+                </ul>
+              </div>
+
+              <Card className="p-4 mt-4">
+                <p className="font-semibold">Valid Propositions:</p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>&quot;Jaipur is the capital of India&quot;
+                    <span className="ml-2 text-red-600">(False)</span>
+                  </li>
+                  <li>&quot;Some cows are brown&quot;
+                    <span className="ml-2 text-green-600">(True)</span>
+                  </li>
+                  <li>&quot;2 × 2 = 5&quot;
+                    <span className="ml-2 text-red-600">(False)</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Card className="p-4 mt-4">
+                <p className="font-semibold">Non-Propositions:</p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>Commands: &quot;Close the door&quot;</li>
+                  <li>Questions: &quot;What time is it?&quot;</li>
+                  <li>Expressions with variables: &quot;x + 2 = 2x&quot;</li>
+                  <li>Exclamations: &quot;How beautiful!&quot;</li>
+                </ul>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Special Cases and Paradoxes">
+            <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+              <p className="font-semibold">The Liar Paradox:</p>
+              <p>Consider the statement S: &quot;S is false&quot;</p>
+              <ul className="list-disc ml-6 mt-2">
+                <li>If S is true, then by its own admission, it&apos;s false</li>
+                <li>If S is false, then its statement is true</li>
+                <li>This creates a logical paradox and is not a valid proposition</li>
+              </ul>
+            </div>
+          </SubSection>
+
+          <SubSection title="Propositional Variables">
+            <div className="space-y-4">
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Representation:</p>
+                <ul className="list-disc ml-6">
+                  <li>Each proposition is represented by a propositional (Boolean) variable</li>
+                  <li>Generally denoted by uppercase letters (P, Q, R, etc.)</li>
+                  <li>Can only take values of True (T) or False (F)</li>
+                  <li>These values are called truth values</li>
+                </ul>
+              </div>
+
+              <Card className="p-4">
+                <p className="font-semibold">Example:</p>
+                <div className="mt-2">
+                  <p>Let S be the proposition &quot;2 + 2 = 5&quot;</p>
+                  <p className="mt-2">Then:</p>
+                  <ul className="list-disc ml-6">
+                    <li>S = false is the truth value assignment</li>
+                    <li>false is the truth value of proposition S</li>
+                  </ul>
+                </div>
+              </Card>
+            </div>
+          </SubSection>
+
+          <SubSection title="Basic Properties">
+            <div className="space-y-4">
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p className="font-semibold">Fundamental Rules:</p>
+                <ul className="list-disc ml-6">
+                  <li>Every proposition must have exactly one truth value</li>
+                  <li>Truth values cannot change within the same context</li>
+                  <li>A proposition cannot be both true and false simultaneously</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
+                <p className="font-semibold">Important Laws:</p>
+                <ul className="list-disc ml-6">
+                  <li>Law of Excluded Middle: A proposition must be either true or false</li>
+                  <li>Law of Non-Contradiction: A proposition cannot be both true and false</li>
+                  <li>Law of Double Negation: Not(Not(P)) ≡ P</li>
+                </ul>
+              </div>
+            </div>
+          </SubSection>
+        </div>
+      </Section>
+
+      <Section title="4. Atomic and Compound Propositions">
+        <div className="space-y-6">
+          <div className="mb-4">
+            <p className="text-lg">Propositions can be classified as atomic or compound based on their complexity and dependencies.</p>
+          </div>
+
           <SubSection title="Atomic Propositions">
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
                 <p>An atomic proposition is a statement whose truth value:</p>
                 <ul className="list-disc ml-6 mt-2">
-                  <li>Does not depend on any other proposition</li>
                   <li>Cannot be broken down into simpler propositions</li>
-                  <li>Is determined independently of other logical statements</li>
+                  <li>Is determined independently of other propositions</li>
+                  <li>Does not depend on the truth or falsity of any other proposition</li>
                 </ul>
               </div>
 
               <Card className="p-4 mt-4">
-                <p className="font-semibold">Examples of Atomic Propositions:</p>
+                <p className="font-semibold">Example of Atomic Propositions:</p>
                 <ul className="list-disc ml-6 space-y-2">
                   <li>&quot;4 is a prime number&quot;
                     <ul className="list-circle ml-6 mt-1">
@@ -288,8 +399,8 @@ const MathLogicNotes: React.FC = () => {
                 <p className="font-semibold">Examples with Logical Connectives:</p>
                 <p className="mt-2">Let:</p>
                 <ul className="list-disc ml-6">
-                  <li>P:&quot;4 is a prime number&quot;</li>
-                  <li>Q:&quot;New Delhi is the capital of India&quot;</li>
+                  <li>P: &quot;4 is a prime number&quot;</li>
+                  <li>Q: &quot;New Delhi is the capital of India&quot;</li>
                 </ul>
                 <p className="mt-2">Compound Propositions:</p>
                 <ol className="list-decimal ml-6 space-y-2">
@@ -372,545 +483,7 @@ const MathLogicNotes: React.FC = () => {
         </div>
       </Section>
 
-      <Section title="4. Logical Connectives and Truth Values">
-        <div className="space-y-6">
-          <div className="mb-4">
-            <p className="text-lg">Logical connectives combine atomic propositions to create compound propositions with precisely defined truth values.</p>
-          </div>
-
-          <SubSection title="Basic Logical Connectives">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Negation (NOT, ¬):</p>
-                <ul className="list-disc ml-6">
-                  <li>Reverses the truth value of a proposition</li>
-                  <li>If p is true, ¬p is false</li>
-                  <li>If p is false, ¬p is true</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Example:</p>
-                  <p>p:&quot;Today is Sunday&quot;</p>
-                  <p>¬p:&quot;Today is not Sunday&quot;</p>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Conjunction (AND, ∧):</p>
-                <ul className="list-disc ml-6">
-                  <li>True only when both propositions are true</li>
-                  <li>False if either or both propositions are false</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Truth Table:</p>
-                  <table className="w-full mt-2 text-center">
-                    <thead>
-                      <tr>
-                        <th>p</th>
-                        <th>q</th>
-                        <th>p ∧ q</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>T</td>
-                        <td>T</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>T</td>
-                        <td>F</td>
-                        <td>F</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>T</td>
-                        <td>F</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>F</td>
-                        <td>F</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Disjunction (OR, ∨):</p>
-                <ul className="list-disc ml-6">
-                  <li>True when at least one proposition is true</li>
-                  <li>False only when both propositions are false</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Truth Table:</p>
-                  <table className="w-full mt-2 text-center">
-                    <thead>
-                      <tr>
-                        <th>p</th>
-                        <th>q</th>
-                        <th>p ∨ q</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>T</td>
-                        <td>T</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>T</td>
-                        <td>F</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>T</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>F</td>
-                        <td>F</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </SubSection>
-
-          <SubSection title="Advanced Logical Connectives">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Implication (→):</p>
-                <ul className="list-disc ml-6">
-                  <li>Represents&quot;if p then q&quot;</li>
-                  <li>False only when p is true and q is false</li>
-                  <li>True in all other cases</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Alternative Expressions:</p>
-                  <ul className="list-disc ml-6">
-                    <li>&quot;p implies q&quot;</li>
-                    <li>&quot;if p, then q&quot;</li>
-                    <li>&quot;p only if q&quot;</li>
-                    <li>&quot;q if p&quot;</li>
-                    <li>&quot;q whenever p&quot;</li>
-                  </ul>
-                </div>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Truth Table:</p>
-                  <table className="w-full mt-2 text-center">
-                    <thead>
-                      <tr>
-                        <th>p</th>
-                        <th>q</th>
-                        <th>p → q</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>T</td>
-                        <td>T</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>T</td>
-                        <td>F</td>
-                        <td>F</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>T</td>
-                        <td>T</td>
-                      </tr>
-                      <tr>
-                        <td>F</td>
-                        <td>F</td>
-                        <td>T</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Biconditional (↔):</p>
-                <ul className="list-disc ml-6">
-                  <li>Represents&quot;p if and only if q&quot;</li>
-                  <li>True when p and q have the same truth value</li>
-                  <li>Equivalent to (p → q) ∧ (q → p)</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p className="font-semibold">Alternative Expressions:</p>
-                  <ul className="list-disc ml-6">
-                    <li>&quot;p iff q&quot;</li>
-                    <li>&quot;p is necessary and sufficient for q&quot;</li>
-                    <li>&quot;if p then q, and conversely&quot;</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">NAND and NOR:</p>
-                <ul className="list-disc ml-6">
-                  <li>NAND (↑): Negation of AND</li>
-                  <li>NOR (↓): Negation of OR</li>
-                  <li>These operators are functionally complete</li>
-                </ul>
-                <div className="mt-2 p-2 bg-white dark:bg-gray-800 rounded">
-                  <p>Any logical expression can be written using only NAND or only NOR operations.</p>
-                </div>
-              </div>
-            </div>
-          </SubSection>
-
-          <SubSection title="Properties of Logical Connectives">
-            <div className="space-y-4">
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p className="font-semibold">Associative Properties:</p>
-                <ul className="list-disc ml-6">
-                  <li>(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)</li>
-                  <li>(p ∨ q) ∨ r ≡ p ∨ (q ∨ r)</li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Commutative Properties:</p>
-                <ul className="list-disc ml-6">
-                  <li>p ∧ q ≡ q ∧ p</li>
-                  <li>p ∨ q ≡ q ∨ p</li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Distributive Properties:</p>
-                <ul className="list-disc ml-6">
-                  <li>p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)</li>
-                  <li>p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)</li>
-                </ul>
-              </div>
-            </div>
-          </SubSection>
-        </div>
-      </Section>
-
-      <Section title="5. Case Method and Logical Equivalence">
-        <div className="space-y-6">
-          <SubSection title="Case Method">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Definition:</p>
-                <p>The case method is a systematic approach to evaluate logical expressions by:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>Assigning specific truth values to one variable</li>
-                  <li>Checking truth values of the entire expression</li>
-                  <li>Avoiding the need to draw complete truth tables</li>
-                </ul>
-              </div>
-
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example:</p>
-                <p>Consider the expression: p ∧ ¬(q ∨ p)</p>
-                <div className="mt-2">
-                  <p className="font-semibold">Case 1: When p is true:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∧ ¬(q ∨ T)</li>
-                    <li>= T ∧ ¬(q ∨ T)</li>
-                    <li>= T ∧ ¬(T)</li>
-                    <li>= T ∧ F</li>
-                    <li>= F</li>
-                  </ul>
-                </div>
-                <div className="mt-4">
-                  <p className="font-semibold">Case 2: When p is false:</p>
-                  <ul className="list-disc ml-6">
-                    <li>F ∧ ¬(q ∨ F)</li>
-                    <li>= F</li>
-                  </ul>
-                </div>
-                <p className="mt-4">Conclusion: The expression is a contradiction (always false)</p>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Logical Equivalence">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Definition:</p>
-                <p>Two propositions are logically equivalent (P ≡ Q) if they have the same truth value under all possible interpretations.</p>
-              </div>
-
-              <div className="space-y-4 mt-4">
-                <p className="font-semibold">Key Equivalence Laws:</p>
-
-                <Card className="p-4">
-                  <p className="font-semibold">1. Identity Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∧ T ≡ p</li>
-                    <li>p ∨ F ≡ p</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">2. Domination Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∨ T ≡ T</li>
-                    <li>p ∧ F ≡ F</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">3. Idempotent Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∨ p ≡ p</li>
-                    <li>p ∧ p ≡ p</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">4. Double Negation Law:</p>
-                  <ul className="list-disc ml-6">
-                    <li>¬(¬p) ≡ p</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">5. Commutative Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∨ q ≡ q ∨ p</li>
-                    <li>p ∧ q ≡ q ∧ p</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">6. Associative Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>(p ∨ q) ∨ r ≡ p ∨ (q ∨ r)</li>
-                    <li>(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">7. Distributive Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)</li>
-                    <li>p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">8. De Morgan&apos;s Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>¬(p ∧ q) ≡ ¬p ∨ ¬q</li>
-                    <li>¬(p ∨ q) ≡ ¬p ∧ ¬q</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">9. Absorption Laws:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p ∨ (p ∧ q) ≡ p</li>
-                    <li>p ∧ (p ∨ q) ≡ p</li>
-                  </ul>
-                </Card>
-              </div>
-
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg mt-6">
-                <p className="font-semibold">Important Notes:</p>
-                <ul className="list-disc ml-6">
-                  <li>If you need to check if two formulas are equivalent, you can:
-                    <ul className="list-circle ml-6 mt-1">
-                      <li>Compare their truth tables</li>
-                      <li>Use the laws of logical equivalence</li>
-                      <li>Try to find a counterexample</li>
-                    </ul>
-                  </li>
-                  <li>Logical equivalence is different from implication:
-                    <ul className="list-circle ml-6 mt-1">
-                      <li>P ≡ Q means P ↔ Q is a tautology</li>
-                      <li>P → Q means Q is true whenever P is true</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Example of Proving Equivalence:</p>
-                <p>Show that ¬(p ∨ q) ≡ ¬p ∧ ¬q using the case method:</p>
-                <div className="mt-2 ml-4">
-                  <p>Case 1: p true, q true → Both sides F</p>
-                  <p>Case 2: p true, q false → Both sides F</p>
-                  <p>Case 3: p false, q true → Both sides F</p>
-                  <p>Case 4: p false, q false → Both sides T</p>
-                  <p className="mt-2">Therefore, the expressions are logically equivalent.</p>
-                </div>
-              </div>
-            </div>
-          </SubSection>
-        </div>
-      </Section>
-
-      <Section title="6. English to Propositional Logic Translation">
-        <div className="space-y-6">
-          <p className="text-lg">Converting English statements to propositional logic requires understanding common patterns and logical relationships. This process is crucial for formalizing mathematical proofs and computer programming logic.</p>
-
-          <SubSection title="Logical Equivalences in English">
-            <div className="space-y-4">
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Equivalent Words for AND:</p>
-                <ul className="list-disc ml-6">
-                  <li>But</li>
-                  <li>Although</li>
-                  <li>Though</li>
-                  <li>Even though</li>
-                  <li>However</li>
-                  <li>Yet</li>
-                  <li>Still</li>
-                  <li>Moreover</li>
-                  <li>Nevertheless</li>
-                  <li>Nonetheless</li>
-                  <li>Comma (,)</li>
-                </ul>
-              </div>
-            </div>
-          </SubSection>
-
-          <SubSection title="The 'Unless' Construction">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Rule:</p>
-                <ul className="list-disc ml-6">
-                  <li>&quot;Unless P, Q&quot; translates to&quot;¬P → Q&quot; or&quot;P ∨ Q&quot;</li>
-                  <li>&quot;P unless Q&quot; translates to&quot;P if not Q&quot; =&quot;¬Q → P&quot; =&quot;Q ∨ P&quot;</li>
-                </ul>
-              </Card>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Example 1:</p>
-                <p>&quot;Jen won&apos;t go to the party UNLESS Mary goes to the party&quot;</p>
-                <div className="ml-4 mt-2">
-                  <p>Let:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p =&quot;Jen won&apos;t go to the party&quot;</li>
-                    <li>q =&quot;Mary goes to the party&quot;</li>
-                  </ul>
-                  <p className="mt-2">Translation: ¬q → p</p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Example 2:</p>
-                <p>&quot;I won&apos;t study UNLESS you complete my demand&quot;</p>
-                <div className="ml-4 mt-2">
-                  <p>Let:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p =&quot;I won&apos;t study&quot;</li>
-                    <li>q =&quot;you complete my demand&quot;</li>
-                  </ul>
-                  <p className="mt-2">Translation: ¬q → p</p>
-                </div>
-              </div>
-            </div>
-          </SubSection>
-
-          <SubSection title="Complex Statement Translation">
-            <div className="space-y-4">
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-                <p className="font-semibold">Important Rule:</p>
-                <p>When translating complex statements, consider the natural flow of English rather than strictly applying precedence rules.</p>
-              </div>
-
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example:</p>
-                <p>&quot;If you study well, you will crack GATE exam unless you make silly mistakes.&quot;</p>
-                <div className="ml-4 mt-2">
-                  <p>Let:</p>
-                  <ul className="list-disc ml-6">
-                    <li>p =&quot;you study well&quot;</li>
-                    <li>q =&quot;you will crack GATE exam&quot;</li>
-                    <li>r =&quot;you make silly mistakes&quot;</li>
-                  </ul>
-                  <p className="mt-2">Translation: (p → q) ∨ r</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    Note: We take&quot;if you study well, you will crack GATE exam&quot; as the first unit because it forms a complete thought in English.
-                  </p>
-                </div>
-              </Card>
-            </div>
-          </SubSection>
-
-          <SubSection title="Common Patterns">
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card className="p-4">
-                  <p className="font-semibold">Conditional Statements:</p>
-                  <ul className="list-disc ml-6">
-                    <li>&quot;if p then q&quot; → p → q</li>
-                    <li>&quot;p implies q&quot; → p → q</li>
-                    <li>&quot;p only if q&quot; → p → q</li>
-                    <li>&quot;q if p&quot; → p → q</li>
-                    <li>&quot;q when p&quot; → p → q</li>
-                    <li>&quot;q whenever p&quot; → p → q</li>
-                  </ul>
-                </Card>
-
-                <Card className="p-4">
-                  <p className="font-semibold">Biconditional Statements:</p>
-                  <ul className="list-disc ml-6">
-                    <li>&quot;p if and only if q&quot; → p ↔ q</li>
-                    <li>&quot;p exactly when q&quot; → p ↔ q</li>
-                    <li>&quot;p is necessary and sufficient for q&quot; → p ↔ q</li>
-                    <li>&quot;p iff q&quot; → p ↔ q</li>
-                  </ul>
-                </Card>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Translation Strategy:</p>
-                <ol className="list-decimal ml-6 space-y-2">
-                  <li>Identify atomic propositions and assign variables</li>
-                  <li>Identify main logical connectives</li>
-                  <li>Follow the natural language structure</li>
-                  <li>Build the formula incrementally</li>
-                  <li>Verify the translation matches the original meaning</li>
-                </ol>
-              </div>
-            </div>
-          </SubSection>
-
-          <SubSection title="Special Cases">
-            <div className="space-y-4">
-              <Card className="p-4">
-                <p className="font-semibold">Necessary and Sufficient Conditions:</p>
-                <ul className="list-disc ml-6">
-                  <li>&quot;P is necessary for Q&quot; means&quot;Q → P&quot;</li>
-                  <li>&quot;P is sufficient for Q&quot; means&quot;P → Q&quot;</li>
-                  <li>&quot;P is necessary and sufficient for Q&quot; means&quot;P ↔ Q&quot;</li>
-                </ul>
-              </Card>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Example:</p>
-                <p>&quot;Being Natural number is sufficient for Being integer number&quot;</p>
-                <div className="ml-4 mt-2">
-                  <ul className="list-disc ml-6">
-                    <li>Let N =&quot;is a natural number&quot;</li>
-                    <li>Let I =&quot;is an integer number&quot;</li>
-                    <li>Translation: N → I</li>
-                  </ul>
-                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                    This is correct because every natural number is an integer, but not every integer is a natural number.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SubSection>
-        </div>
-      </Section>
-
-      <Section title="7. Logical Arguments and Valid Arguments">
+      <Section title="5. Logical Arguments and Valid Arguments">
         <div className="space-y-6">
           <div className="mb-4">
             <p className="text-lg">A logical argument is a sequence of propositions including premises (knowledge base/hypothesis/antecedents) and a conclusion.</p>
@@ -1071,12 +644,12 @@ const MathLogicNotes: React.FC = () => {
         </div>
       </Section>
 
-      <Section title="8. First Order Logic">
+      <Section title="6. First Order Logic">
         <div className="space-y-6">
           <div className="mb-4">
             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-              <p className="font-semibold text-lg">Definition:</p>
-              <p>First order logic (FOL), also known as:</p>
+              <p className="font-semibold text-lg">Definition and Alternative Names:</p>
+              <p>First order logic, also known as:</p>
               <ul className="list-disc ml-6 mt-2">
                 <li>Predicate calculus</li>
                 <li>Predicate logic</li>
@@ -1089,7 +662,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <Card className="p-4">
                 <p className="font-semibold">Example of Propositional Logic Limitations:</p>
-                <div className="mt-2 space-y-2">
+                <div className="mt-2">
                   <p>Consider this valid argument:</p>
                   <div className="ml-4 pl-4 border-l-4 border-gray-300">
                     <p>&quot;All men are mortal.&quot;</p>
@@ -1102,9 +675,9 @@ const MathLogicNotes: React.FC = () => {
                 </div>
               </Card>
 
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg mt-4">
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Problems with Propositional Logic:</p>
-                <ul className="list-disc ml-6 mt-2">
+                <ul className="list-disc ml-6">
                   <li>Limited to true/false values only</li>
                   <li>Cannot assign numerical values to variables</li>
                   <li>Cannot express relationships between objects</li>
@@ -1116,10 +689,10 @@ const MathLogicNotes: React.FC = () => {
           </SubSection>
 
           <SubSection title="Components of First Order Logic">
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <p className="font-semibold">1. Objects (Domain)</p>
-                <ul className="list-disc ml-6 mt-2">
+                <ul className="list-disc ml-6">
                   <li>Set of values a variable can take (Universe)</li>
                   <li>Cannot be empty unless explicitly stated</li>
                   <li>Values in domain are called constants</li>
@@ -1142,19 +715,19 @@ const MathLogicNotes: React.FC = () => {
                     <div className="ml-4">
                       <p className="font-semibold mt-2">Unary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>C(x):&quot;x is clever&quot;</li>
-                        <li>M(x):&quot;x is male&quot;</li>
+                        <li>C(x): &quot;x is clever&quot;</li>
+                        <li>M(x): &quot;x is male&quot;</li>
                       </ul>
 
                       <p className="font-semibold mt-2">Binary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>F(x,y):&quot;x is father of y&quot;</li>
-                        <li>L(x,y):&quot;x is less than y&quot;</li>
+                        <li>F(x,y): &quot;x is father of y&quot;</li>
+                        <li>L(x,y): &quot;x is less than y&quot;</li>
                       </ul>
 
                       <p className="font-semibold mt-2">Ternary Predicates:</p>
                       <ul className="list-disc ml-6">
-                        <li>B(x,y,z):&quot;x is between y and z&quot;</li>
+                        <li>B(x,y,z): &quot;x is between y and z&quot;</li>
                       </ul>
                     </div>
                   </div>
@@ -1162,102 +735,52 @@ const MathLogicNotes: React.FC = () => {
               </div>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p className="font-semibold">3. Quantifiers</p>
-                <div className="space-y-4">
-                  <div className="mt-2">
-                    <p className="font-semibold">Universal Quantifier (∀):</p>
-                    <ul className="list-disc ml-6">
-                      <li>&quot;For all&quot; or&quot;For every&quot;</li>
-                      <li>∀x P(x) means&quot;P(x) is true for all values of x&quot;</li>
-                      <li>False if there exists a counterexample</li>
-                    </ul>
+                <p className="font-semibold">3. Functions of Objects</p>
+                <p className="mt-2">FOL allows for the representation of functions that map objects to objects within the domain.</p>
+              </div>
 
-                    <p className="font-semibold mt-4">Existential Quantifier (∃):</p>
-                    <ul className="list-disc ml-6">
-                      <li>&quot;There exists&quot; or&quot;For some&quot;</li>
-                      <li>∃x P(x) means&quot;There exists an x such that P(x) is true&quot;</li>
-                      <li>True if there is at least one witness</li>
-                    </ul>
-                  </div>
-                </div>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p className="font-semibold">4. Quantification</p>
+                <ul className="list-disc ml-6">
+                  <li>The ability to assert properties about all elements (Universal Quantifier - ∀)</li>
+                  <li>The ability to assert existence of elements with certain properties (Existential Quantifier - ∃)</li>
+                </ul>
               </div>
             </div>
           </SubSection>
 
-          <SubSection title="Special Cases and Behavior">
+          <SubSection title="Predicate Examples">
             <div className="space-y-4">
               <Card className="p-4">
-                <p className="font-semibold">Empty Domain Behavior:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>∀x P(x) is vacuously true (no counterexamples possible)</li>
-                  <li>∃x P(x) is false (no witnesses possible)</li>
-                  <li className="text-red-600 dark:text-red-400">Important: Domain is always non-empty unless explicitly stated</li>
-                </ul>
-              </Card>
-
-              <Card className="p-4">
-                <p className="font-semibold">No Free Variables:</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>If P has no free variable x, then:</li>
-                  <ul className="list-circle ml-6">
-                    <li>∃x P ≡ P</li>
-                    <li>∀x P ≡ P</li>
+                <p className="font-semibold">Domain: Set of People</p>
+                <div className="mt-2">
+                  <p>Consider the domain {'{ram, john, sita, gita}'} with properties:</p>
+                  <ul className="list-disc ml-6">
+                    <li>ram is male</li>
+                    <li>sita is female</li>
+                    <li>ram is husband of sita</li>
+                    <li>john is brother of gita</li>
                   </ul>
-                </ul>
+                </div>
               </Card>
 
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                <p className="font-semibold">Formula Structure:</p>
-                <p className="mt-2">First order logic = </p>
-                <ul className="list-disc ml-6">
-                  <li>Propositional logic</li>
-                  <li>+ Objects (Domain)</li>
-                  <li>+ Properties (Predicates)</li>
-                  <li>+ Multiple objects (Quantifiers)</li>
-                </ul>
+                <p className="font-semibold">Key Point:</p>
+                <p>A predicate becomes a proposition when all variables are replaced with specific values from the domain.</p>
               </div>
             </div>
           </SubSection>
 
-          <SubSection title="Key Differences from Propositional Logic">
-            <div className="space-y-4">
-              <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
-                <thead>
-                  <tr className="bg-gray-100 dark:bg-gray-800">
-                    <th className="border p-2">Feature</th>
-                    <th className="border p-2">Propositional Logic</th>
-                    <th className="border p-2">First Order Logic</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border p-2">Variables</td>
-                    <td className="border p-2">Only truth values</td>
-                    <td className="border p-2">Can represent objects</td>
-                  </tr>
-                  <tr>
-                    <td className="border p-2">Relationships</td>
-                    <td className="border p-2">Cannot express</td>
-                    <td className="border p-2">Can express via predicates</td>
-                  </tr>
-                  <tr>
-                    <td className="border p-2">Quantification</td>
-                    <td className="border p-2">Not possible</td>
-                    <td className="border p-2">Possible (∀, ∃)</td>
-                  </tr>
-                  <tr>
-                    <td className="border p-2">Expressive Power</td>
-                    <td className="border p-2">Limited</td>
-                    <td className="border p-2">Much greater</td>
-                  </tr>
-                </tbody>
-              </table>
+          <SubSection title="Formalization">
+            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+              <p className="font-semibold">First Order Logic Formula:</p>
+              <p className="mt-2">First order logic = Propositional logic + Objects (Domain) + Properties (Predicates) + Multiple objects (Quantifiers)</p>
             </div>
           </SubSection>
         </div>
       </Section>
 
-      <Section title="9. Quantifiers and Their Properties">
+      <Section title="7. Quantifiers and Their Properties">
         <div className="space-y-6">
           <p className="text-lg mb-4">Quantifiers are fundamental logical operators that express quantities or amounts in logical statements.</p>
 
@@ -1265,11 +788,11 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The universal quantification of P(x) is a proposition stating&quot;P(x) is true for all values of x in the universe of discourse&quot;</p>
+                <p>The universal quantification of P(x) is a proposition stating "P(x) is true for all values of x in the universe of discourse"</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
-                    <li>&quot;For all x P(x)&quot; or&quot;For every x P(x)&quot;</li>
+                    <li>&quot;For all x P(x)&quot; or &quot;For every x P(x)&quot;</li>
                     <li>Written as: ∀x P(x)</li>
                   </ul>
                 </div>
@@ -1287,8 +810,8 @@ const MathLogicNotes: React.FC = () => {
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">Example:</p>
                 <p>Domain: Natural numbers</p>
-                <p>P(x):&quot;x ≥ 0&quot;</p>
-                <p>∀x P(x) means&quot;All natural numbers are greater than or equal to 0&quot;</p>
+                <p>P(x): &quot;x ≥ 0&quot;</p>
+                <p>∀x P(x) means &quot;All natural numbers are greater than or equal to 0&quot;</p>
                 <p className="mt-2 text-green-600 dark:text-green-400">This is true as every natural number satisfies this property</p>
               </div>
             </div>
@@ -1298,7 +821,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The Existential Quantification of P(x) is a proposition stating&quot;There exists an element x in the universe of discourse such that P(x) is true&quot;</p>
+                <p>The Existential Quantification of P(x) is a proposition stating "There exists an element x in the universe of discourse such that P(x) is true"</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
@@ -1333,7 +856,7 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">No Free Variables:</p>
-                <p>If&quot;A&quot; doesn&apos;t have any free variable x then:</p>
+                <p>If "A" doesn't have any free variable x then:</p>
                 <ul className="list-disc ml-6 space-y-2">
                   <li>∃x A = A</li>
                   <li>∀x A = A</li>
@@ -1391,9 +914,9 @@ const MathLogicNotes: React.FC = () => {
 
               <Card className="p-4 mt-4">
                 <p className="font-semibold">Example:</p>
-                <p>Statement:&quot;All students are clever&quot;</p>
+                <p>Statement: &quot;All students are clever&quot;</p>
                 <p>∀x (Student(x) → Clever(x))</p>
-                <p className="mt-2">Negation:&quot;There exists a student who is not clever&quot;</p>
+                <p className="mt-2">Negation: &quot;There exists a student who is not clever&quot;</p>
                 <p>∃x (Student(x) ∧ ¬Clever(x))</p>
               </Card>
             </div>
@@ -1403,7 +926,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>∃!x P(x) means&quot;there exists exactly one x such that P(x)&quot;</p>
+                <p>∃!x P(x) means &quot;there exists exactly one x such that P(x)&quot;</p>
                 <p className="mt-2">Equivalent to:</p>
                 <p>∃x (P(x) ∧ ∀y (P(y) → x = y))</p>
               </div>
@@ -1418,7 +941,7 @@ const MathLogicNotes: React.FC = () => {
         </div>
       </Section>
 
-      <Section title="10. Interpretation and Models in Logic">
+      <Section title="8. Interpretation and Models">
         <div className="space-y-6">
           <SubSection title="Interpretation and Models in Propositional Logic">
             <div className="space-y-4">
@@ -1429,31 +952,32 @@ const MathLogicNotes: React.FC = () => {
                 <div className="mt-4">
                   <p className="font-semibold">For a propositional formula G:</p>
                   <ul className="list-disc ml-6">
-                    <li>Interpretation assigns True or False to each variable</li>
+                    <li>Each interpretation assigns True or False to each variable</li>
                     <li>Total possible interpretations = 2ⁿ (n = number of variables)</li>
+                    <li>Each interpretation provides a specific truth combination</li>
                   </ul>
                 </div>
               </div>
 
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example:</p>
-                <p>Consider formula G with variables a, b, c</p>
-                <p className="mt-2">Sample interpretation I₁:</p>
-                <ul className="list-disc ml-6">
-                  <li>a = True</li>
-                  <li>b = False</li>
-                  <li>c = False</li>
-                </ul>
-              </Card>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
+              <Card className="p-4">
                 <p className="font-semibold">Models:</p>
-                <p>A model is an interpretation that makes the formula true.</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>If system has n variables and expression uses m variables:</li>
+                <ul className="list-disc ml-6">
+                  <li>A model is an interpretation that makes the formula true</li>
+                  <li>For n system variables and m expression variables:</li>
                   <li>Total models = 2⁽ⁿ⁻ᵐ⁾ × P (where P = number of satisfying assignments)</li>
                   <li>Co-model: An interpretation where the formula is false</li>
-                  <li>Interpretation = Model + Co-model</li>
+                </ul>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                  Interpretation = Model + Co-model
+                </p>
+              </Card>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+                <p className="font-semibold">Knowledge Base (KB) Models:</p>
+                <p>For a set KB = {'{E₁, E₂, E₃, ..., Eₙ}'}:</p>
+                <ul className="list-disc ml-6 mt-2">
+                  <li>A model must satisfy all expressions in KB</li>
+                  <li>An interpretation is a model if it makes all expressions true</li>
                 </ul>
               </div>
             </div>
@@ -1471,93 +995,84 @@ const MathLogicNotes: React.FC = () => {
                 </ul>
               </div>
 
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Example:</p>
-                <p>For formula G: ∀x P(x)</p>
-                <p className="mt-2">An interpretation includes:</p>
-                <ul className="list-disc ml-6">
-                  <li>Domain (e.g., set of natural numbers)</li>
-                  <li>Meaning of P(x) (e.g.,&quot;x is even&quot;)</li>
-                </ul>
-              </Card>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Models in First-Order Logic:</p>
+              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p className="font-semibold">Model Types:</p>
                 <ul className="list-disc ml-6">
                   <li>Finite model: Model with finite domain</li>
                   <li>Infinite model: Model with infinite domain</li>
-                  <li>Valid formula: True under all interpretations (no co-models)</li>
+                  <li>Valid formula: True under all interpretations</li>
                   <li>Satisfiable formula: Has at least one model</li>
                 </ul>
               </div>
-            </div>
-          </SubSection>
 
-          <SubSection title="Key Concepts and Comparisons">
-            <div className="space-y-4">
-              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
-                <p className="font-semibold">Important Distinctions:</p>
-                <div className="overflow-x-auto">
-                  <table className="w-full mt-2">
-                    <thead>
-                      <tr className="bg-gray-100 dark:bg-gray-700">
-                        <th className="px-4 py-2 text-left">Term</th>
-                        <th className="px-4 py-2 text-left">Propositional Logic</th>
-                        <th className="px-4 py-2 text-left">First-Order Logic</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="border px-4 py-2">Valid</td>
-                        <td className="border px-4 py-2">There exists a model</td>
-                        <td className="border px-4 py-2">There is no co-model</td>
-                      </tr>
-                      <tr>
-                        <td className="border px-4 py-2">Satisfiable</td>
-                        <td className="border px-4 py-2">There exists a model</td>
-                        <td className="border px-4 py-2">There exists a model</td>
-                      </tr>
-                      <tr>
-                        <td className="border px-4 py-2">Unsatisfiable</td>
-                        <td className="border px-4 py-2">There is no model</td>
-                        <td className="border px-4 py-2">There is no model</td>
-                      </tr>
-                      <tr>
-                        <td className="border px-4 py-2">Tautology</td>
-                        <td className="border px-4 py-2">There is no co-model</td>
-                        <td className="border px-4 py-2">Special definition*</td>
-                      </tr>
-                      <tr>
-                        <td className="border px-4 py-2">Contradiction</td>
-                        <td className="border px-4 py-2">There is no model</td>
-                        <td className="border px-4 py-2">There is no model</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p className="mt-2 text-sm">*A tautology in first-order logic is a sentence obtained by replacing propositional variables in a propositional tautology with first-order formulas.</p>
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
-                <p className="font-semibold">Special Cases and Considerations:</p>
+              <Card className="p-4">
+                <p className="font-semibold">Special Cases:</p>
                 <ul className="list-disc ml-6">
-                  <li>Empty domain interpretations are typically not allowed unless explicitly specified</li>
+                  <li>Empty domain interpretations typically not allowed unless explicitly specified</li>
                   <li>Unique names assumption: Different constants denote different elements</li>
                   <li>Closed world assumption: Facts not explicitly stated are false</li>
                   <li>Domain closure: Domain contains only elements that must exist</li>
                 </ul>
-              </div>
+              </Card>
+            </div>
+          </SubSection>
 
-              <Card className="p-4 mt-4">
-                <p className="font-semibold">Knowledge Base (KB) Interpretation:</p>
-                <p>For a set of logical expressions KB = {'{E₁, E₂, E₃, ..., Eₙ}'}</p>
-                <ul className="list-disc ml-6 mt-2">
-                  <li>A model must satisfy all expressions in KB</li>
-                  <li>KB |= α means α is true in all models of KB</li>
-                  <li>KB is consistent if it has at least one model</li>
-                  <li>KB is inconsistent if it has no models</li>
+          <SubSection title="Key Differences Between Propositional and First-Order Logic">
+            <div className="space-y-4">
+              <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
+                <thead>
+                  <tr className="bg-gray-100 dark:bg-gray-800">
+                    <th className="border p-2">Term</th>
+                    <th className="border p-2">Propositional Logic</th>
+                    <th className="border p-2">First-Order Logic</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-2">Valid</td>
+                    <td className="border p-2">There exists a model</td>
+                    <td className="border p-2">There is no co-model</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Satisfiable</td>
+                    <td className="border p-2">There exists a model</td>
+                    <td className="border p-2">There exists a model</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Unsatisfiable</td>
+                    <td className="border p-2">There is no model</td>
+                    <td className="border p-2">There is no model</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Tautology</td>
+                    <td className="border p-2">There is no co-model</td>
+                    <td className="border p-2">Special definition*</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-sm">*A tautology in first-order logic is a sentence obtained by replacing propositional variables in a propositional tautology with first-order formulas.</p>
+            </div>
+          </SubSection>
+
+          <SubSection title="Tautologies and Special Cases">
+            <div className="space-y-4">
+              <Card className="p-4">
+                <p className="font-semibold">First-Order Logic Tautologies:</p>
+                <ul className="list-disc ml-6">
+                  <li>Must be obtained from propositional tautologies</li>
+                  <li>Requires uniform replacement of propositional variables</li>
+                  <li>Each propositional variable maps to one first-order formula</li>
                 </ul>
               </Card>
+
+              <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
+                <p className="font-semibold">Important Considerations:</p>
+                <ul className="list-disc ml-6">
+                  <li>Domain assumptions affect interpretation validity</li>
+                  <li>Quantifier scope impacts model satisfaction</li>
+                  <li>Function symbols require consistent interpretation</li>
+                </ul>
+              </div>
             </div>
           </SubSection>
         </div>

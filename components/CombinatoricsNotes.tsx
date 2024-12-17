@@ -218,9 +218,9 @@ const CombinatoricsNotes: React.FC = () => {
                 <p className="font-semibold">Permutations with Repetition:</p>
                 <p>For n objects where nᵢ are repeated:</p>
                 <p className="mt-2 font-mono">n!/(n₁!×n₂!×...×nₖ!)</p>
-                <p className="mt-2">Example: Permutations of 'COOK'</p>
+                <p className="mt-2">Example: Permutations of &apos;COOK&apos;</p>
                 <ul className="list-disc ml-6">
-                  <li>Method 1: Select positions for C, K, then arrange O's</li>
+                  <li>Method 1: Select positions for C, K, then arrange O&apos;s</li>
                   <li>Method 2: Consider as 4!/(2!) = 12 arrangements</li>
                   <li>Method 3: Select positions with multiplicity</li>
                 </ul>
@@ -245,7 +245,7 @@ const CombinatoricsNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>A combination is a selection of objects where order doesn't matter.</p>
+                <p>A combination is a selection of objects where order doesn&apos;t matter.</p>
                 <div className="mt-2">
                   <p className="font-semibold">Core Formula:</p>
                   <p>C(n,r) = n!/[r!(n-r)!]</p>
@@ -260,12 +260,12 @@ const CombinatoricsNotes: React.FC = () => {
                   <li>C(n,0) = C(n,n) = 1</li>
                   <li>C(n,1) = n</li>
                   <li>C(n,r) = 0 if r &gt; n</li>
-                  <li>C(n+1,r) = C(n,r-1) + C(n,r) [Pascal's Identity]</li>
+                  <li>C(n+1,r) = C(n,r-1) + C(n,r) [Pascal&apos;s Identity]</li>
                 </ul>
               </Card>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                <p className="font-semibold">Pascal's Triangle:</p>
+                <p className="font-semibold">Pascal&apos;s Triangle:</p>
                 <div className="mt-2 text-center font-mono">
                   <p>1</p>
                   <p>1 1</p>
@@ -277,7 +277,7 @@ const CombinatoricsNotes: React.FC = () => {
               </div>
 
               <Card className="p-4">
-                <p className="font-semibold">Vandermonde's Identity:</p>
+                <p className="font-semibold">Vandermonde&apos;s Identity:</p>
                 <p className="mt-2">C(m+n,r) = ΣC(m,k)×C(n,r-k)</p>
                 <p className="mt-2">Example: Selecting r objects from two groups of m and n objects</p>
               </Card>
@@ -286,7 +286,7 @@ const CombinatoricsNotes: React.FC = () => {
                 <p className="font-semibold">Combinations with Repetition:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Formula: C(n+r-1,r) or C(n+r-1,n-1)</li>
-                  <li>Also known as "Stars and Bars" problem</li>
+                  <li>Also known as &quot;Stars and Bars&quot; problem</li>
                   <li>Example: Selecting r items from n types with repetition allowed</li>
                 </ul>
               </div>
@@ -353,7 +353,7 @@ const CombinatoricsNotes: React.FC = () => {
                     <p className="font-medium">2. IODB (Indistinguishable Objects into Distinguishable Boxes)</p>
                     <ul className="list-disc ml-6 mt-1 text-gray-600">
                       <li>Objects are identical</li>
-                      <li>Also known as "Stars and Bars" problem</li>
+                      <li>Also known as &quot;Stars and Bars&quot; problem</li>
                       <li>Formula: C(n+k-1, k-1) or C(n+k-1, n)</li>
                       <li>Example: Distributing identical coins into different piggy banks</li>
                     </ul>
@@ -419,7 +419,7 @@ const CombinatoricsNotes: React.FC = () => {
                   <ul className="list-disc ml-6">
                     <li>Total number of compositions of n = 2ⁿ⁻¹</li>
                     <li>Compositions into k parts = C(n-1, k-1)</li>
-                    <li>Different from partitions (where order doesn't matter)</li>
+                    <li>Different from partitions (where order doesn&apos;t matter)</li>
                     <li>Related to IODB distribution problems</li>
                     <li>Each composition represents a unique way to break down a number</li>
                   </ul>

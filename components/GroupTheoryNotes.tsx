@@ -113,7 +113,7 @@ const GroupTheoryNotes: React.FC = () => {
                   <li>Formally written as # : S × S → S</li>
                   <li>Maps two elements of set to one value in same set</li>
                   <li>Must satisfy closure property by definition</li>
-                  <li>Different from normal math where it's just operation between two operands</li>
+                  <li>Different from normal math where it&apos;s just operation between two operands</li>
                 </ul>
               </div>
 
@@ -205,9 +205,9 @@ const GroupTheoryNotes: React.FC = () => {
 
               <Card className="p-4">
                 <p className="font-semibold">Important Note:</p>
-                <p>When operation "*" is NOT associative:</p>
+                <p>When operation &quot;*&quot; is NOT associative:</p>
                 <ul className="list-disc ml-6">
-                  <li>Cannot write a * b * c because it's ambiguous</li>
+                  <li>Cannot write a * b * c because it&apos;s ambiguous</li>
                   <li>Must use parentheses to disambiguate</li>
                   <li>Different parentheses placements may give different results</li>
                 </ul>
@@ -370,9 +370,9 @@ const GroupTheoryNotes: React.FC = () => {
               <div className="bg-red-50 dark:bg-red-900 p-4 rounded-lg">
                 <p className="font-semibold">Key Points:</p>
                 <ul className="list-disc ml-6">
-                  <li>When operation "*" is NOT associative, expressions like a * b * c are ambiguous and require parentheses</li>
+                  <li>When operation &quot;*&quot; is NOT associative, expressions like a * b * c are ambiguous and require parentheses</li>
                   <li>Every structure has at most one identity element</li>
-                  <li>Non-commutative doesn't mean ∀x,y(x*y ≠ y*x), as e*a = a*e always holds</li>
+                  <li>Non-commutative doesn&apos;t mean ∀x,y(x*y ≠ y*x), as e*a = a*e always holds</li>
                   <li>Operation tables (Cayley tables) completely define binary operations on finite sets</li>
                 </ul>
               </div>
@@ -470,7 +470,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p className="font-semibold">Cayley Table Properties:</p>
                 <ul className="list-disc ml-6">
                   <li>Each element appears exactly once in each row and column</li>
-                  <li>Identity element's row and column match the header</li>
+                  <li>Identity element&apos;s row and column match the header</li>
                   <li>Inverse elements can be identified by finding e in the table</li>
                   <li>Commutativity can be checked by table symmetry</li>
                   <li>Cannot easily check associativity from table alone</li>
@@ -633,7 +633,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <p>While multiplication modulo n is not a group over all of Zn, we can create a group by selecting only elements with multiplicative inverses:</p>
                 <ul className="list-disc ml-6 mt-2">
                   <li>Start with multiplication modulo n operation</li>
-                  <li>Remove elements that don't have multiplicative inverses</li>
+                  <li>Remove elements that don&apos;t have multiplicative inverses</li>
                   <li>Remaining elements form Un</li>
                 </ul>
               </div>
@@ -651,7 +651,7 @@ const GroupTheoryNotes: React.FC = () => {
                 <ul className="list-disc ml-6">
                   <li>Forms a group under multiplication modulo n</li>
                   <li>All elements have multiplicative inverses</li>
-                  <li>Order of Un equals φ(n) (Euler's totient function)</li>
+                  <li>Order of Un equals φ(n) (Euler&apos;s totient function)</li>
                 </ul>
               </div>
             </div>
@@ -744,7 +744,7 @@ const GroupTheoryNotes: React.FC = () => {
               <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Relationship to Other Concepts:</p>
                 <ul className="list-disc ml-6">
-                  <li>Connected to Euler's totient function</li>
+                  <li>Connected to Euler&apos;s totient function</li>
                   <li>Important in cryptography (RSA algorithm)</li>
                   <li>Used in studying cyclic groups</li>
                   <li>Helps understand group structure through isomorphisms</li>
@@ -911,7 +911,7 @@ const GroupTheoryNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                 <p className="font-semibold">Converse Statement (Not Always True):</p>
-                <p>"If n divides |G|, then G has a subgroup of order n"</p>
+                <p>&quot;If n divides |G|, then G has a subgroup of order n&quot;</p>
                 <div className="mt-2">
                   <p className="font-semibold">Special Cases:</p>
                   <ul className="list-disc ml-6">

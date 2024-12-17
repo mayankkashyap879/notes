@@ -788,7 +788,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The universal quantification of P(x) is a proposition stating "P(x) is true for all values of x in the universe of discourse"</p>
+                <p>The universal quantification of P(x) is a proposition stating &quot;P(x) is true for all values of x in the universe of discourse&quot;</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
@@ -821,7 +821,7 @@ const MathLogicNotes: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                 <p className="font-semibold">Definition:</p>
-                <p>The Existential Quantification of P(x) is a proposition stating "There exists an element x in the universe of discourse such that P(x) is true"</p>
+                <p>The Existential Quantification of P(x) is a proposition stating &quot;There exists an element x in the universe of discourse such that P(x) is true&quot;</p>
                 <div className="mt-2">
                   <p>Notation:</p>
                   <ul className="list-disc ml-6">
@@ -856,7 +856,7 @@ const MathLogicNotes: React.FC = () => {
 
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mt-4">
                 <p className="font-semibold">No Free Variables:</p>
-                <p>If "A" doesn't have any free variable x then:</p>
+                <p>If &quot;A&quot; doesn&apos;t have any free variable x then:</p>
                 <ul className="list-disc ml-6 space-y-2">
                   <li>∃x A = A</li>
                   <li>∀x A = A</li>

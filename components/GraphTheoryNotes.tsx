@@ -248,8 +248,8 @@ const GraphTheoryNotes: React.FC = () => {
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Complement Properties:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>For graph G(V,E), complement G'(V,E') has edges missing from G</li>
-                                    <li>|E'| = n(n-1)/2 - |E| where n is number of vertices</li>
+                                    <li>For graph G(V,E), complement G&apos;(V,E&apos;) has edges missing from G</li>
+                                    <li>|E&apos;| = n(n-1)/2 - |E| where n is number of vertices</li>
                                     <li>Complement of disconnected graph is always connected</li>
                                 </ul>
                             </div>
@@ -277,7 +277,7 @@ const GraphTheoryNotes: React.FC = () => {
 
                             <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                                 <p className="font-semibold">Key Theorem:</p>
-                                <p>A graph is bipartite if and only if it doesn't have an odd cycle</p>
+                                <p>A graph is bipartite if and only if it doesn&apos;t have an odd cycle</p>
                             </div>
 
                             <Card className="p-4">
@@ -554,7 +554,7 @@ const GraphTheoryNotes: React.FC = () => {
                             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                                 <p className="font-semibold">Definition:</p>
                                 <p>A graph is k-connected if κ(G) ≥ k, where k is variable.</p>
-                                <p className="mt-2">Alternatively: Removal of any ≤ k-1 vertices doesn't disconnect the graph or leaves a single vertex.</p>
+                                <p className="mt-2">Alternatively: Removal of any ≤ k-1 vertices doesn&apos;t disconnect the graph or leaves a single vertex.</p>
 
                                 <div className="mt-4">
                                     <p className="font-semibold">Important Properties:</p>
@@ -587,7 +587,7 @@ const GraphTheoryNotes: React.FC = () => {
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                                 <p className="font-semibold">Strongly Connected Components:</p>
                                 <ul className="list-disc ml-6">
-                                    <li>Each equivalence class of "strongly connected relation" is called a strongly connected component</li>
+                                    <li>Each equivalence class of &quot;strongly connected relation&quot; is called a strongly connected component</li>
                                     <li>Every vertex belongs to exactly one strongly connected component</li>
                                     <li>Maximum subgraphs that are strongly connected</li>
                                 </ul>
@@ -670,7 +670,7 @@ const GraphTheoryNotes: React.FC = () => {
                                     <li>For Euler Circuit:
                                         <ul className="list-disc ml-6 mt-2">
                                             <li>Graph must be strongly connected</li>
-                                            <li>Every vertex's indegree must equal its outdegree</li>
+                                            <li>Every vertex&apos;s indegree must equal its outdegree</li>
                                         </ul>
                                     </li>
                                     <li>For Euler Path:
@@ -730,7 +730,7 @@ const GraphTheoryNotes: React.FC = () => {
                             </Card>
 
                             <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                                <p className="font-semibold">Dirac's Theorem:</p>
+                                <p className="font-semibold">Dirac&apos;s Theorem:</p>
                                 <p>If minimum degree of any vertex in a simple connected undirected graph is ≥ n/2 (where n is the number of vertices), then a Hamiltonian cycle exists (provided |V| ≥ 3)</p>
                             </div>
 
@@ -893,7 +893,7 @@ const GraphTheoryNotes: React.FC = () => {
                                     <ul className="list-disc ml-6">
                                         <li>This problem is equivalent to asking if K₃,₃ is planar</li>
                                         <li>Since K₃,₃ is not planar, the problem has no solution</li>
-                                        <li>This can be proved using Euler's formula or Kuratowski's theorem</li>
+                                        <li>This can be proved using Euler&apos;s formula or Kuratowski&apos;s theorem</li>
                                     </ul>
                                 </div>
                             </div>
@@ -956,10 +956,10 @@ const GraphTheoryNotes: React.FC = () => {
                     <SubSection title="Self-Loop Transformation">
                         <div className="space-y-4">
                             <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                                <p>If we convert undirected graph G to a new graph G' by adding self-loops on all vertices then:</p>
+                                <p>If we convert undirected graph G to a new graph G&apos; by adding self-loops on all vertices then:</p>
                                 <ul className="list-disc ml-6 mt-2">
-                                    <li>If there's a walk of length 1 to n-1 in G between vertices</li>
-                                    <li>Then there's a walk of exactly length n-1 in G'</li>
+                                    <li>If there&apos;s a walk of length 1 to n-1 in G between vertices</li>
+                                    <li>Then there&apos;s a walk of exactly length n-1 in G&apos;</li>
                                 </ul>
                             </div>
                         </div>

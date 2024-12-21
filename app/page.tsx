@@ -55,7 +55,7 @@ const CSNotesHome: React.FC = () => {
         { name: "Discrete Mathematics", path: "/discrete_mathematics" },
         { name: "Linear Algebra", path: "/linear_algebra" },
         { name: "Calculus", path: "/calculus" },
-        { name: "Probability and Statistics", path: "/probability_statistics" }
+        { name: "Probability and Statistics", path: "/probability_and_statistics" }
       ]
     },
     {

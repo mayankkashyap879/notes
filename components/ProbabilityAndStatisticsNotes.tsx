@@ -45,7 +45,7 @@ const ProbabilityAndStatisticsNotes: React.FC = () => {
                 {/* Conditional Probability Introduction */}
                 <SubSection title="Conditional Probability">
                     <Card className="p-4">
-                        <p className="mb-4">Conditional probability is nothing but "Change in belief". Example of conditioning:</p>
+                        <p className="mb-4">Conditional probability is nothing but &quot;Change in belief&quot;. Example of conditioning:</p>
 
                         <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg mb-4">
                             <p className="font-semibold">Dice tossing example:</p>
@@ -60,7 +60,7 @@ const ProbabilityAndStatisticsNotes: React.FC = () => {
 
                         <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
                             <p>P(A|B) = P(A∩B)/P(B)</p>
-                            <p className="mt-2 text-sm">We call this as "Conditional probability of A given B"</p>
+                            <p className="mt-2 text-sm">We call this as &quot;Conditional probability of A given B&quot;</p>
                         </div>
                     </Card>
                 </SubSection>

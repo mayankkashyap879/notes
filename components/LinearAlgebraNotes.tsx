@@ -50,7 +50,7 @@ const LinearAlgebraNotes: React.FC = () => {
                     <SubSection title="Filling the Space (Span)">
                         <div className="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg">
                             <p>Any two linearly independent vector can fill R2. Because we can form any vector using these linearly independent vectors. This is same as two equation and two variables.</p>
-                            <p className="mt-2">In general, "Any n linearly independent vector can fill Rn space."</p>
+                            <p className="mt-2">In general, &quot;Any n linearly independent vector can fill Rn space.&quot;</p>
                         </div>
                     </SubSection>
 
@@ -92,7 +92,7 @@ const LinearAlgebraNotes: React.FC = () => {
                                     <li>If you have two independent vectors then we can construct any vector in R2 using these two-independent vectors</li>
                                     <li>If we add some vector to this set, we would have set having dependent vectors</li>
                                     <li>If we extend this idea then we cannot have more than n independent vector in Rn space</li>
-                                    <li>Or in other words "If a subset of Rn contains more than n vectors, then the subset is linearly dependent"</li>
+                                    <li>Or in other words &quot;If a subset of Rn contains more than n vectors, then the subset is linearly dependent&quot;</li>
                                 </ul>
                             </div>
 
@@ -382,7 +382,7 @@ const LinearAlgebraNotes: React.FC = () => {
                                     <li>Add to one row a scalar multiple of another.
                                         <p className="text-sm text-gray-600 mt-1">
                                             (We can do this operation because if u = v and x = y then u + x = v + y and if you want
-                                            intuitive reason then replacing one vector by resultant vector doesn't change its meaning)
+                                            intuitive reason then replacing one vector by resultant vector doesn&apos;t change its meaning)
                                         </p>
                                     </li>
                                 </ol>
@@ -578,8 +578,8 @@ const LinearAlgebraNotes: React.FC = () => {
                                         <li>|ta tb|
                                             |c  d | = t|a b|
                                             |c d|</li>
-                                        <li>|a+a' b+b'|
-                                            |c    d   | = |a b| + |a' b'|
+                                        <li>|a+a&apos; b+b&apos;|
+                                            |c    d   | = |a b| + |a&apos; b&apos;|
                                             |c d|   |c  d |</li>
                                     </ul>
                                 </div>
@@ -758,7 +758,7 @@ const LinearAlgebraNotes: React.FC = () => {
                                 <div className="space-y-4">
                                     <Card className="p-4">
                                         <p className="font-semibold">Q1: Let A be 3 x 7 and B be 7 x 3 and eigenvalues of AB are 1, 2, 4. Then what will be eigenvalues of BA?</p>
-                                        <p className="mt-2">Answer: As from above, AB and BA shares same nonzero eigenvalues so eigenvalues of BA will be 1, 2, 4 and 4 0's. Why 4 0's because dimension of BA is 7x7 so after copying non-zero eigenvalues all remaining eigenvalues must be zero to accommodate.</p>
+                                        <p className="mt-2">Answer: As from above, AB and BA shares same nonzero eigenvalues so eigenvalues of BA will be 1, 2, 4 and 4 0&apos;s. Why 4 0&apos;s because dimension of BA is 7x7 so after copying non-zero eigenvalues all remaining eigenvalues must be zero to accommodate.</p>
                                     </Card>
 
                                     <Card className="p-4">
